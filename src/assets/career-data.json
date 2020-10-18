@@ -174,5 +174,26 @@
       "Seven Academy",
       "Digital College"
     ]
+  },
+  {
+    "id": 19,
+    "title": "Certified Hacker",
+    "background": "GCE AL  , Any Bacc, International Baccaleaurate",
+    "Universities or Institutions": [
+      "University of Yaounde( ICT4dev)",
+      "Seven Academy",
+      "Digital College"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "CyberSecurity Expert",
+    "background": "GCE AL  , Any Bacc, International Baccaleaurate",
+    "Universities or Institutions": [
+      "University of Yaounde( ICT4dev)",
+      "Seven Academy",
+      "Digital College"
+    ]
   }
+  
 ]
