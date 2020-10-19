@@ -18,6 +18,8 @@
     <li
       class="list-group-item"
       *ngFor="let career of filteredCareerArray"
+      [routerLink]="['/careers', career.id]"
+      routerLinkActive="router-link-active"
     >
       {{ career.title }}
     </li>

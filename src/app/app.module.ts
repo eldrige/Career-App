@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CareerListComponent } from './careers/career-list/career-list.component';
+import { CareerDetailsComponent } from './careers/career-details/career-details.component';
 
 
 
@@ -19,6 +20,7 @@ import { CareerListComponent } from './careers/career-list/career-list.component
     WelcomeComponent,
     NotFoundComponent,
     CareerListComponent,
+    CareerDetailsComponent,
   ],
   imports: [
     BrowserModule,
