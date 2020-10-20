@@ -1,6 +1,7 @@
 # CareerApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8. to aid Cameroon students choose the right careers and entrace examinations in a variety of fields.
 
 ## Development server
 

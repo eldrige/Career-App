@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "career-app"
+    }
+  },
+  "defaultProject": "career-app",
+  "cli": {
+    "analytics": "53723ca9-d068-4afd-a8df-304998565908"
+  }
 }
