@@ -3,7 +3,7 @@
 1. Fork the project
 2. Clone the project
 ```
-git clone
+git clone https://github.com/eldrige/Career-App.git
 
 ```
 3. You can create a branch if you are familiar with this option

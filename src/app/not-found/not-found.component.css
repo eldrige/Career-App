@@ -1,91 +1,99 @@
-.inside {
-  background-color: #2f3242;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-svg {
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#notfound {
+  position: relative;
+  height: 90vh;
+}
+
+#notfound .notfound {
   position: absolute;
-  top: 50%;
   left: 50%;
-  margin-top: -250px;
-  margin-left: -400px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-.message-box {
-    
-  height: 200px;
-  width: 380px;
-  padding: 20px;
+
+.notfound {
+  max-width: 410px;
+  width: 100%;
+  text-align: center;
+}
+
+.notfound .notfound-404 {
+  height: 280px;
+  position: relative;
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 230px;
+  margin: 0px;
+  font-weight: 900;
   position: absolute;
-  top: 50%;
   left: 50%;
-  margin-top: -100px;
-  margin-left: 50px;
-  color: #fff;
-  font-family: Roboto;
-  font-weight: 200;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: url("src/assets/images/bg.jpg") no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center;
 }
-.message-box h1 {
-  font-size: 60px;
-  line-height: 46px;
-  margin-bottom: 40px;
+
+.notfound h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
 }
-.buttons-con .action-link-wrap {
-  margin-top: 40px;
-}
-.buttons-con .action-link-wrap a {
-  background: #e0a800;
-  padding: 8px 25px;
-  border-radius: 4px;
-  color: #fff;
-  font-weight: bold;
+
+.notfound p {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
   font-size: 14px;
-  transition: all 0.3s linear;
-  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.notfound a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   text-decoration: none;
-  margin-right: 10px;
-}
-.buttons-con .action-link-wrap a:hover {
-  background: #5a5c6c;
+  text-transform: uppercase;
+  background: #e0a800;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 10px;
   color: #fff;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 4px 15px -5px #0046d5;
+  box-shadow: 0px 4px 15px -5px #0046d5;
+}
+.notfound a:hover{
+    background: #a7800a;
+
 }
 
-#Polygon-1,
-#Polygon-2,
-#Polygon-3,
-#Polygon-4,
-#Polygon-4,
-#Polygon-5 {
-  animation: float 1s infinite ease-in-out alternate;
-}
-#Polygon-2 {
-  animation-delay: 0.2s;
-}
-#Polygon-3 {
-  animation-delay: 0.4s;
-}
-#Polygon-4 {
-  animation-delay: 0.6s;
-}
-#Polygon-5 {
-  animation-delay: 0.8s;
-}
-
-@keyframes float {
-  100% {
-    transform: translateY(20px);
+@media only screen and (max-width: 767px) {
+  .notfound .notfound-404 {
+    height: 142px;
   }
-}
-@media (max-width: 450px) {
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -190px;
-  }
-  .message-box {
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -190px;
-    text-align: center;
+  .notfound .notfound-404 h1 {
+    font-size: 112px;
   }
 }
