@@ -10,9 +10,11 @@ import { Observable } from 'rxjs';
 export class CareerService {
   careerDataUrl = '../../assets/career-data.json';
 
+
+
   constructor(private http: HttpClient) {}
 
-  getCareers(): Observable<ICareer[]> {
+  getCareers() : Observable<ICareer[]>{
     return this.http.get<ICareer[]>(this.careerDataUrl);
   }
 

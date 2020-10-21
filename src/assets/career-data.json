@@ -13,7 +13,7 @@
       "Faculte de medicine Kumbo",
       "Institut superieure des Techniques Medicales (Nkolondom)"
     ],
-    "Universities or institutions": [
+    "institions": [
       "University of Yaounde",
       "University of Douala",
       "University of Dschang"
@@ -24,7 +24,7 @@
     "title": "Mechanical Engineer",
     "background": "GCE AL (Sciences), Bacc A, International Baccaleaurate",
     "concours": ["ENSP", "ENSP Bamenda", "FGI", "UDM", "FET"],
-    "Universities or institutions": [
+    "institions": [
       "University of Yaounde",
       "University of Douala",
       "University of Dschang"
@@ -35,7 +35,7 @@
     "title": "lawyer / Magistrate",
     "background": "GCE AL (Arts), Bacc Litteraire, International Baccaleaurate",
     "concours": ["ENAM"],
-    "Universities or institutions": [
+    "institions": [
       "University of Yaounde",
       "University of Douala",
       "University of Dschang",
@@ -47,7 +47,7 @@
     "id": 4,
     "title": "Software Engineer",
     "background": "GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate",
-    "Universities or Institutions": [
+    "institions": [
       "Seven Academy",
       "Digital College",
       "Universite de la cote",
@@ -58,7 +58,7 @@
     "id": 5,
     "title": "Accountant",
     "background": "GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate",
-    "Universities or Institutions": [
+    "institions": [
       "Seven Academy",
       "Digital College",
       "university of dreams",
@@ -70,7 +70,7 @@
     "title": "Agricultural engineer",
     "background": "GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate",
     "concours": ["FASA", "ENEF"],
-    "Universities or Institutions": [
+    "institions": [
       "Digital College",
       "university of Ebolowa",
       "Faculte du bois du sud"
@@ -81,7 +81,7 @@
     "title": "Telecom engineer",
     "background": "GCE AL (Sciences / Arts), Bacc A, International Baccaleaurate",
     "concours": ["SUPPTIC", "Polytechnique Yaounde", "Polytechnique Bamenda"],
-    "Universities or Institutions": [
+    "institions": [
       "University of Yaounde( ICT4dev)",
       "university of Ebolowa",
       "Faculte du bois du sud"
@@ -91,19 +91,19 @@
     "id": 8,
     "title": "Journalist",
     "background": "GCE AL (Arts), Bacc C, International Baccaleaurate",
-    "Universities or Institutions": ["Esstic", "university of Yaounde 2"]
+    "institions": ["Esstic", "university of Yaounde 2"]
   },
   {
     "id": 9,
     "title": "Translator",
     "background": "GCE AL (Arts), Bacc C, International Baccaleaurate",
-    "Universities or Institutions": ["Esstic", "university of Yaounde 2"]
+    "institions": ["Esstic", "university of Yaounde 2"]
   },
   {
     "id": 10,
     "title": "Civil Engineer",
     "background": "GCE AL (Science), Bacc A, International Baccaleaurate",
-    "Universities or Institutions": [
+    "institions": [
       "Travaux Publique",
       "Siantou Univeristy",
       "ENSPY (3rd Year)"
@@ -122,14 +122,14 @@
       "ENS Douala",
       "all ensets and ENS"
     ],
-    "Universities or Institutions": ["All State Universities"]
+    "institions": ["All State universities"]
   },
   {
     "id": 12,
     "title": "Mining Engineer",
     "background": "GCE AL Science, Bacc  A, International Baccaleaurate",
     "concours": ["EGEM", "FMIP"],
-    "Universities or Institutions": [" All State universities"]
+    "institions": [" All State universities"]
   },
   {
     "id": 13,
@@ -142,7 +142,7 @@
     "title": "Computer Network Specialist",
     "background": "GCE AL (Science) , Any Bacc, International Baccaleaurate",
     "concours": ["COLTECH", "ENEF", "ENSP Bamenda"],
-    "Universities or Institutions": [
+    "institions": [
       "University of Yaounde",
       "University of Douala"
     ]
@@ -157,19 +157,19 @@
     "id": 16,
     "title": "Political Scientist",
     "background": "GCE AL  , Any Bacc, International Baccaleaurate",
-    "Universities or Institutions": ["University of Yaounde 2"]
+    "institions": ["University of Yaounde 2"]
   },
   {
     "id": 17,
     "title": "Pharmacist",
     "background": "GCE AL  , Any Bacc, International Baccaleaurate",
-    "Universities or Institutions": ["University of Yaounde 2"]
+    "institions": ["University of Yaounde 2"]
   },
   {
     "id": 18,
     "title": "Digital Marketer",
     "background": "GCE AL  , Any Bacc, International Baccaleaurate",
-    "Universities or Institutions": [
+    "institions": [
       "University of Yaounde 2",
       "Seven Academy",
       "Digital College"
@@ -179,7 +179,7 @@
     "id": 19,
     "title": "Certified Hacker",
     "background": "GCE AL  , Any Bacc, International Baccaleaurate",
-    "Universities or Institutions": [
+    "institions": [
       "University of Yaounde( ICT4dev)",
       "Seven Academy",
       "Digital College"
@@ -189,7 +189,7 @@
     "id": 20,
     "title": "CyberSecurity Expert",
     "background": "GCE AL  , Any Bacc, International Baccaleaurate",
-    "Universities or Institutions": [
+    "institions": [
       "University of Yaounde( ICT4dev)",
       "Seven Academy",
       "Digital College"
