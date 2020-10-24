@@ -1,4 +1,6 @@
+import { getQuote,getRandomQuote } from 'inspirational-quotes';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-welcome',
@@ -9,7 +11,10 @@ export class WelcomeComponent implements OnInit {
 
   constructor() { }
 
+  quoteObject = getQuote()
+
   ngOnInit(): void {
+  
   }
 
 }
