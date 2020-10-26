@@ -18,7 +18,7 @@ export class CareerService {
 
   getCareer(id: Number): Observable<ICareer> {
     return this.getCareers().pipe(
-      map((careers) => careers.find((career) => career.id === id))
+      map(careers => careers.find((career) => career.id === id))
     );
   }
 }
