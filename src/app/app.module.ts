@@ -23,14 +23,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotFoundComponent,
     CareerListComponent,
     CareerDetailsComponent,
-    MaterialModule
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+     MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
