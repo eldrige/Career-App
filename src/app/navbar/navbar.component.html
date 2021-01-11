@@ -7,7 +7,7 @@
     <ul class="navbar-nav">
       <li class="nav-item active">
         <a class="nav-link"
-        [routerLink]="['/welcome']" routerLinkActive="router-link-active" 
+        [routerLink]="['/home']" routerLinkActive="router-link-active" 
         >Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -16,7 +16,7 @@
         >Careers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Jobs</a>
+        <a class="nav-link" [routerLink]="['jobs']">Jobs</a>
       </li>
       <li class="nav-item">
         <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
