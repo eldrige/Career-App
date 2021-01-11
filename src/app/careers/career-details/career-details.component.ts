@@ -13,7 +13,7 @@ export class CareerDetailsComponent implements OnInit {
     private careerServ: CareerService,
     private route: ActivatedRoute
   ) {}
-  careerArray: ICareer[] = [];
+  
   currentCareer: ICareer;
   ngOnInit(): void {
     this.getCareer();
