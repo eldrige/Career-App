@@ -11,11 +11,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CareerListComponent } from './careers/career-list/career-list.component';
 import { CareerDetailsComponent } from './careers/career-details/career-details.component';
-<<<<<<< HEAD
 import { JobsComponent } from './jobs/jobs.component';
-=======
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
->>>>>>> 70ae10d3519420a94bf00a27c54ae3b4ebda614d
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -27,18 +24,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotFoundComponent,
     CareerListComponent,
     CareerDetailsComponent,
-<<<<<<< HEAD
     JobsComponent,
-=======
-   
->>>>>>> 70ae10d3519420a94bf00a27c54ae3b4ebda614d
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
      MaterialModule
   ],
   providers: [],
