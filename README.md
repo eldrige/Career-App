@@ -6,10 +6,21 @@ The CareerApp project was built with the intention to allow students find out wh
 The application serves data on the most in careers in Cameroon. Furthermore it provides a lot more of features to discover.
 
 ## Development server
+
 The application consist of a backend and a frontend. The backend provides the data for the frontend.
 To get the application up and running, you need to run `npm run server` at the root of the app. When that is done
 cd into the frontend folder and run `npm run proxyStart`.
 The app will automatically reload if you change any of the source files.
+
+
+## QuickStart
+
+-Clone the project into your machine using `git clone https://github.com/eldrige/Career-App`
+-Open the project with your favourite text editor e.g vs-code
+-Cd into the project folder and `npm install` to install all dependencies
+-Enter `npm run app` to see the app
+-Happy Hacking
+
 
 ## Contributing
 
