@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CareerService {
-  careerDataUrl = '../../assets/career-data.json';
-
+// careerDataUrl = '../../assets/career-data.json';[]
+private careerDataUrl = '/api/careers'
 
 
   constructor(private http: HttpClient) {}
