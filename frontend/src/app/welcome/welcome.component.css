@@ -1,0 +1,13 @@
+.container-fluid.bg-primary#welcome{
+    height: 90vh;
+    background-image: url('/assets/images/wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content{
+    height: 500px;
+    background-image: url('/assets/images/blob1.svg');
+    background-size: cover;
+
+    /* background-color: red; */
+}

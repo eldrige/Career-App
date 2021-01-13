@@ -1,28 +1,30 @@
 # CareerApp
 
+Made with love by SevenAcademyStudents for Cameroon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8. to aid Cameroon students choose the right careers and entrace examinations in a variety of fields.
+The CareerApp project was built with the intention to allow students find out what is next, as per their careers.
+The application serves data on the most in careers in Cameroon. Furthermore it provides a lot more of features to discover.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The application consist of a backend and a frontend. The backend provides the data for the frontend.
+To get the application up and running, you need to run `npm run server` at the root of the app. When that is done
+cd into the frontend folder and run `npm run proxyStart`.
+The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## QuickStart
 
-## Build
+-Clone the project into your machine using `git clone https://github.com/eldrige/Career-App`
+-Open the project with your favourite text editor e.g vs-code
+-Cd into the project folder and `npm install` to install all dependencies
+-Enter `npm run app` to see the app
+-Happy Hacking
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Contributing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To contribute to this project, we use the github-flow method. 
+Fork the repo, add your useful changes. Then create a pull request. Alternatively, if you are a contributor, you can
+clone the project, then create a new branch using `git checkout -b feature/what-you-are-working-on`. After modifying
+the source code, you can commit then push your work. Like this `git push`. 

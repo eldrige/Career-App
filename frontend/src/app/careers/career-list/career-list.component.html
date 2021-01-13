@@ -1,0 +1,27 @@
+<div class="container my-5">
+  <h1>Most In Demand Jobs in Cameroon</h1>
+
+  <p>
+    Click on a career to discover the possible institutions you can take to
+    pursue a path in that career
+  </p>
+
+  <input
+    type="text"
+    placeholder="Enter a job to find its path"
+    class="form-control my-3"
+    [(ngModel)]="listFilter"
+  />
+  <p>Filtered By: {{ listFilter }}</p>
+
+  <ul class="list-group">
+    <li
+      class="list-group-item"
+      *ngFor="let career of filteredCareerArray"
+      [routerLink]="['/careers', career._id]"
+      routerLinkActive="router-link-active"
+    >
+      {{ career.title }}
+    </li>
+  </ul>
+</div>
