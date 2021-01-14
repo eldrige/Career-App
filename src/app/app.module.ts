@@ -13,6 +13,8 @@ import { CareerListComponent } from './careers/career-list/career-list.component
 import { CareerDetailsComponent } from './careers/career-details/career-details.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { FooterComponent } from './footer/footer.component';
+import { Header2Component } from './header2/header2.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -26,6 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     CareerDetailsComponent,
     JobsComponent,
     FooterComponent,
+    Header2Component,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
