@@ -8,19 +8,22 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CareerService {
-  careerDataUrl = '../../assets/career-data.json';
-
-
+  // careerDataUrl = '../../assets/career-data.json';[]
+  private careerDataUrl = '/api/careers';
 
   constructor(private http: HttpClient) {}
 
-  getCareers() : Observable<ICareer[]>{
+  getCareers(): Observable<ICareer[]> {
     return this.http.get<ICareer[]>(this.careerDataUrl);
   }
 
   getCareer(id: Number): Observable<ICareer> {
     return this.getCareers().pipe(
-      map(careers => careers.find((career) => career.id === id))
+      map(careers => careers.find((career) => career._id === id))
     );
   }
+
+  // getCareer(id): Observable<ICareer> {
+  //   return this.http.get<ICareer>(`this.careerDataUrl/id`);
+  // }
 }

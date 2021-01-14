@@ -1,5 +1,5 @@
 export interface ICareer {
-  id: number;
+  _id: number;
   title: string;
   background: string;
   concours?: string[];
