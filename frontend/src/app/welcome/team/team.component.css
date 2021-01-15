@@ -8,8 +8,12 @@
     margin-bottom: 80px;
 }
 .main{
+    font-family: 'Lato', sans-serif;
     /* background: #027ffd62; */
     background:linear-gradient(180deg, rgba(0, 123, 255, 0.262) 0%, rgba(35, 179, 215, 0.228) 100%) !important;
     padding: 150px 0;
     background-repeat: no-repeat;
+}
+.lead{
+    line-height: 30px !important;
 }
