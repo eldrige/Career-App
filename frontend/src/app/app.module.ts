@@ -13,8 +13,11 @@ import { CareerListComponent } from './careers/career-list/career-list.component
 import { CareerDetailsComponent } from './careers/career-details/career-details.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { FooterComponent } from './footer/footer.component';
-import { Header2Component } from './header2/header2.component';
-import { HeaderComponent } from './header/header.component';
+import { Header2Component } from './welcome/header2/header2.component';
+import { HeaderComponent } from './welcome/header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TeamComponent } from './welcome/team/team.component';
+import { SubscribeComponent } from './welcome/subscribe/subscribe.component';
 
 
 
@@ -30,6 +33,9 @@ import { HeaderComponent } from './header/header.component';
     FooterComponent,
     Header2Component,
     HeaderComponent,
+    DashboardComponent,
+    TeamComponent,
+    SubscribeComponent,
   ],
   imports: [
     BrowserModule,

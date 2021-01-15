@@ -1,48 +1,45 @@
 <div class="main">
-  
-
-<section class="container2">
-  <div class="hero-text">
+  <section class="container2">
       <div class="container text-white">
-        <div class="row">
-          <div class="col-md-7 searchbar">
+        <div class="row hero-text">
+          <div class="col-md-6 searchbar">
             <h1 class="display-4 mt-5">
               Find the perfect career to briss in Cameroon
             </h1>
+           
+            <p class="author mt-5">
+              {{quoteObject.text}}
+              <i> {{quoteObject.author}}
+              </i>
+            </p>
             <div>
               <form class="form-inline my-2 my-lg-0">
-                <input
-                  class="form-control"
-                  type="search"
-                  placeholder="Engineering"
-                  aria-label="Search"
-                />
+                <input class="form-control" type="search" placeholder="Engineering" aria-label="Search" />
                 <button class="btn btn-warning my-2 my-sm-0" type="submit">
                   Search
                 </button>
               </form>
             </div>
-          <p class="mt-5">
-            {{quoteObject.text}}
-            {{quoteObject.author}}
-          </p>
             <br />
-            Popular :
-            <span class="badge badge-warning mx-2 p-2"
-              >Web Design and Mobile Design</span>
-            <span class="badge badge-warning mx-2 p-2">Advocacy</span>
-            <span class="badge badge-warning mx-2 p-2">Agriculture</span>
-            <span class="badge badge-warning mx-2 p-2">Engineering</span>
+            <div class="popular">
+              <p>Popular :</p>
+              <span class="badge badge-warning mx-2 p-2">Web Design and Mobile Design</span>
+              <span class="badge badge-warning mx-2 p-2">Advocacy</span>
+              <span class="badge badge-warning mx-2 p-2">Agriculture</span>
+              <span class="badge badge-warning mx-2 p-2">Engineering</span>
+              
+            </div>
+          
           </div>
-      
+          <div class="col-md-6">
+            <img src="/assets/images/vector.png" alt="">
+          </div>
+
         </div>
       </div>
-  </div>
+    
+
+    <div class="wave">
+  <!-- </section> -->
   
-  <div class="wave">
-
-  </div>
-
-</section>
-
 </div>

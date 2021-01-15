@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CareerListComponent } from './careers/career-list/career-list.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'home', component: WelcomeComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'careers', component: CareerListComponent },
   { path: 'jobs', component: JobsComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'careers/:id', component: CareerDetailsComponent },
   { path: '**', component: NotFoundComponent },
 ];

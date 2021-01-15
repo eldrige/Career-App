@@ -1,0 +1,7 @@
+.fdb-block{
+    background-image: url('/assets/illustrations/blob (2).svg') ;
+    /* background-size: cover; */
+    /* background:url("/assets/illustrations/blob (2).svg"), linear-gradient(180deg, rgba(0,123,255,1) 0%, rgba(35,180,215,1) 100%) !important; */
+    background-repeat: no-repeat !important;
+    height: 80vh;
+}
