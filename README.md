@@ -1,30 +1,23 @@
 # CareerApp
 
-Made with love by SevenAcademyStudents for Cameroon
+Made with :heart: by Seven-Academy-Students for Cameroon
 
 The CareerApp project was built with the intention to allow students find out what is next, as per their careers.
 The application serves data on the most in careers in Cameroon. Furthermore it provides a lot more of features to discover.
 
 ## Development server
 
-The application consist of a backend and a frontend. The backend provides the data for the frontend.
-To get the application up and running, you need to run `npm run server` at the root of the app. When that is done
-cd into the frontend folder and run `npm run proxyStart`.
-The app will automatically reload if you change any of the source files.
-
-
-## QuickStart
-
--Clone the project into your machine using `git clone https://github.com/eldrige/Career-App`
--Open the project with your favourite text editor e.g vs-code
--Cd into the project folder and `npm install` to install all dependencies
--Enter `npm run app` to see the app
--Happy Hacking
-
+To run the application , you will need to install npm packages. Type `npm run dep`.
+When the installation is complete, you can now run `npm run launch`. To open the application in your broswer.
 
 ## Contributing
 
-To contribute to this project, we use the github-flow method. 
-Fork the repo, add your useful changes. Then create a pull request. Alternatively, if you are a contributor, you can
-clone the project, then create a new branch using `git checkout -b feature/what-you-are-working-on`. After modifying
-the source code, you can commit then push your work. Like this `git push`. 
+ To contribute to this project, we use the github-flow method
+ Clone the repository
+ Go to the path of your clone or open your terminal in vs-code
+ Create a new branch called feature/what-you-are-working-on using `git checkout -b feature/what-you-are-working-on`
+ You can now update the code with your valuable contributions 
+ When done contributing, add and commit your changes, using `git add .` and `git commit -m commit-message`
+ Finally push your code online using `git push -u origin feature/what-you-are-working-on`.
+ Create a pull request and assign either Honorez or Eric as reviewer.
+
