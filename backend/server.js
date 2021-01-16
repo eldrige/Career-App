@@ -7,6 +7,8 @@ import careerRouter from './routes/careerRoutes.js';
 dotenv.config();
 app.use(morgan('dev'));
 
+const PORT = process.env.PORT || 3000
+
 app.get('/', (req, res) => {
   res.send('API is running');
 });
@@ -16,6 +18,6 @@ app.use(cors());
 
 app.use('/api/careers/', careerRouter);
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
