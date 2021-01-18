@@ -7,7 +7,7 @@ The application serves data on the most in careers in Cameroon. Furthermore it p
 
 ## Development server
 
-To run the application , you will need to install npm packages. Type `npm run dep`.
+To run the application , you will need to install npm packages. Type ```npm run dep```.
 When the installation is complete, you can now run `npm run launch`. To open the application in your broswer.
 
 ## Contributing
