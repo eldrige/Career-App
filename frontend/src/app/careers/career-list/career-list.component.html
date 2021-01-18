@@ -1,12 +1,15 @@
-<div class="container my-5">
+<div class="hero-text container my-5 ">
   <h1>Most In Demand Jobs in Cameroon</h1>
 
   <p>
     Click on a career to discover the possible institutions you can take to
     pursue a path in that career
   </p>
+  <div class="center-input">
+    <input type="text" placeholder="Enter a job to find its path" class="form-control my-3" [(ngModel)]="listFilter" />
+  </div>
 
-  <input type="text" placeholder="Enter a job to find its path" class="form-control my-3" [(ngModel)]="listFilter" />
+  
   <p>Filtered By: {{ listFilter }}</p>
 
   <!-- <ul class="list-group">

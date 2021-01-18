@@ -16,12 +16,12 @@
     font-weight: 900;
     color: #1e0975;
     font-family: 'Lato', sans-serif;
-    
-  
+    text-align: center;  
 }
 .hero-text p{
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
+    text-align: center;
 }
 .second{
     margin-top: 40px !important;
@@ -59,4 +59,16 @@ button:hover{
     border: 1px solid #FFC108;
     transition: ease-in-out 0.7s;
 
+}
+input{
+    width: 100%;
+}
+input:focus{
+    border: 1px solid var(--primary);
+    box-shadow: none;
+}
+.center-input{
+    width: 70%;
+    margin: 0 auto;
+    
 }
