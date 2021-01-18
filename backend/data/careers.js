@@ -3,6 +3,7 @@ const careers = [
     _id: 1,
     title: "Doctor",
     background: "GCE AL (Sciences), Bacc A, International Baccaleaurate",
+    image_url: "assets/images/doctor.svg",
     concours: [
       "FMPS Douala",
       "FMBS Buea",
