@@ -36,20 +36,23 @@ body {
 
 .notfound .notfound-404 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 230px;
-  margin: 0px;
+  font-size: 210px;
+  /* margin: 0px; */
+  /* margin-top: 50px; */
+  padding: 80px;
   font-weight: 900;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  background: url("src/assets/images/bg.jpg") no-repeat;
+  background: url("src/assets/images/bg.jpg") no-repeat ;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: cover;
   background-position: center;
+  height: 90vh;
 }
 
 .notfound h2 {
