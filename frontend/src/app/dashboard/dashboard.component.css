@@ -1,0 +1,41 @@
+.brand {
+  color: white;
+}
+.icon1 {
+  width: 40px;
+  height: 70px;
+}
+.icon2 {
+  width: 50px;
+  height: 50px;
+}
+.dot {
+  width: 50px;
+  height: 30px;
+}
+img {
+  padding: 5px;
+}
+.bloc1 {
+  height: 400px;
+}
+.cartoon {
+  width: 60px;
+  height: 60px;
+}
+.main-prin  {
+  align-items: center;
+}
+.main-prin p {
+  margin-left: 0.7rem;
+}
+.main-prine {
+    display: flex;
+  align-self: center;
+}
+
+.card {
+  width: 100%;
+  min-height: 200px;
+  background-color: red;
+}
