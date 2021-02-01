@@ -72,3 +72,107 @@ input:focus{
     margin: 0 auto;
     
 }
+
+/* New Career Css */
+
+
+
+.career {
+    /* width: 100%; */
+    height: auto;
+    padding: 50px 0 70px 0;
+}
+
+#career-list {
+    /* width: 100%; */
+    height: auto;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.career-article {
+    width: 100%;
+    height: 300px;
+    
+}
+.career-title {
+    /* width: 100%; */
+    height: 100%;
+    transition-duration: 1s;
+}
+.career-article:hover .career-title div {
+    padding: 0;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    transition-duration: .3s;
+    background-color: #f89523d7;
+    box-shadow: 4px 4px 1px 1px  hsl(240, 3%, 28%);
+}
+.career-article:hover .career-title img {
+    width: 60%;
+    margin: 0 auto;
+    transition-duration: .3s;
+}
+
+.career-article:hover .career-title {
+    width: 60px;
+    height: 60px;
+    transition-duration: .3s;
+}
+.career-article:hover .career-title h3 {
+    margin: 0;
+    display: none;
+    transition-duration: .3s;
+}
+.vision {
+    background: url("/assets/images/car5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.career-title div {
+    width: 100%;
+    height: 100%;
+    background-color: #0067abc0;
+    color: #fff;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    transition-duration: 1s;
+}
+.career-title img {
+    width: 30%;
+    margin: 0 auto;
+    transition-duration: .3s;
+}
+.career-title h3 {
+    margin-top: 20px;
+    font-size: 40px;
+    transition-duration: .3s;
+}
+.career-content {
+    width: 85%;
+    height: 240px;
+    margin-left: 60px;
+    padding: 20px;
+    border-bottom: 2px solid #eee;
+    border-right: 2px solid #eee;
+    display: none;
+    transition-duration: 1s;
+    box-shadow: 4px 4px 1px 1px  hsl(240, 3%, 28%);
+}
+.career-article:hover .career-content {
+    display: block;
+    transition-duration: 1s;
+}
+.career-content h4 {
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f89623;
+}
+.career-content p {
+    font-size: 18px;
+    line-height: 1.5;
+}

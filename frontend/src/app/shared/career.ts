@@ -4,4 +4,5 @@ export interface ICareer {
   background: string;
   concours?: string[];
   institions?: string[];
+  description: string
 }

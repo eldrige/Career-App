@@ -28,12 +28,27 @@
 <section class="main">
   <div class="container">
     <div class="second row ">
-      <div class="col-md-3 text-center " *ngFor="let career of filteredCareerArray"
+      <div class="col-md-3 text-center " *ngFor="let career of filteredCareerArray"  [routerLink]="['/careers', career._id]"
         >
-        <img src="assets/icons/scholar.png" alt="">
+        <!-- <img src="assets/icons/scholar.png" alt=""> -->
         <!-- <p class=" career my-4">Career</p> -->
-        <p class="career my4">{{ career.title }}</p>
-        <button class="btn btn-primary" [routerLink]="['/careers', career._id]" routerLinkActive="router-link-active">Read More</button>
+        <!-- <p class="career my4">{{ career.title }}</p>
+        <button class="btn btn-primary" [routerLink]="['/careers', career._id]" routerLinkActive="router-link-active">Read More</button> -->
+
+        <div id="career-list" >
+          <div class="career-article">
+              <div class="career-title vision">
+                  <div>
+                      <img src="{{career.image_url}}" alt="binocular icon">
+                      <h3> {{ career.title }} </h3>
+                  </div>
+              </div>
+              <div class="career-content">
+                  <h4> {{ career.title }} </h4>
+                  <p> {{career.background}} </p>
+              </div>
+          </div>
+        </div>
 
       </div>
 
