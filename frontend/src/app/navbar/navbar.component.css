@@ -1,5 +1,9 @@
+img {
+  width: 5rem;
+}
 nav{
     height: 10vh;
+    box-sizing: border-box;
 }
 form{
     background: #000;

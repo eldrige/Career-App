@@ -13,14 +13,15 @@ export class CareerDetailsComponent implements OnInit {
     private careerServ: CareerService,
     private route: ActivatedRoute
   ) {}
-  
+
   currentCareer: ICareer;
   ngOnInit(): void {
     this.getCareer();
   }
 
+  // tslint:disable-next-line: typedef
   getCareer() {
-    let id = +this.route.snapshot.paramMap.get('id');
+    const id = +this.route.snapshot.paramMap.get('id');
     this.careerServ.getCareer(id).subscribe(
       (response) => {
         this.currentCareer = response;
