@@ -1,45 +1,26 @@
 <div class="container my-5">
   <div class="card card-body mb-3">
-    <div class="row">
-      <div class="col-md-3">
-        <img class="img-fluid mb-2" src="assets/images/vector.png" />
-        <a
-          href="${user.html_url}"
-          target="_blank"
-          class="btn btn-primary btn-block mb-4"
-          >View Profile</a
-        >
+        <div class="row">
+          <div class="col-md-3">
+            <img class="img-fluid mb-2" src="assets/images/vector.png">
+            <!-- <img class="img-fluid mb-2" src={{currentCareer.image_url}}> -->
+            <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
+          </div>
+          <div class="col-md-9">
+            <span class="badge badge-primary mx-1 p-1">Popularity: very popular </span>
+            <span class="badge badge-secondary mx-1 p-1">Difficulty: Medium </span>
+            <span class="badge badge-success mx-1 p-1">Salary: 100k+</span>
+            <br><br>
+            <ul class="list-group">
+              <li class="list-group-item">Job Title: {{currentCareer.title}} </li>
+              <li class="list-group-item">Background: {{currentCareer.background}} </li>
+              <li class="list-group-item" *ngIf="currentCareer.concours">Concours: {{currentCareer.concours}} </li>
+              <li class="list-group-item" *ngIf="currentCareer.institions">Institutions: {{currentCareer.institions}}</li>
+            </ul>
+          </div>
+          <button class="btn btn-primary"
+          [routerLink]="['/careers']" routerLinkActive="router-link-active"
+          >Back</button>
+        </div>
       </div>
-      <div class="col-md-9">
-        <span class="badge badge-primary mx-1 p-1"
-          >Popularity: very popular
-        </span>
-        <span class="badge badge-secondary mx-1 p-1">Difficulty: Medium </span>
-        <span class="badge badge-success mx-1 p-1">Salary: 100k+</span>
-        <br /><br />
-        <ul class="list-group">
-          <li class="list-group-item">Job Title: {{ currentCareer.title }}</li>
-          <li class="list-group-item">
-            Background: {{ currentCareer.background }}
-          </li>
-          <li class="list-group-item">
-            Description: {{ currentCareer.description }}
-          </li>
-          <li class="list-group-item" *ngIf="currentCareer.concours">
-            Concours: {{ currentCareer.concours }}
-          </li>
-          <li class="list-group-item" *ngIf="currentCareer.institions">
-            Institutions: {{ currentCareer.institions }}
-          </li>
-        </ul>
-      </div>
-      <button
-        class="btn btn-primary"
-        [routerLink]="['/careers']"
-        routerLinkActive="router-link-active"
-      >
-        Back
-      </button>
-    </div>
-  </div>
 </div>

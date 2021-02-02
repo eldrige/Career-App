@@ -24,9 +24,10 @@ const careers = [
   },
   {
     _id: 2,
-    title: 'Mechanical Engineer',
-    background: 'GCE AL (Sciences), Bacc A, International Baccaleaurate',
-    concours: ['ENSP Yaounde', 'ENSP Bamenda', 'FGI', 'UDM', 'FET'],
+    title: "Mechanical Engineer",
+    background: "GCE AL (Sciences), Bacc A, International Baccaleaurate",
+    image_url: "assets/images/meca.jpg",
+    concours: ["ENSP Yaounde", "ENSP Bamenda", "FGI", "UDM", "FET"],
     institions: [
       'University of Yaounde',
       'University of Douala',
