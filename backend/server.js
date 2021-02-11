@@ -1,18 +1,18 @@
 import express from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import cors from 'cors'
-const app = express();
+import cors from 'cors';
 import careerRouter from './routes/careerRoutes.js';
-dotenv.config();
-app.use(morgan('dev'));
 
-const PORT = process.env.PORT || 3000
+dotenv.config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
   res.send('API is running');
 });
-
 
 app.use(cors());
 

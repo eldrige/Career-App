@@ -1,10 +1,6 @@
 import mongoose from 'mongoose';
 
 const careerSchema = mongoose.Schema({
-  _id: {
-    type: String,
-    required: true,
-  },
   title: {
     type: String,
     required: true,
@@ -20,6 +16,6 @@ const careerSchema = mongoose.Schema({
   },
 });
 
-const User = mongoose.model('User', careerSchema);
+const Career = mongoose.model('Career', careerSchema);
 
-export default User;
+export default Career;
