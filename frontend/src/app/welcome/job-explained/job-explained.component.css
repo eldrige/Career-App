@@ -1,0 +1,28 @@
+section {
+  /* background:#17A0E4; */
+  /* height: 50vh; */
+  padding: 60px 0;
+  color: #fff;
+}
+h1 {
+  text-transform: uppercase;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+.btn {
+    color: #fff;
+  background: #17a0e4;
+}
+.btn:hover {
+  background: #4cbfe1;
+  color: #17a0e4;
+}
+.hero-text h1{
+    font-size: 38px;
+    line-height: 50px;
+    font-weight: 900;
+    color: #1e0975;
+    font-family: 'Lato', sans-serif;
+}
