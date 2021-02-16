@@ -1,4 +1,4 @@
-<div class="hero-text container my-5 ">
+<div class="hero-text container my-5">
   <h1>Most In Demand Jobs in Cameroon</h1>
 
   <p>
@@ -6,9 +6,13 @@
     pursue a path in that career
   </p>
   <div class="center-input">
-    <input type="text" placeholder="Enter a job to find its path" class="form-control my-3" [(ngModel)]="listFilter" />
+    <input
+      type="text"
+      placeholder="Enter a job to find its path"
+      class="form-control my-3"
+      [(ngModel)]="listFilter"
+    />
   </div>
-
 
   <p>Filtered By: {{ listFilter }}</p>
 
@@ -24,36 +28,38 @@
   </ul> -->
 </div>
 
-
 <section class="main">
   <div class="container">
-    <div class="second row ">
-      <div class="col-md-3 text-center " *ngFor="let career of filteredCareerArray"  [routerLink]="['/careers', career._id]"
-        >
+    <div class="second row">
+      <div
+        class="col-md-3 text-center"
+        *ngFor="let career of filteredCareerArray"
+        
+      >
         <!-- <img src="assets/icons/scholar.png" alt=""> -->
         <!-- <p class=" career my-4">Career</p> -->
         <!-- <p class="career my4">{{ career.title }}</p>
         <button class="btn btn-primary" [routerLink]="['/careers', career._id]" routerLinkActive="router-link-active">Read More</button> -->
 
-        <div id="career-list" >
+        <div id="career-list">
           <div class="career-article">
-              <div class="career-title vision">
-                  <div>
-                      <!-- <img src="{{career.image_url }}" alt="binocular icon"> -->
-                      <h3> {{ career.title }} </h3>
-                  </div>
+            <div class="career-title vision">
+              <div>
+                <!-- <img src="{{career.image_url }}" alt="binocular icon"> -->
+                <h3>{{ career.title }}</h3>
               </div>
-              <div class="career-content">
-                  <h4> {{ career.title }} </h4>
-                  <p> {{career.background}} </p>
-              </div>
+            </div>
+            <div class="career-content">
+              <h4>{{ career.title }}</h4>
+              <p>{{ career.background }}</p>
+            </div>
           </div>
         </div>
-
+        <div class="btn">
+          <button class="btn btn-primary" type="submit" [routerLink]="['/careers', career._id]">Read More</button>
+        </div>
       </div>
-
-
-
+      
     </div>
   </div>
 </section>
