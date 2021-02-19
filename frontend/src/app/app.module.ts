@@ -18,6 +18,8 @@ import { HeaderComponent } from './welcome/header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TeamComponent } from './welcome/team/team.component';
 import { SubscribeComponent } from './welcome/subscribe/subscribe.component';
+import { CareerExplainedComponent } from './welcome/career-explained/career-explained.component';
+import { JobExplainedComponent } from './welcome/job-explained/job-explained.component';
 
 
 
@@ -36,6 +38,8 @@ import { SubscribeComponent } from './welcome/subscribe/subscribe.component';
     DashboardComponent,
     TeamComponent,
     SubscribeComponent,
+    CareerExplainedComponent,
+    JobExplainedComponent,
   ],
   imports: [
     BrowserModule,

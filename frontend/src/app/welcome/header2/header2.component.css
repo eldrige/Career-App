@@ -1,0 +1,19 @@
+.hero-text h1{
+    font-size: 38px;
+    line-height: 50px;
+    text-transform: capitalize;
+    font-weight: 900;
+    color: #1e0975;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 80px;
+}
+.main{
+    font-family: 'Lato', sans-serif;
+    /* background: #027ffd62; */
+    background:linear-gradient(180deg, rgba(0, 123, 255, 0.262) 0%, rgba(35, 179, 215, 0.228) 100%) !important;
+    padding: 150px 0;
+    background-repeat: no-repeat;
+}
+.lead{
+    line-height: 30px !important;
+}
