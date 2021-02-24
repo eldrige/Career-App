@@ -1,0 +1,19 @@
+section{
+    background:#17A0E4;
+    /* height: 50vh; */
+    padding: 180px 0;
+    color: #fff;
+}
+h1{
+    text-transform: uppercase;
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    background: rgb(255, 255, 255);
+}.btn:hover{
+    background: #4CBFE1;
+    color: #fff;
+}

@@ -16,12 +16,13 @@
     font-weight: 900;
     color: #1e0975;
     font-family: 'Lato', sans-serif;
-    
-  
 }
 .hero-text p{
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 16px;
+    /* line-height: 25px; */
+    line-height: 30px !important;
+    font-weight: 300;
+
 }
 .second{
     margin-top: 40px !important;
@@ -30,7 +31,7 @@
     justify-content: space-around;
 
 }
-.col-md-3 {
+.col-md-12 {
     box-shadow: -1px 1px 6px 1px #dfdfdfbf;
     border-radius: 10px;
     padding: 30px 20px;
