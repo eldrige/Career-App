@@ -23,6 +23,7 @@
     "@angular/router": "~11.0.9",
     "bootstrap": "^4.5.3",
     "font-awesome": "^4.7.0",
+    "fusioncharts": "^3.16.0",
     "inspirational-quotes": "^1.0.8",
     "jquery": "^3.5.1",
     "rxjs": "~6.6.3",
