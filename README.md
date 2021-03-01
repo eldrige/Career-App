@@ -50,6 +50,6 @@ To open the application in your broswer.
  ```
  git push -u origin feature/what-you-are-working-on
  
- ```
+ ```  
  Create a pull request and assign either Honorez or Eric as reviewer.
 
