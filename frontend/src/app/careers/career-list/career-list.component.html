@@ -34,7 +34,6 @@
       <div
         class="col-md-3 text-center"
         *ngFor="let career of filteredCareerArray"
-        
       >
         <!-- <img src="assets/icons/scholar.png" alt=""> -->
         <!-- <p class=" career my-4">Career</p> -->
@@ -56,10 +55,15 @@
           </div>
         </div>
         <div class="btn">
-          <button class="btn btn-primary" type="submit" [routerLink]="['/careers', career._id]">Read More</button>
+          <a
+            class="btn btn-primary"
+            type="submit"
+            [routerLink]="['/careers', career._id]"
+          >
+            Read More
+          </a>
         </div>
       </div>
-      
     </div>
   </div>
 </section>

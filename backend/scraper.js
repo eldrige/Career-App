@@ -11,12 +11,17 @@ const fetchAndLoad = (url) => {
       const $ = cheerio.load(html);
       let titleArray = [];
       $('.post.hentry').each((index, element) => {
-        const title = $(element).find('h2').toArray();
-        // .text()
-        // .replace(/\s\s+/g, '');
+        const title = $(element).find('h2').text().replace(/\s\s+/g, '');
 
         const link = $(element).find('a').attr('href');
         // const description = $(element).find('div.resumo').text();
+        // console.log(title);
+
+        // console.log(title.split(" "))
+
+        let funnyArray = title.split(' ');
+
+        let singleJob = funnyArray.reduce((prev, next) => prev + next);
         console.log(title);
 
         // write to json

@@ -11,9 +11,9 @@ const routes: Routes = [
   { path: 'home', component: WelcomeComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'careers', component: CareerListComponent },
+  { path: 'careers/:id', component: CareerDetailsComponent },
   { path: 'jobs', component: JobsComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'careers/:id', component: CareerDetailsComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

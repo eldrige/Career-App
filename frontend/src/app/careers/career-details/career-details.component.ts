@@ -21,9 +21,11 @@ export class CareerDetailsComponent implements OnInit {
 
   // tslint:disable-next-line: typedef
   getCareer() {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
     this.careerServ.getCareer(id).subscribe(
       (response) => {
+        console.log(response, 'from details page');
         this.currentCareer = response;
       },
       (err) => console.error(err)

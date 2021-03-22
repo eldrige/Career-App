@@ -13,7 +13,7 @@ careerRouter.get("/", (req, res) => {
 // @route GET /api/careers/:id
 // @access public
 careerRouter.get("/:id", (req, res) => {
-  let param = +req.params.id;
+  let param = req.params.id;
   const career = careers.find((c) => c._id === param);
   if (career) {
     res.json(career);
