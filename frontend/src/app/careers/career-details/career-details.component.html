@@ -19,13 +19,13 @@
         <span class="badge badge-success mx-1 p-1">Salary: 100k+</span>
         <br /><br />
         <ul class="list-group">
-          <li class="list-group-item">Job Title: hello</li>
-          <li class="list-group-item">Background: you there</li>
+          <li class="list-group-item">{{ currentCareer.title }}</li>
+          <li class="list-group-item">{{ currentCareer.description }}</li>
           <li class="list-group-item" *ngIf="currentCareer.concours">
-            Concours: concour
+            {{ currentCareer.concours }}
           </li>
           <li class="list-group-item" *ngIf="currentCareer.institions">
-            Institutions:hey
+            {{ currentCareer.institions }}
           </li>
         </ul>
       </div>
