@@ -1,25 +1,21 @@
-import express from "express";
+import express from 'express';
+import Career from '../models/careerModel.js';
+import asyncHandler from 'express-async-handler';
 const careerRouter = express.Router();
-import careers from "../data/careers.js";
+// import careers from '../data/careers.js';
 
 // @desc fetch all careers
 // @route GET /api/careers
 // @access public
-careerRouter.get("/", (req, res) => {
-  res.json(careers);
-});
-
+careerRouter.get(
+  '/',
+  asyncHandler(async (req, res) => {
+    const careers = await Career.find({});
+    res.json(careers);
+  })
+);
 // @desc fetch one careers
 // @route GET /api/careers/:id
 // @access public
-careerRouter.get("/:id", (req, res) => {
-  let param = req.params.id;
-  const career = careers.find((c) => c._id === param);
-  if (career) {
-    res.json(career);
-  } else {
-    res.status(404).json({ message: "Career not found" });
-  }
-});
 
 export default careerRouter;

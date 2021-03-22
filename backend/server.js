@@ -3,8 +3,10 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import careerRouter from './routes/careerRoutes.js';
+import connectDB from './config/db.js';
 
 dotenv.config();
+connectDB();
 
 const app = express();
 const PORT = process.env.PORT || 3000;

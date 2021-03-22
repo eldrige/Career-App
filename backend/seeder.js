@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import colors from 'colors';
-import careers from './data/careers.js'
+import careers from './data/careers.js';
 import connectDB from './config/db.js';
 import Career from './models/CareerModel.js';
 
@@ -14,7 +14,7 @@ const importData = async () => {
     // * remove all data from the database
     await Career.deleteMany();
     // * Now insert into a clean database
-    const createdCareers = await Career.insertMany(careers);
+    await Career.insertMany(careers);
 
     // console.log(createdCareers);
     console.log('Data Imported'.green.inverse);
@@ -28,7 +28,7 @@ const importData = async () => {
 const destroyData = async () => {
   try {
     // remove all the data from the database
-    await Career.deleteMany()
+    await Career.deleteMany();
     console.log('Data destroyed!'.green.inverse);
     process.exit();
   } catch (error) {
