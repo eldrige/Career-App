@@ -18,4 +18,17 @@ careerRouter.get(
 // @route GET /api/careers/:id
 // @access public
 
+careerRouter.get(
+  '/:id',
+  asyncHandler(async (req, res) => {
+    const career = await Career.findById(req.params.id);
+
+    if (career) {
+      res.json(career);
+    } else {
+      res.status(404).json({ message: 'Career not found' });
+    }
+  })
+);
+
 export default careerRouter;
