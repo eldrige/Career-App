@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import colors from 'colors';
+// import colors from 'colors';
 import careers from './data/careers.js';
 import connectDB from './config/db.js';
-import Career from './models/CareerModel.js';
+import Career from './models/careerModel.js';
 
 dotenv.config();
 
@@ -17,10 +17,10 @@ const importData = async () => {
     await Career.insertMany(careers);
 
     // console.log(createdCareers);
-    console.log('Data Imported'.green.inverse);
+    console.log('Data Imported');
     process.exit();
   } catch (error) {
-    console.error(`${error}`.red.inverse);
+    console.error(`${error}`);
     process.exit(1);
   }
 };
