@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
-  userForm: FormGroup;
+  signUpForm: FormGroup;
   constructor(
     private userService: UserService,
     public formBuilder: FormBuilder,
     private router: Router,
     private ngZone: NgZone
   ) {
-    this.userForm = this.formBuilder.group({
+    this.signUpForm = this.formBuilder.group({
       name: [''],
       email: [''],
       password: [''],
@@ -27,7 +27,7 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(): any {
-    this.userService.registerUser(this.userForm.value).subscribe(
+    this.userService.registerUser(this.signUpForm.value).subscribe(
       () => {
         console.log('Data added successfully!');
         this.ngZone.run(() => this.router.navigateByUrl('/login'));

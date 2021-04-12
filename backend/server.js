@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 
 app.use(cors());
 
-app.use('/api/users', userRouter);
+app.use('/api/users/', userRouter);
 app.use('/api/careers/', careerRouter);
 
 app.listen(PORT, () => {

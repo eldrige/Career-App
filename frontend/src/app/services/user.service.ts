@@ -24,10 +24,11 @@ export class UserService {
   }
 
   authUser(user): Observable<any> {
-    return this.httpClient.post(
-      `${this.userEndpoint}/login`,
-      JSON.stringify(user)
-    );
+    return this.httpClient
+      .post(`${this.userEndpoint}/login/`, JSON.stringify(user), {
+        headers: this.httpHeaders,
+      })
+      .pipe(catchError(this.handleError));
   }
 
   handleError(error: HttpErrorResponse) {
