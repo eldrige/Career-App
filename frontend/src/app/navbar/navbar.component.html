@@ -1,47 +1,76 @@
-
-
 <header class="bg-dark">
   <div class="container">
     <nav class="navbar navbar-dark navbar-expand-md no-gutters">
       <div class="col-3 text-left">
         <a href="https://www.froala.com">
-          <img src="assets/images/logo-removebg-preview.png" height="100" alt="image">
+          <img
+            src="assets/images/logo-removebg-preview.png"
+            height="100"
+            alt="image"
+          />
         </a>
       </div>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-4" aria-controls="navbarNav15" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse-4"
+        aria-controls="navbarNav15"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse navbar-collapse-4 justify-content-center col-md-6" id="navbarNav15">
+      <div
+        class="collapse navbar-collapse navbar-collapse-4 justify-content-center col-md-6"
+        id="navbarNav15"
+      >
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link"
-            [routerLink]="['/home']" routerLinkActive="router-link-active" 
-            >Home <span class="sr-only">(current)</span></a>
+            <a
+              class="nav-link"
+              [routerLink]="['/home']"
+              routerLinkActive="router-link-active"
+              >Home <span class="sr-only">(current)</span></a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" 
-            [routerLink]="['/careers']" routerLinkActive="router-link-active" 
-            >Careers</a>
+            <a
+              class="nav-link"
+              [routerLink]="['/careers']"
+              routerLinkActive="router-link-active"
+              >Careers</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['jobs']">Jobs</a>
-          </li> <li class="nav-item">
+          </li>
+          <li class="nav-item">
             <a class="nav-link" [routerLink]="['dashboard']">Dashboard</a>
           </li>
-         
         </ul>
       </div>
 
       <div class="collapse navbar-collapse navbar-collapse-4">
         <ul class="navbar-nav ml-auto justify-content-end">
           <li class="nav-item">
-            <a class="nav-link" href="https://www.froala.com">Log In</a>
+            <a
+              class="nav-link"
+              [routerLink]="['/login']"
+              routerLinkActive="active"
+              >Log In</a
+            >
           </li>
         </ul>
 
-        <a class="btn btn-primary ml-md-3" href="https://www.froala.com">Register</a>
+        <a
+          class="btn btn-primary ml-md-3"
+          routerLinkActive="active"
+          [routerLink]="['/sign-up']"
+          >Register</a
+        >
       </div>
     </nav>
   </div>

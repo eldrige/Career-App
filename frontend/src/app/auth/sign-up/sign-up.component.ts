@@ -1,0 +1,40 @@
+import { UserService } from './../../services/user.service';
+import { Component, OnInit, NgZone } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.css'],
+})
+export class SignUpComponent implements OnInit {
+  userForm: FormGroup;
+  constructor(
+    private userService: UserService,
+    public formBuilder: FormBuilder,
+    private router: Router,
+    private ngZone: NgZone
+  ) {
+    this.userForm = this.formBuilder.group({
+      name: [''],
+      email: [''],
+      password: [''],
+    });
+  }
+  ngOnInit(): void {
+    console.log('hey there');
+  }
+
+  onSubmit(): any {
+    this.userService.registerUser(this.userForm.value).subscribe(
+      () => {
+        console.log('Data added successfully!');
+        this.ngZone.run(() => this.router.navigateByUrl('/login'));
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+}
