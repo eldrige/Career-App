@@ -1,20 +1,44 @@
-<div class="hero-text container my-5">
-  <h1>Most In Demand Jobs in Cameroon</h1>
+<div
+  class="dez-bnr-inr overlay-black-middle"
+  style="background-image: url(assets/images/find.jpg)"
+>
+  <div class="container">
+    <div class="dez-bnr-inr-entry hero-text">
+      <!-- <h1 class="text-white">Job Detail</h1> -->
+      <h1>Most In Demand Jobs in Cameroon</h1>
 
-  <p>
+      <!-- Breadcrumb row -->
+      <div class="breadcrumb-row">
+        <ul class="list-inline">
+          <li><a href="#">Home</a></li>
+          <li>Jobs</li>
+        </ul>
+      </div>
+      <!-- Breadcrumb row END -->
+    </div>
+  </div>
+</div>
+
+<div class="hero-text container my-5">
+  <!-- <h1>Most In Demand Jobs in Cameroon</h1> -->
+
+  <h2>
     Click on a career to discover the possible institutions you can take to
     pursue a path in that career
-  </p>
+  </h2>
   <div class="center-input">
     <input
       type="text"
       placeholder="Enter a job to find its path"
-      class="form-control my-3"
+      class="form-control mt-3 mb-2 p-4"
       [(ngModel)]="listFilter"
     />
+    <div class="input-group-prepend text-center justify-content-center mb-2">
+      <button class="btn btn-primary site-button">Search</button>
+    </div>
   </div>
 
-  <p>Filtered By: {{ listFilter }}</p>
+  <h2>Filtered By: {{ listFilter }}</h2>
 
   <!-- <ul class="list-group">
     <li
@@ -31,37 +55,44 @@
 <section class="main">
   <div class="container">
     <div class="second row">
-      <div
-        class="col-md-3 text-center"
-        *ngFor="let career of filteredCareerArray"
-      >
-        <!-- <img src="assets/icons/scholar.png" alt=""> -->
-        <!-- <p class=" career my-4">Career</p> -->
-        <!-- <p class="career my4">{{ career.title }}</p>
-        <button class="btn btn-primary" [routerLink]="['/careers', career._id]" routerLinkActive="router-link-active">Read More</button> -->
+      <!-- <div class="col-md-3 text-center" *ngFor="let career of filteredCareerArray">
 
-        <div id="career-list">
-          <div class="career-article">
-            <div class="career-title vision">
-              <div>
-                <!-- <img src="{{career.image_url }}" alt="binocular icon"> -->
-                <h3>{{ career.title }}</h3>
+                <div id="career-list">
+                    <div class="career-article">
+                        <div class="career-title vision">
+                            <div>
+                                <h3>{{ career.title }}</h3>
+                            </div>
+                        </div>
+                        <div class="career-content">
+                            <h4>{{ career.title }}</h4>
+                            <p>{{ career.background }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="btn btn-primary" type="submit" [routerLink]="['/careers', career._id]">Read More</button>
+                </div>
+            </div> -->
+
+      <div class="container">
+        <div class="row align-middle">
+          <div
+            class="col-md-6 col-lg-4 column"
+            *ngFor="let career of filteredCareerArray"
+          >
+            <div class="card gr-1">
+              <div class="txt">
+                <!-- <h3>{{ career.title }}</h3> -->
+                <h1>{{ career.title }}</h1>
+                <p>{{ career.title }}</p>
+              </div>
+              <a href="#" [routerLink]="['/careers', career._id]">more</a>
+              <div class="ico-card">
+                <i class="fa fa-rebel"></i>
               </div>
             </div>
-            <div class="career-content">
-              <h4>{{ career.title }}</h4>
-              <p>{{ career.background }}</p>
-            </div>
           </div>
-        </div>
-        <div class="btn">
-          <a
-            class="btn btn-primary"
-            type="submit"
-            [routerLink]="['/careers', career._id]"
-          >
-            Read More
-          </a>
         </div>
       </div>
     </div>
