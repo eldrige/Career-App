@@ -1,21 +1,27 @@
 import express from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import cors from 'cors'
-const app = express();
+import cors from 'cors';
 import careerRouter from './routes/careerRoutes.js';
-dotenv.config();
-app.use(morgan('dev'));
+import userRouter from './routes/userRoutes.js';
+import connectDB from './config/db.js';
 
-const PORT = process.env.PORT || 3000
+dotenv.config();
+connectDB();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
   res.send('API is running');
 });
 
-
 app.use(cors());
 
+app.use('/api/users/', userRouter);
 app.use('/api/careers/', careerRouter);
 
 app.listen(PORT, () => {
