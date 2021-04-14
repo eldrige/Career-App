@@ -7,7 +7,19 @@ The application serves data on the most in careers in Cameroon. Furthermore it p
 
 ## Development server
 
-To run the application , you will need to install npm packages. 
+Create an env file with the following details
+```
+PORT = 3000;
+MONGO_URI = mongodb://127.0.0.1/Jongleur
+JWT_SECRET =abc123
+```
+Import the data by running the command
+```
+npm run data:import
+```
+
+To run the application , you will need to install npm packages.
+
 Type 
 
 ```
@@ -21,6 +33,8 @@ When the installation is complete, you can now run
 npm run launch
 
 ``` 
+
+
 To open the application in your broswer.
 
 ## Contributing
