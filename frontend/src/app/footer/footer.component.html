@@ -1,48 +1,56 @@
 <footer class="fdb-block footer-large bg-dark text-white">
-    <div class="container">
-        <div class="row align-items-top text-center">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-sm-left">
-                <h3><strong>Hot Links</strong></h3>
-                <nav class="nav flex-column">
-                    <a class="nav-link active" href="">Home</a>
-                    <a class="nav-link" [routerLink]="['/careers']">Features</a>
-                    <a class="nav-link" [routerLink]="['/careers']">Pricing</a>
-                    <a class="nav-link" [routerLink]="['/careers']">Team</a>
-                    <a class="nav-link" [routerLink]="['/careers']">Contact Us</a>
-                </nav>
-            </div>
+  <div class="container">
+    <div class="row align-items-top text-center">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-sm-left">
+        <h3><strong>Hot Links</strong></h3>
+        <nav class="nav flex-column">
+          <a class="nav-link active" routerLink = '/home'>Home</a>
+          <a class="nav-link" [routerLink]="['/home']">Team</a>
+          <a class="nav-link" [routerLink]="['/home']">Contact Us</a>
+        </nav>
+      </div>
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-sm-0 text-sm-left">
-                <h3><strong>Why we are so true</strong></h3>
-                <nav class="nav flex-column">
-                    <a class="nav-link active" href="#">Privacy Policy</a>
-                    <a class="nav-link" href="#">Terms</a>
-                    <a class="nav-link" href="#">FAQ</a>
-                    <a class="nav-link" href="#">Support</a>
-                </nav>
-            </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-sm-0 text-sm-left">
+        <h3><strong>Why we are so true</strong></h3>
+        <nav class="nav flex-column">
+          <a
+            class="nav-link"
+            routerLink="/policies"
+            routerLinkActive="router-link-active"
+            >Terms and Privacy Policy</a
+          >
+          <a class="nav-link" href="#">FAQ</a>
+          <a class="nav-link" href="#">Support</a>
+        </nav>
+      </div>
 
-            <div class="col-12 col-md-4 col-lg-3 text-md-left mt-5 mt-md-0">
-                <h3><strong>About Us</strong></h3>
-                <p>Jongleur is a Cameroon platform that solves the problem of career orientation, showing you the next to take</p>
-            </div>
+      <div class="col-12 col-md-4 col-lg-3 text-md-left mt-5 mt-md-0">
+        <h3><strong>About Us</strong></h3>
+        <p>
+          Jongleur is a Cameroon platform that solves the problem of career
+          orientation, showing you the next to take
+        </p>
+      </div>
 
-            <div class="col-12 col-lg-2 ml-auto text-lg-left mt-4 mt-lg-0">
-                <h3><strong>Follow Us</strong></h3>
-                <p class="lead">
-                    <a href="#" class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="h#" class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                   
-                    
-                    <a href="#" class="mx-2"><i class="fa fa-google" aria-hidden="true"></i></a>
-                </p>
-            </div>
-        </div>
+      <div class="col-12 col-lg-2 ml-auto text-lg-left mt-4 mt-lg-0">
+        <h3><strong>Follow Us</strong></h3>
+        <p class="lead">
+          <a href="#" class="mx-2"
+            ><i class="fa fa-twitter" aria-hidden="true"></i
+          ></a>
+          <a href="h#" class="mx-2"
+            ><i class="fa fa-facebook" aria-hidden="true"></i
+          ></a>
 
-        <div class="row mt-3">
-            <div class="col text-center">
-                © 2021 Jongluer. All Rights Reserved
-            </div>
-        </div>
+          <a href="#" class="mx-2"
+            ><i class="fa fa-google" aria-hidden="true"></i
+          ></a>
+        </p>
+      </div>
     </div>
+
+    <div class="row mt-3">
+      <div class="col text-center">© 2021 Jongluer. All Rights Reserved</div>
+    </div>
+  </div>
 </footer>
