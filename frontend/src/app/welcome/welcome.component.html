@@ -1,29 +1,28 @@
 <div class="main">
-    <section class="container2">
-        <div class="container text-white">
-            <div class="row hero-text mt-5">
-                <div class="col-md-6 searchbar">
-                    <h1 class="display-4 mt-5">
-                        Find the perfect career to briss in Cameroon
-                    </h1>
+  <section class="container2">
+    <div class="container text-white">
+      <div class="row hero-text mt-5">
+        <div class="col-md-6 searchbar">
+          <h1 class="display-4 mt-5">
+            Find the perfect career to briss in Cameroon
+          </h1>
 
-                    <p class="author mt-5">
-                        {{quoteObject.text}}
-                        <i> {{quoteObject.author}}
-                        </i>
-                    </p>
-                    <button class="btn site-button">Get Started</button>
-                </div>
-                <div class="vector col-md-6">
-                    <img src="/assets/images/vector.png" alt="">
-                </div>
-
-            </div>
+          <p class="author mt-5">
+            {{ quoteObject.text }}
+            <i> {{ quoteObject.author }} </i>
+          </p>
+          <button class="btn site-button" [routerLink]="['/careers']">
+            Get Started
+          </button>
         </div>
+        <div class="vector col-md-6">
+          <img src="/assets/images/vector.png" alt="" />
+        </div>
+      </div>
+    </div>
 
-
-        <div class="wave"></div>
-    </section>
+    <div class="wave"></div>
+  </section>
 </div>
 <app-header></app-header>
 <app-career-explained></app-career-explained>
