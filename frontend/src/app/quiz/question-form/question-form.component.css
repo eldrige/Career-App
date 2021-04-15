@@ -1,0 +1,26 @@
+.question-form-container {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+mat-card-content {
+    font-size: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+.choice-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+
+
+
+input {
+  margin-right: 10px;
+}

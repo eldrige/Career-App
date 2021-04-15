@@ -1,10 +1,18 @@
+import { QuestionFormComponent } from './quiz/question-form/question-form.component';
+import { WelcomeQuizComponent } from './quiz/welcome/welcome.component';
+import { ResultsComponent } from './quiz/results/results.component';
+import { QuestionsComponent } from './quiz/questions/questions.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 import { MaterialModule } from './shared/material-module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+// import { QuizModule } from './quiz/quiz.module';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -42,6 +50,10 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
     JobExplainedComponent,
     LoginComponent,
     SignUpComponent,
+    ResultsComponent,
+    QuestionsComponent,
+    WelcomeQuizComponent,
+    QuestionFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +63,9 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
     // BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

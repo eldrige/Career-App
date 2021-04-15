@@ -1,3 +1,5 @@
+import { QuestionsComponent } from './quiz/questions/questions.component';
+import { WelcomeQuizComponent } from './quiz/welcome/welcome.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { CareerDetailsComponent } from './careers/career-details/career-details.component';
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'careers/:id', component: CareerDetailsComponent },
   { path: 'jobs', component: JobsComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'quiz', component: WelcomeQuizComponent },
+  { path: ':quizId', component: QuestionsComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', component: NotFoundComponent },

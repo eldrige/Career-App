@@ -1,0 +1,38 @@
+.results-container {
+  max-width: 800px;
+  margin: 8px auto;
+}
+
+.answer {
+  font-size: 20px;
+  margin-bottom: 10px;
+  background-color: var(--false-color);
+  padding: 5px 8px;
+}
+
+.correct {
+  background-color: var(--correct-color);
+  padding: 8px;
+}
+
+.question-repeat {
+  font-weight: bold;
+}
+
+.your-answer {
+  font-style: italic;
+}
+
+.wrong-right {
+  font-weight: bold;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+button {
+  font-size: 20px;
+}
