@@ -1,7 +1,3 @@
-import { QuestionFormComponent } from './quiz/question-form/question-form.component';
-import { WelcomeQuizComponent } from './quiz/welcome/welcome.component';
-import { ResultsComponent } from './quiz/results/results.component';
-import { QuestionsComponent } from './quiz/questions/questions.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -50,10 +46,6 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
     JobExplainedComponent,
     LoginComponent,
     SignUpComponent,
-    ResultsComponent,
-    QuestionsComponent,
-    WelcomeQuizComponent,
-    QuestionFormComponent,
   ],
   imports: [
     BrowserModule,
