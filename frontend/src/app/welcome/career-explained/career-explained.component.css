@@ -17,3 +17,11 @@ h1{
     background: #4CBFE1;
     color: #fff;
 }
+
+@media screen  and (max-width: 400px){
+   
+    .hero-text{
+        margin-top: 180px;
+    }
+   
+}

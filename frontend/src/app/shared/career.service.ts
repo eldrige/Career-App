@@ -17,7 +17,7 @@ export class CareerService {
     return this.http.get<ICareer[]>(this.careerDataUrl);
   }
 
-  getCareer(id: Number): Observable<ICareer> {
+  getCareer(id: String): Observable<ICareer> {
     return this.getCareers().pipe(
       map(careers => careers.find((career) => career._id === id))
     );

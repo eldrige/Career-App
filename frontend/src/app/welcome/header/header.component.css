@@ -14,14 +14,18 @@
     line-height: 50px;
     text-transform: capitalize;
     font-weight: 900;
-    color: #1e0975;
+    color: #007BFF;
     font-family: 'Lato', sans-serif;
 }
 .hero-text p{
+    font-weight: 400;
     font-size: 16px;
-    /* line-height: 25px; */
+    font-family: 'Lato', sans-serif;
     line-height: 30px !important;
-    font-weight: 300;
+}
+.cad{
+    font-size: 14px;
+    text-align: center;
 
 }
 .second{
@@ -35,18 +39,19 @@
     box-shadow: -1px 1px 6px 1px #dfdfdfbf;
     border-radius: 10px;
     padding: 30px 20px;
+    /* text-align: center; */
 }
 
 .career{
     font-size: 20px;
     text-transform: capitalize;
     font-weight: 600;
-    color: #1e0975;
+    color: #007BFF;
     font-family: 'Lato', sans-serif;
 }
 .second p:nth-child(3){
     color: #4d587a;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-family: 'lato', sans-serif;
+    font-size: 16px;
 
 }

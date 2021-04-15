@@ -9,18 +9,26 @@
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
     "launch": "concurrently \"npm run server\" \"npm run client\"",
-    "dep": "npm install && cd frontend && npm install"
+    "dep": "npm install && cd frontend && npm install",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
   },
   "author": "peldrige8",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "cheerio": "^1.0.0-rc.5",
+    "colors": "^1.4.0",
     "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.11",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "request": "^2.88.2",
+    "requests": "^0.3.0"
   }
 }

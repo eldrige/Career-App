@@ -1,8 +1,8 @@
 import { MaterialModule } from './shared/material-module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,8 +20,8 @@ import { TeamComponent } from './welcome/team/team.component';
 import { SubscribeComponent } from './welcome/subscribe/subscribe.component';
 import { CareerExplainedComponent } from './welcome/career-explained/career-explained.component';
 import { JobExplainedComponent } from './welcome/job-explained/job-explained.component';
-
-
+import { LoginComponent } from './auth/login/login.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +40,8 @@ import { JobExplainedComponent } from './welcome/job-explained/job-explained.com
     SubscribeComponent,
     CareerExplainedComponent,
     JobExplainedComponent,
+    LoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,9 +49,10 @@ import { JobExplainedComponent } from './welcome/job-explained/job-explained.com
     FormsModule,
     HttpClientModule,
     // BrowserAnimationsModule,
-     MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

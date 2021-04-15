@@ -1,43 +1,57 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); */
 
-.main{
+
+/* search */
+
+
+/* search */
+
+.main {
     margin: 0 0 100px 0;
     /* height: 100vh; */
     /* padding: 50px 0; */
 }
-.hero-text{
+
+.hero-text {
     /* background: #000; */
     padding: 20px;
 }
-.hero-text h1{
-    font-size: 38px;
+
+.hero-text h1 {
+    font-size: 45px;
     line-height: 50px;
     text-transform: capitalize;
-    font-weight: 900;
-    color: #1e0975;
+    font-weight: 600;
+    color: #ffffff;
     font-family: 'Lato', sans-serif;
-    text-align: center;  
-}
-.hero-text p{
-    font-size: 16px;
-    line-height: 25px;
     text-align: center;
 }
-.second{
+
+.hero-text h2 {
+    font-size: 20px;
+    line-height: 50px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    text-align: center;
+}
+
+.second {
     margin-top: 40px !important;
     /* background: #000 !important; */
     display: flex;
     justify-content: space-around;
-
 }
+
 .col-md-3 {
     box-shadow: -1px 1px 6px 1px #dfdfdfbf;
     border-radius: 10px;
     padding: 30px 20px;
-    margin:20px 2px;
+    margin: 20px 2px;
 }
 
-.career{
+.career {
     font-size: 16px;
     text-transform: capitalize;
     font-weight: 400;
@@ -45,37 +59,40 @@
     font-family: 'Lato', sans-serif;
     padding: 20px;
 }
-.second p:nth-child(3){
+
+.second p:nth-child(3) {
     color: #4d587a;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
-button{
+
+button {
     transition: 0.7s;
 }
-button:hover{
+
+button:hover {
     background: #FFC108;
     color: #000;
     border: 1px solid #FFC108;
     transition: ease-in-out 0.7s;
-
 }
-input{
+
+input {
     width: 100%;
 }
-input:focus{
+
+input:focus {
     border: 1px solid var(--primary);
     box-shadow: none;
 }
-.center-input{
+
+.center-input {
     width: 70%;
     margin: 0 auto;
-    
 }
 
+
 /* New Career Css */
-
-
 
 .career {
     /* width: 100%; */
@@ -90,16 +107,18 @@ input:focus{
     margin-bottom: 30px;
     justify-content: space-between;
 }
+
 .career-article {
     width: 100%;
     height: 300px;
-    
 }
+
 .career-title {
     /* width: 100%; */
     height: 100%;
     transition-duration: 1s;
 }
+
 .career-article:hover .career-title div {
     padding: 0;
     text-align: center;
@@ -107,8 +126,9 @@ input:focus{
     align-content: center;
     transition-duration: .3s;
     background-color: #f89523d7;
-    box-shadow: 4px 4px 1px 1px  hsl(240, 3%, 28%);
+    box-shadow: 4px 4px 1px 1px hsl(240, 3%, 28%);
 }
+
 .career-article:hover .career-title img {
     width: 60%;
     margin: 0 auto;
@@ -120,11 +140,13 @@ input:focus{
     height: 60px;
     transition-duration: .3s;
 }
+
 .career-article:hover .career-title h3 {
     margin: 0;
     display: none;
     transition-duration: .3s;
 }
+
 .vision {
     background: url("/assets/images/car5.jpg");
     background-size: cover;
@@ -141,16 +163,19 @@ input:focus{
     align-content: center;
     transition-duration: 1s;
 }
+
 .career-title img {
     width: 30%;
     margin: 0 auto;
     transition-duration: .3s;
 }
+
 .career-title h3 {
     margin-top: 20px;
     font-size: 40px;
     transition-duration: .3s;
 }
+
 .career-content {
     width: 85%;
     height: 240px;
@@ -160,19 +185,159 @@ input:focus{
     border-right: 2px solid #eee;
     display: none;
     transition-duration: 1s;
-    box-shadow: 4px 4px 1px 1px  hsl(240, 3%, 28%);
+    box-shadow: 4px 4px 1px 1px hsl(240, 3%, 28%);
 }
+
 .career-article:hover .career-content {
     display: block;
     transition-duration: 1s;
 }
+
 .career-content h4 {
     font-size: 25px;
     padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: 1px solid #f89623;
 }
+
 .career-content p {
     font-size: 18px;
     line-height: 1.5;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+.gr-1 {
+    background: linear-gradient(170deg, #01e4f8 0%, #1d3ede 100%);
+}
+
+.gr-2 {
+    background: linear-gradient(170deg, #b4ec51 0%, #429321 100%);
+}
+
+.gr-3 {
+    background: linear-gradient(170deg, #c86dd7 0%, #3023ae 100%);
+}
+
+* {
+    transition: 0.5s;
+}
+
+.h-100 {
+    height: 100vh !important;
+}
+
+.align-middle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.column {
+    margin-top: 3rem;
+    padding-left: 3rem;
+}
+
+.column:hover {
+    padding-left: 0;
+}
+
+.column:hover .card .txt {
+    margin-left: 1rem;
+}
+
+.column:hover .card .txt h1,
+.column:hover .card .txt p {
+    color: rgba(255, 255, 255, 1);
+    opacity: 1;
+    font-weight: bold;
+}
+
+.column:hover a {
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+
+.column:hover a:after {
+    width: 10%;
+    font-weight: bold;
+}
+
+.card {
+    min-height: 170px;
+    margin: 0;
+    padding: 1.7rem 1.2rem;
+    border: none;
+    border-radius: 0;
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: 0.05rem;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 0 0 21px rgba(0, 0, 0, .27);
+}
+
+.card .txt {
+    margin-left: -3rem;
+    z-index: 1;
+}
+
+.card .txt h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card .txt p {
+    font-size: 0.7rem;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0rem;
+    margin-top: 33px;
+    opacity: 0;
+    color: rgb(0, 0, 0);
+}
+
+.card a {
+    z-index: 3;
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 1);
+    margin-left: 1rem;
+    position: relative;
+    bottom: -0.5rem;
+    text-transform: uppercase;
+}
+
+.card a:after {
+    content: "";
+    display: inline-block;
+    height: 0.5em;
+    width: 0;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    transition: 0.5s;
+}
+
+.card .ico-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card i {
+    position: relative;
+    right: -50%;
+    top: 60%;
+    font-size: 12rem;
+    line-height: 0;
+    opacity: 0.2;
+    color: rgba(255, 255, 255, 1);
+    z-index: 0;
 }

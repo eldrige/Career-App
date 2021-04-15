@@ -1,8 +1,8 @@
 export interface ICareer {
-  _id: number;
+  _id: string;
   title: string;
   background: string;
   concours?: string[];
   institions?: string[];
-  description: string
+  description: string;
 }

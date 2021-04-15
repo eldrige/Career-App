@@ -1,25 +1,10 @@
-import express from "express";
-const careerRouter = express.Router();
-import careers from "../data/careers.js";
+import express from 'express';
 
-// @desc fetch all careers
-// @route GET /api/careers
-// @access public
-careerRouter.get("/", (req, res) => {
-  res.json(careers);
-});
+const router = express.Router();
+import { getCareers, getCareerById } from '../controllers/careerController.js';
 
-// @desc fetch one careers
-// @route GET /api/careers/:id
-// @access public
-careerRouter.get("/:id", (req, res) => {
-  let param = +req.params.id;
-  const career = careers.find((c) => c._id === param);
-  if (career) {
-    res.json(career);
-  } else {
-    res.status(404).json({ message: "Career not found" });
-  }
-});
+router.route('/').get(getCareers);
+//  ? this is equivalent to router.get('/', getProducts)
+router.route('/:id').get(getCareerById);
 
-export default careerRouter;
+export default router;

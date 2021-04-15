@@ -23,3 +23,6 @@ describe('NavbarComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+// styling the navbar
+
