@@ -1,4 +1,4 @@
-<div class="row justify-content-center mt-5">
+<div class="row justify-content-center reggis">
   <div class="col-md-4">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
@@ -7,6 +7,7 @@
           class="form-control"
           type="email"
           formControlName="email"
+          placeholder="email"
           required
         />
       </div>
@@ -17,6 +18,7 @@
           class="form-control"
           type="password"
           formControlName="password"
+          placeholder="password"
           required
         />
       </div>
@@ -24,11 +26,11 @@
       <div class="form-group">
         <button class="btn btn-primary btn-block" type="submit">Sign In</button>
       </div>
-      <div>
-        No Account ?
+      <!-- <div>
+        <p class="text-right">No Account ?</p>
         <h5>Sign In</h5>
         Instead
-      </div>
+      </div> -->
     </form>
   </div>
 </div>
