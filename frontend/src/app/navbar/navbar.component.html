@@ -1,112 +1,3 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-2">
-  <a class="navbar-brand" href="#">Jongleur</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home <span
-            class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/careers']" routerLinkActive="router-link-active">Careers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['jobs']">Jobs</a>
-      </li>
-      <li class="nav-item">
-      </li>
-    </ul>
-  </div>
-</nav> -->
-
-<!-- <header class="bg-dark">
-  <div class="container">
-    <nav class="navbar navbar-dark navbar-expand-md no-gutters">
-      <div class="col-3 text-left">
-        <a href="https://www.froala.com">
-          <img
-            src="assets/images/logo-removebg-preview.png"
-            height="100"
-            alt="image"
-          />
-        </a>
-      </div>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-4"
-        aria-controls="navbarNav15" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div
-        class="collapse navbar-collapse navbar-collapse-4 justify-content-center col-md-6"
-        id="navbarNav15"
-      >
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home <span
-                class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/careers']" routerLinkActive="router-link-active">Careers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['jobs']">Jobs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['dashboard']">Dashboard</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="collapse navbar-collapse navbar-collapse-4">
-        <ul class="navbar-nav ml-auto justify-content-end">
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              [routerLink]="['/login']"
-              routerLinkActive="active"
-              >Log In</a
-            >
-          </li>
-        </ul>
-
-        <a
-          class="btn btn-primary ml-md-3"
-          routerLinkActive="active"
-          [routerLink]="['/sign-up']"
-          >Register</a
-        >
-      </div>
-    </nav>
-  </div>
-</header> -->
-
-<!-- <header>
-    <img src="https://codetheweb.blog/assets/img/icon2.png">
-    <nav>
-        <ul>
-            <li>
-                <a class="nav-link logo" [routerLink]="['/home']" routerLinkActive="router-link-active">Home <span
-            class="sr-only">(current)</span></a>
-            </li>
-            <li>
-                <a class="nav-link" [routerLink]="['/careers']" routerLinkActive="router-link-active">Careers</a>
-            </li>
-            <li>
-                <a class="nav-link" [routerLink]="['jobs']">Jobs</a>
-            </li>
-            <li>
-                <a class="nav-link" [routerLink]="['dashboard']">Dashboard</a>
-            </li>
-            <li> <a href="#">Contact</a>
-            </li>
-        </ul>
-    </nav>
-</header> -->
-
 <header class="site-header mo-left header fullwidth">
   <!-- main header -->
   <div class="sticky-header main-bar-wraper navbar-expand-lg is-fixed">
@@ -149,8 +40,12 @@
         <!-- extra nav -->
         <div class="extra-nav">
           <div class="extra-cell">
-            <a href="register.html" class="site-button"
-              ><i class="fa fa-user"></i> Contact</a
+            <a
+              href="register.html"
+              class="site-button"
+              [routerLink]="['/sign-up']"
+              routerLinkActive="router-link-active"
+              ><i class="fa fa-user"></i> Register</a
             >
             <!-- <a href="login.html" class="site-button"><i class="fa fa-lock"></i> login</a> -->
           </div>
@@ -198,7 +93,7 @@
               >
             </li>
             <li>
-              <a [routerLink]="['dashboard']">Dashboard</a>
+              <a [routerLink]="['dashboard']">Scholarships</a>
             </li>
           </ul>
         </div>
