@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
-:root{
-    --primary: #fffff
+:root {
+  --false-color: #ff8080;
+  --correct-color: #66b266;
 }
