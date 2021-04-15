@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import careerRouter from './routes/careerRoutes.js';
 import userRouter from './routes/userRoutes.js';
+import jobRouter from './routes/jobRoutes.js';
 import connectDB from './config/db.js';
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.use(cors());
 
 app.use('/api/users/', userRouter);
 app.use('/api/careers/', careerRouter);
+app.use('/api/jobs/', jobRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
