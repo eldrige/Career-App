@@ -5,26 +5,9 @@
       <div class="container clearfix">
         <!-- website logo -->
         <div class="logo-header mostion">
-          
-          <!-- <a href="index-2.html"
-            ><img src="images/logo.png" class="logo" alt="" />
-            <h1 class="logo-span">
-              <span>&#123;</span>
-              <span>J</span>
-              <span>O</span>
-              <span>N</span>
-              <span>G</span>
-              <span>L</span>
-              <span>E</span>
-              <span>U</span>
-              <span>R</span>
-              <span>&#125;</span>
-            </h1>
-          </a> -->
           <!-- <a class="nav-link logo" [routerLink]="['/home']" routerLinkActive="router-link-active"><img src="assets/images/logo.png" class="logo" width="10px" alt=""><span class="sr-only">(current)</span></a> -->
         </div>
-        <!-- nav toggle button -->
-        <!-- nav toggle button -->
+
         <button
           class="navbar-toggler collapsed navicon justify-content-end"
           type="button"
@@ -88,13 +71,17 @@
                                 <li><a [routerLink]="['/careers']" routerLinkActive="router-link-active" class="dez-page">Browse Job</a></li>
                             </ul> -->
             </li>
-            <li>
-              <a [routerLink]="['jobs']" routerLinkActive="router-link-active"
-                >Jobs</a
-              >
+            <li *ngIf="user">
+              <a [routerLink]="['jobs']" routerLinkActive="router-link-active">
+                {{ user.name }}
+              </a>
             </li>
             <li>
-              <a [routerLink]="['dashboard']">Scholarships</a>
+              <a
+                [routerLink]="['/dashboard']"
+                routerLinkActive="router-link-active"
+                >Scholarships</a
+              >
             </li>
           </ul>
         </div>
