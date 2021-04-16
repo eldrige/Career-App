@@ -6,3 +6,9 @@ export interface ICareer {
   institions?: string[];
   description: string;
 }
+
+export interface IQuestion {
+  question: string;
+  options: String[];
+  answer: string;
+}

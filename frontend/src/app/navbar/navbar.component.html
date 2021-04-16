@@ -5,26 +5,9 @@
       <div class="container clearfix">
         <!-- website logo -->
         <div class="logo-header mostion">
-          
-          <!-- <a href="index-2.html"
-            ><img src="images/logo.png" class="logo" alt="" />
-            <h1 class="logo-span">
-              <span>&#123;</span>
-              <span>J</span>
-              <span>O</span>
-              <span>N</span>
-              <span>G</span>
-              <span>L</span>
-              <span>E</span>
-              <span>U</span>
-              <span>R</span>
-              <span>&#125;</span>
-            </h1>
-          </a> -->
           <!-- <a class="nav-link logo" [routerLink]="['/home']" routerLinkActive="router-link-active"><img src="assets/images/logo.png" class="logo" width="10px" alt=""><span class="sr-only">(current)</span></a> -->
         </div>
-        <!-- nav toggle button -->
-        <!-- nav toggle button -->
+
         <button
           class="navbar-toggler collapsed navicon justify-content-end"
           type="button"
@@ -42,11 +25,25 @@
         <div class="extra-nav">
           <div class="extra-cell">
             <a
-              href="register.html"
+              *ngIf="user"
+              class="site-button"
+              [routerLink]="['/dashboard']"
+              routerLinkActive="router-link-active"
+              ><i class="fa fa-user"></i> {{ user.name }}</a
+            >
+            <a
+              *ngIf="!user"
               class="site-button"
               [routerLink]="['/sign-up']"
               routerLinkActive="router-link-active"
               ><i class="fa fa-user"></i> Register</a
+            >
+            <a
+              *ngIf="!user"
+              class="site-button"
+              [routerLink]="['/login']"
+              routerLinkActive="router-link-active"
+              ><i class="fa fa-user"></i> Login</a
             >
             <!-- <a href="login.html" class="site-button"><i class="fa fa-lock"></i> login</a> -->
           </div>
@@ -94,7 +91,11 @@
               >
             </li>
             <li>
-              <a [routerLink]="['dashboard']">Scholarships</a>
+              <a
+                [routerLink]="['/dashboard']"
+                routerLinkActive="router-link-active"
+                >Scholarships</a
+              >
             </li>
           </ul>
         </div>

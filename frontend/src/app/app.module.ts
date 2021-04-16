@@ -1,3 +1,5 @@
+import { QuestionComponent } from './test/question/question.component';
+import { QuizComponent } from './test/quiz/quiz.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -8,7 +10,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 // import { QuizModule } from './quiz/quiz.module';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -46,6 +47,8 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
     JobExplainedComponent,
     LoginComponent,
     SignUpComponent,
+    QuestionComponent,
+    QuizComponent,
   ],
   imports: [
     BrowserModule,
