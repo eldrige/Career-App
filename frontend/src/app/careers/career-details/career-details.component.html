@@ -95,22 +95,23 @@
                   </strong>
                 </li>
               </ul>
-              <h3 class="p-t30" *ngIf="currentCareer.concours">
+              <h3 class="p-t30" *ngIf="currentCareer.concours.length !== 0">
                 <strong> Concours: </strong>
                 {{ currentCareer.concours }}
               </h3>
               <!-- <h5 class="font-weight-600">Job Description</h5> -->
               <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div>
-              <h2 *ngIf="currentCareer.institions">
-                Institutions: {{ currentCareer.institions }}
-              </h2>
+              <h2 *ngIf="currentCareer.institutions">Institutions:</h2>
+              <p>
+                {{ currentCareer.institutions }}
+              </p>
               <!-- <h5 class="font-weight-600">How to Apply</h5> -->
               <!-- <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div> -->
               <p>
                 {{ currentCareer.description }}
               </p>
-              <h5 class="display-3">
-                The ideal {{ currentCareer.title }} should
+              <h5 class="font-weight-900">
+                An aspiring {{ currentCareer.title }} should
               </h5>
               <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div>
               <ul class="list-num-count no-round">
