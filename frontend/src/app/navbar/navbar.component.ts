@@ -14,4 +14,8 @@ export class NavbarComponent implements OnInit {
       ? JSON.parse(localStorage.getItem('currentUser'))
       : false;
   }
+
+  logout() {
+    localStorage.removeItem('currentUser');
+  }
 }

@@ -25,11 +25,25 @@
         <div class="extra-nav">
           <div class="extra-cell">
             <a
-              href="register.html"
+              *ngIf="user"
+              class="site-button"
+              [routerLink]="['/dashboard']"
+              routerLinkActive="router-link-active"
+              ><i class="fa fa-user"></i> {{ user.name }}</a
+            >
+            <a
+              *ngIf="!user"
               class="site-button"
               [routerLink]="['/sign-up']"
               routerLinkActive="router-link-active"
               ><i class="fa fa-user"></i> Register</a
+            >
+            <a
+              *ngIf="!user"
+              class="site-button"
+              [routerLink]="['/login']"
+              routerLinkActive="router-link-active"
+              ><i class="fa fa-user"></i> Login</a
             >
             <!-- <a href="login.html" class="site-button"><i class="fa fa-lock"></i> login</a> -->
           </div>
@@ -71,10 +85,10 @@
                                 <li><a [routerLink]="['/careers']" routerLinkActive="router-link-active" class="dez-page">Browse Job</a></li>
                             </ul> -->
             </li>
-            <li *ngIf="user">
-              <a [routerLink]="['jobs']" routerLinkActive="router-link-active">
-                {{ user.name }}
-              </a>
+            <li>
+              <a [routerLink]="['jobs']" routerLinkActive="router-link-active"
+                >Jobs</a
+              >
             </li>
             <li>
               <a
