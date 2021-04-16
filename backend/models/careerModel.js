@@ -6,11 +6,12 @@ const careerSchema = mongoose.Schema({
     required: true,
     unique: true,
   },
+  background: String,
   image_url: {
     type: String,
   },
   concours: [{ type: String }],
-  instiitions: [{ type: String }],
+  institutions: [{ type: String }],
   description: {
     type: String,
   },
