@@ -2,26 +2,30 @@
         list-style-type: none;
         text-decoration: none;
     }
-
+    
     .clearfix button {
         outline: none;
     }
-
+    
+    .extra-nav a:hover {
+        background: #EFBB20;
+    }
+    
     .extra-nav a,
     .header-nav a {
         list-style-type: none;
         text-decoration: none;
     }
     /* .show { */
-
+    
     @media screen and (max-width: 991px) {
         .mo-left .navbar-toggler .show span {
             background: #fff !important;
         }
     }
-
+    
     .logo-header {}
-
+    
     @keyframes amir {
         0% {
             transition: 0.4s;
@@ -51,7 +55,7 @@
             transform: rotate(90deg) !important;
         }
     }
-
+    
     @media screen and (max-width: 991px) {
         .mo-left .navbar-toggler.open {
             background-color: rgba(0, 0, 0, 0.6);
@@ -70,7 +74,7 @@
             transition: all 0.5s;
         }
     }
-
+    
     .navicon.open span:nth-child(3) {
         top: 7px;
         -webkit-transform: rotate( -135deg);
