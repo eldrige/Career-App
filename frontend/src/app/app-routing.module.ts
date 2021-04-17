@@ -8,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CareerListComponent } from './careers/career-list/career-list.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { QuizComponent } from './test/quiz/quiz.component';
 
 const routes: Routes = [
   { path: 'home', component: WelcomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'quiz', component: QuizComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
