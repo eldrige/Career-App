@@ -2,24 +2,24 @@
         list-style-type: none;
         text-decoration: none;
     }
-
+    
     .clearfix button {
         outline: none;
     }
-
+    
     .extra-nav a,
     .header-nav a {
         list-style-type: none;
         text-decoration: none;
     }
     /* .show { */
-    /* @media screen and (max-width: 991px) {
+    
+    @media screen and (max-width: 991px) {
         .mo-left .navbar-toggler .show span {
             background: #fff !important;
         }
-    } */
-
-    .logo-span {
+    }
+    /* .logo-span {
         box-shadow: 4px 4px 12px 4px hsl(240, 7%, 83%);
         background: transparent !important;
     }
@@ -39,17 +39,19 @@
     .logo-span:hover span:nth-child(2n) {
         animation: amir;
         -webkit-animation: amir;
-    }
-
+    } */
+    
+    .logo-header {}
+    
     @keyframes amir {
         0% {
             transition: 0.4s;
             transform: translate(0px, 0px) !important;
             transform: rotate(0deg) !important;
-            -webkit-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg) !important;
+            -moz-transform: rotate(0deg) !important;
+            -ms-transform: rotate(0deg) !important;
+            -o-transform: rotate(0deg) !important;
         }
         50% {
             transition: 0.5s;
@@ -69,4 +71,31 @@
             -o-transform: rotate(90deg) !important;
             transform: rotate(90deg) !important;
         }
+    }
+    
+    @media screen and (max-width: 991px) {
+        .mo-left .navbar-toggler.open {
+            background-color: rgba(0, 0, 0, 0.6);
+            content: "";
+            height: 100%;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            transform: scale(100);
+            -o-transform: scale(100);
+            -moz-transform: scale(100);
+            -webkit-transform: scale(100);
+            width: 100%;
+            z-index: -1;
+            transition: all 0.5s;
+        }
+    }
+    
+    .navicon.open span:nth-child(3) {
+        top: 7px;
+        -webkit-transform: rotate( -135deg);
+        -moz-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        transform: rotate( -135deg);
     }
