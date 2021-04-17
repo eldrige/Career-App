@@ -1,3 +1,4 @@
+import { PoliciesComponent } from './policies/policies.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { CareerDetailsComponent } from './careers/career-details/career-details.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'policies', component: PoliciesComponent },
   { path: 'quiz', component: QuizComponent },
   { path: '**', component: NotFoundComponent },
 ];

@@ -27,6 +27,7 @@ import { CareerExplainedComponent } from './welcome/career-explained/career-expl
 import { JobExplainedComponent } from './welcome/job-explained/job-explained.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { PoliciesComponent } from './policies/policies.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
     JobExplainedComponent,
     LoginComponent,
     SignUpComponent,
+    PoliciesComponent,
     QuestionComponent,
     QuizComponent,
   ],
