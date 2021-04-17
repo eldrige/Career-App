@@ -13,7 +13,7 @@ const careers = [
       'Faculte de medicine Kumbo',
       'Institut superieure des Techniques Medicales (Nkolondom)',
     ],
-    institions: [
+    institutions: [
       'University of Yaounde',
       'University of Douala',
       'University of Dschang',
@@ -26,7 +26,7 @@ const careers = [
     background: 'GCE AL (Sciences), Bacc A, International Baccaleaurate',
     image_url: 'assets/images/meca.jpg',
     concours: ['ENSP Yaounde', 'ENSP Bamenda', 'FGI', 'UDM', 'FET'],
-    institions: [
+    institutions: [
       'University of Yaounde',
       'University of Douala',
       'University of Dschang',
@@ -38,7 +38,7 @@ const careers = [
     title: 'lawyer / Magistrate',
     background: 'GCE AL (Arts), Bacc Litteraire, International Baccaleaurate',
     concours: ['ENAM'],
-    institions: [
+    institutions: [
       'University of Yaounde',
       'University of Douala',
       'University of Dschang',
@@ -52,7 +52,7 @@ const careers = [
     title: 'Software Engineer',
     background:
       'GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate',
-    institions: [
+    institutions: [
       'Seven Academy',
       'Digital College',
       'Universite de la cote',
@@ -65,7 +65,7 @@ const careers = [
     title: 'Accountant',
     background:
       'GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate',
-    institions: [
+    institutions: [
       'Seven Academy',
       'Digital College',
       'university of dreams',
@@ -80,7 +80,7 @@ const careers = [
     background:
       'GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate',
     concours: ['FASA', 'ENEF'],
-    institions: [
+    institutions: [
       'Digital College',
       'university of Ebolowa',
       'Faculte du bois du sud',
@@ -92,7 +92,7 @@ const careers = [
     title: 'Telecom engineer',
     background: 'GCE AL (Sciences / Arts), Bacc A, International Baccaleaurate',
     concours: ['SUPPTIC', 'Polytechnique Yaounde', 'Polytechnique Bamenda'],
-    institions: [
+    institutions: [
       'University of Yaounde( ICT4dev)',
       'university of Ebolowa',
       'Faculte du bois du sud',
@@ -103,7 +103,7 @@ const careers = [
   {
     title: 'Journalist',
     background: 'GCE AL (Arts), Bacc C, International Baccaleaurate',
-    institions: ['Esstic', 'university of Yaounde 2'],
+    institutions: ['Esstic', 'university of Yaounde 2'],
     description:
       'Journalists research, write, edit, proofread and file news stories, features and articles. Their pieces are used on television and radio or within magazines, journals and newspapers, in print and online.',
   },
@@ -111,14 +111,14 @@ const careers = [
   {
     title: 'Translator',
     background: 'GCE AL (Arts), Bacc C, International Baccaleaurate',
-    institions: ['Esstic', 'university of Yaounde 2'],
+    institutions: ['Esstic', 'university of Yaounde 2'],
     description:
       'Translator Job Purpose Interprets written or spoken material into one or more other languages, ensures meaning and context are maintained, creates glossaries or term dictionaries, possesses knowledge of multiple languages, works with individual clients and corporations.',
   },
   {
     title: 'Civil Engineer',
     background: 'GCE AL (Science), Bacc A, International Baccaleaurate',
-    institions: [
+    institutions: [
       'Travaux Publique',
       'Siantou Univeristy',
       'ENSP YaoundeY (3rd Year)',
@@ -139,7 +139,7 @@ const careers = [
       'ENS Douala',
       'all ensets and ENS',
     ],
-    institions: ['All State universities'],
+    institutions: ['All State universities'],
     description:
       'A Teacher is responsible for preparing lesson plans and educating students at all levels. Their duties include assigning homework, grading tests, and documenting progress. Teachers must be able to instruct in a variety of subjects and reach students with engaging lesson plans.',
   },
@@ -147,7 +147,7 @@ const careers = [
     title: 'Mining Engineer',
     background: 'GCE AL Science, Bacc  A, International Baccaleaurate',
     concours: ['EGEM', 'FMIP'],
-    institions: [' All State universities'],
+    institutions: [' All State universities'],
     description:
       'Mining engineers ensure that underground resources such as minerals, metals, oil and gas are extracted safely and efficiently. ... producing models or plans for possible mining sites. planning and implementing extraction systems. using specialist computer applications to maximise planning and production.',
   },
@@ -162,7 +162,7 @@ const careers = [
     title: 'Computer Network Specialist',
     background: 'GCE AL (Science) , Any Bacc, International Baccaleaurate',
     concours: ['COLTECH', 'ENEF', 'ENSP Bamenda'],
-    institions: ['University of Yaounde', 'University of Douala'],
+    institutions: ['University of Yaounde', 'University of Douala'],
     description:
       'The job of IT Network Specialist was established for the purpose/s of planning, directing, designing, coordinating, and administering network systems and subsystems including all workstations; resolving network operational issues; maintaining computer and network hardware, software and the network; and providing ...',
   },
@@ -176,28 +176,32 @@ const careers = [
   {
     title: 'Political Scientist',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
-    institions: ['University of Yaounde 2'],
+    institutions: ['University of Yaounde 2'],
     description:
       'Political scientists study the origin, development, and operation of political systems. They research political ideas and analyze governments, policies, political trends, and related issues',
   },
   {
     title: 'Pharmacist',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
-    institions: ['University of Yaounde 2'],
+    institutions: ['University of Yaounde 2'],
     description:
       'Prepares medications by reviewing and interpreting physician orders and detecting therapeutic incompatibilities. Dispenses medications by compounding, packaging, and labeling pharmaceuticals. Controls medications by monitoring drug therapies; advising interventions.',
   },
   {
     title: 'Digital Marketer',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
-    institions: ['University of Yaounde 2', 'Seven Academy', 'Digital College'],
+    institutions: [
+      'University of Yaounde 2',
+      'Seven Academy',
+      'Digital College',
+    ],
     description:
       "As a digital marketer, you'll need to: create and upload copy and images for the organisation's website. write and dispatch email marketing campaigns. provide accurate reports and analysis to clients and company management to demonstrate effective return on investment (ROI)",
   },
   {
     title: 'Certified Hacker',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
-    institions: [
+    institutions: [
       'University of Yaounde( ICT4dev)',
       'Seven Academy',
       'Digital College',
@@ -208,7 +212,7 @@ const careers = [
   {
     title: 'CyberSecurity Expert',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
-    institions: [
+    institutions: [
       'University of Yaounde( ICT4dev)',
       'Seven Academy',
       'Digital College',
@@ -219,7 +223,7 @@ const careers = [
   {
     title: 'Nurse',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
-    institions: [
+    institutions: [
       'University of Yaounde( ICT4dev)',
       'Seven Academy',
       'Digital College',

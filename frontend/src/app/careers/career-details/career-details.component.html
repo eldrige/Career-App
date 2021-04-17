@@ -1,29 +1,3 @@
-<!-- <div class="container my-5">
-    <div class="card card-body mb-3">
-        <div class="row">
-            <div class="col-md-3">
-                <img class="img-fluid mb-2" src="assets/images/vector.png">
-                <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
-            </div>
-            <div class="col-md-9">
-                <span class="badge badge-primary mx-1 p-1">Popularity: very popular </span>
-                <span class="badge badge-secondary mx-1 p-1">Difficulty: Medium </span>
-                <span class="badge badge-success mx-1 p-1">Salary: 100k+</span>
-                <br><br>
-                <ul class="list-group">
-                    <li class="list-group-item">Job Title: {{currentCareer.title}} </li>
-                    <li class="list-group-item">Background: {{currentCareer.background}} </li>
-                    <li class="list-group-item" *ngIf="currentCareer.concours">Concours: {{currentCareer.concours}} </li>
-                    <li class="list-group-item" *ngIf="currentCareer.institions">Institutions: {{currentCareer.institions}}</li>
-                </ul>
-            </div>
-            <button class="btn btn-primary" [routerLink]="['/careers']" routerLinkActive="router-link-active">Back</button>
-        </div>
-    </div>
-</div> -->
-
-<!-- career detail -->
-
 <div class="page-content bg-white">
   <!-- inner page banner -->
   <div
@@ -73,7 +47,7 @@
                     class="widget bg-white p-lr20 p-t20 widget_getintuch radius-sm"
                   >
                     <h4 class="text-black font-weight-700 p-t10 m-b15">
-                      Job Details
+                      Career Details
                     </h4>
                     <ul>
                       <li>
@@ -87,15 +61,15 @@
                       <li>
                         <i class="ti-money"></i
                         ><strong class="font-weight-700 text-black"
-                          >Salary</strong
+                          >Estimated Salary</strong
                         >
                         100 000 FCFA
                       </li>
                       <li>
                         <i class="ti-shield"></i
                         ><strong class="font-weight-700 text-black"
-                          >Experience</strong
-                        >2 Year Experience
+                          >Length of Training</strong
+                        >2 Years +
                       </li>
                     </ul>
                   </div>
@@ -121,27 +95,24 @@
                   </strong>
                 </li>
               </ul>
-              <h3 class="p-t50" *ngIf="currentCareer.concours">
-                Concours: {{ currentCareer.concours }}
+              <h3 class="p-t30" *ngIf="currentCareer.concours.length !== 0">
+                <strong> Concours: </strong>
+                {{ currentCareer.concours }}
               </h3>
-              <h5 class="font-weight-600">Job Description</h5>
+              <!-- <h5 class="font-weight-600">Job Description</h5> -->
               <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div>
-              <h2 *ngIf="currentCareer.institions">
-                Institutions: {{ currentCareer.institions }}
-              </h2>
-              <h5 class="font-weight-600">How to Apply</h5>
-              <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div>
+              <h2 *ngIf="currentCareer.institutions">Institutions:</h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages.
+                {{ currentCareer.institutions }}
               </p>
-              <h5 class="font-weight-600">Job Requirements</h5>
+              <!-- <h5 class="font-weight-600">How to Apply</h5> -->
+              <!-- <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div> -->
+              <p>
+                {{ currentCareer.description }}
+              </p>
+              <h5 class="font-weight-900">
+                An aspiring {{ currentCareer.title }} should
+              </h5>
               <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div>
               <ul class="list-num-count no-round">
                 <li>
@@ -158,7 +129,7 @@
                 </li>
                 <li>DexignLab standard dummy text ever since</li>
               </ul>
-              <a href="#" class="site-button mt-4">Apply This Job</a>
+              <a href="#" class="site-button mt-4">See related Careers</a>
             </div>
           </div>
         </div>

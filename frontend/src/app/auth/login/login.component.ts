@@ -9,6 +9,7 @@ import { UserService } from './../../services/user.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+
   constructor(
     private userService: UserService,
     public formBuilder: FormBuilder,
@@ -25,8 +26,8 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): any {
     this.userService.authUser(this.loginForm.value).subscribe(
-      () => {
-        console.log('User successfully authenticated!');
+      (data) => {
+        localStorage.setItem('currentUser', JSON.stringify(data));
         this.ngZone.run(() => this.router.navigateByUrl('/dashboard'));
       },
       (err) => {
