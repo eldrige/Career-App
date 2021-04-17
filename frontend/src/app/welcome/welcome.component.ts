@@ -1,4 +1,4 @@
-import { getQuote,getRandomQuote } from 'inspirational-quotes';
+import { getQuote, getRandomQuote } from 'inspirational-quotes';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -11,10 +11,10 @@ export class WelcomeComponent implements OnInit {
 
   constructor() { }
 
-  quoteObject = getQuote()
+  quoteObject = getQuote();
 
   ngOnInit(): void {
-  
+
   }
 
 }

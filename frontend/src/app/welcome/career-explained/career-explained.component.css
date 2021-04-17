@@ -1,27 +1,30 @@
-section{
-    background:#17A0E4;
+section {
+    background: #17A0E4;
     /* height: 50vh; */
-    padding: 180px 0;
+    padding: 60px 0;
     color: #fff;
 }
-h1{
+
+h1 {
     text-transform: uppercase;
 }
-.row{
+
+.row {
     display: flex;
     align-items: center;
 }
-.btn{
+
+.btn {
     background: rgb(255, 255, 255);
-}.btn:hover{
+}
+
+.btn:hover {
     background: #4CBFE1;
     color: #fff;
 }
 
-@media screen  and (max-width: 400px){
-   
-    .hero-text{
+@media screen and (max-width: 400px) {
+    .hero-text {
         margin-top: 180px;
     }
-   
 }
