@@ -1,19 +1,22 @@
-<div class="row justify-content-center mt-5">
-    <div class="col-md-4">
+<div class="container-form d-flex flex justify-content-center mt-5">
+    <div class="col-md-4 my-4 amir-form">
         <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <h2 class="text-center"><img src="assets/images/jongleur.png" alt=""></h2>
+            <h2 class="text-primary">Account Registration</h2>
+            <hr class="style-seven">
             <div class="form-group">
                 <label>Name</label>
-                <input class="form-control" type="text" formControlName="name" required />
+                <input class="form-control" type="text" formControlName="name" required placeholder="Name" />
             </div>
 
             <div class="form-group">
                 <label>Email</label>
-                <input class="form-control" type="email" formControlName="email" required />
+                <input class="form-control" type="email" formControlName="email" required placeholder="Type your email address" />
             </div>
 
             <div class="form-group">
                 <label>Password</label>
-                <input class="form-control" type="password" formControlName="password" required />
+                <input class="form-control" type="password" formControlName="password" required placeholder="password" />
             </div>
             <div class="form-group">
                 <button class="btn btn-primary btn-block" type="submit">Sign Up</button>

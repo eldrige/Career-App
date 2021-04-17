@@ -1,0 +1,81 @@
+.container-form {
+    padding-top: 3rem;
+    background: rgb(253, 247, 247);
+}
+
+.amir-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 24, 128, 0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+hr.style-seven {
+    overflow: visible;
+    /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: rgb(138, 133, 133);
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+hr.style-seven:before {
+    /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: rgb(138, 133, 133);
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.amir-form form h2 {
+    padding: 4px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.amir-form img {
+    width: 200px;
+}
+
+.amir-form form h2 {
+    padding: 4px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.amir-form label {
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+input {
+    border: 0;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+input::placeholder {
+    color: rgb(184, 184, 189);
+    font-size: 11px;
+    font-style: italic;
+}
