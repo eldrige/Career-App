@@ -6,6 +6,7 @@ import jobs from './data/jobs.js';
 import connectDB from './config/db.js';
 import Career from './models/careerModel.js';
 import Job from './models/jobModel.js';
+import User from './models/userModel.js';
 
 dotenv.config();
 
@@ -34,6 +35,7 @@ const destroyData = async () => {
     // remove all the data from the database
     await Career.deleteMany();
     await Job.deleteMany();
+    await User.deleteMany();
     console.log('Data destroyed!'.green.inverse);
     process.exit();
   } catch (error) {
