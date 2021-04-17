@@ -1,0 +1,30 @@
+<div class="main">
+    <section class="container2">
+        <div class="container text-white">
+            <div class="row hero-text mt-5">
+                <div class="col-md-6 searchbar">
+                    <h1>
+                        Find the perfect career to briss in Cameroon
+                    </h1>
+
+                    <p>
+                        {{ quoteObject.text }}
+                        <i> {{ quoteObject.author }} </i>
+                    </p>
+                    <button class="btn site-button" [routerLink]="['/careers']">
+            Get Started
+         s </button>
+                </div>
+                <div class="vector col-md-6">
+                    <img src="/assets/images/vector.png" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div class="wave"></div>
+    </section>
+</div>
+<app-header></app-header>
+<app-career-explained></app-career-explained>
+<app-team></app-team>
+<!-- <app-job-explained></app-job-explained> -->
