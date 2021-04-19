@@ -2,7 +2,7 @@ const careers = [
   {
     title: 'Doctor',
     background: 'GCE AL (Sciences), Bacc A, International Baccaleaurate',
-    image_url: 'assets/images/doctor.svg',
+    image_url: 'assets/images/careers/doctor.jpg',
     concours: [
       'FMPS Douala',
       'FMBS Buea',
@@ -24,7 +24,7 @@ const careers = [
   {
     title: 'Mechanical Engineer',
     background: 'GCE AL (Sciences), Bacc A, International Baccaleaurate',
-    image_url: 'assets/images/meca.jpg',
+    image_url: 'assets/images/careers/mechanical.jpg',
     concours: ['ENSP Yaounde', 'ENSP Bamenda', 'FGI', 'UDM', 'FET'],
     institutions: [
       'University of Yaounde',
@@ -37,6 +37,7 @@ const careers = [
   {
     title: 'lawyer / Magistrate',
     background: 'GCE AL (Arts), Bacc Litteraire, International Baccaleaurate',
+    image_url: 'assets/images/careers/account.jpg',
     concours: ['ENAM'],
     institutions: [
       'University of Yaounde',
@@ -52,6 +53,7 @@ const careers = [
     title: 'Software Engineer',
     background:
       'GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/software.jpg',
     institutions: [
       'Seven Academy',
       'Digital College',
@@ -65,6 +67,7 @@ const careers = [
     title: 'Accountant',
     background:
       'GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/accountant.jpg',
     institutions: [
       'Seven Academy',
       'Digital College',
@@ -79,6 +82,7 @@ const careers = [
     title: 'Agricultural engineer',
     background:
       'GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/agriculture.jpg',
     concours: ['FASA', 'ENEF'],
     institutions: [
       'Digital College',
@@ -91,6 +95,7 @@ const careers = [
   {
     title: 'Telecom engineer',
     background: 'GCE AL (Sciences / Arts), Bacc A, International Baccaleaurate',
+    image_url: 'assets/images/careers/telecom.jpg',
     concours: ['SUPPTIC', 'Polytechnique Yaounde', 'Polytechnique Bamenda'],
     institutions: [
       'University of Yaounde( ICT4dev)',
@@ -103,6 +108,7 @@ const careers = [
   {
     title: 'Journalist',
     background: 'GCE AL (Arts), Bacc C, International Baccaleaurate',
+    image_url: 'assets/images/careers/nurse.jpg',
     institutions: ['Esstic', 'university of Yaounde 2'],
     description:
       'Journalists research, write, edit, proofread and file news stories, features and articles. Their pieces are used on television and radio or within magazines, journals and newspapers, in print and online.',
@@ -111,6 +117,7 @@ const careers = [
   {
     title: 'Translator',
     background: 'GCE AL (Arts), Bacc C, International Baccaleaurate',
+    image_url: 'assets/images/careers/translation.jpg',
     institutions: ['Esstic', 'university of Yaounde 2'],
     description:
       'Translator Job Purpose Interprets written or spoken material into one or more other languages, ensures meaning and context are maintained, creates glossaries or term dictionaries, possesses knowledge of multiple languages, works with individual clients and corporations.',
@@ -118,6 +125,7 @@ const careers = [
   {
     title: 'Civil Engineer',
     background: 'GCE AL (Science), Bacc A, International Baccaleaurate',
+    image_url: 'assets/images/careers/mechanical.jpg',
     institutions: [
       'Travaux Publique',
       'Siantou Univeristy',
@@ -130,6 +138,7 @@ const careers = [
     title: 'Teacher',
     background:
       'GCE AL (Science/ Arts), any Bacc , International Baccaleaurate',
+    image_url: 'assets/images/careers/teacher.jpg',
     concours: [
       'ENS Yaounde',
       'ENS Bertoua',
@@ -146,6 +155,7 @@ const careers = [
   {
     title: 'Mining Engineer',
     background: 'GCE AL Science, Bacc  A, International Baccaleaurate',
+    image_url: 'assets/images/careers/mining.jpg',
     concours: ['EGEM', 'FMIP'],
     institutions: [' All State universities'],
     description:
@@ -154,6 +164,7 @@ const careers = [
   {
     title: 'Police',
     background: 'GCE AL (Science/ Arts), Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/police.jpg',
     concours: ['EMIA', 'ENEF'],
     description:
       'In a nutshell, police officers maintain law and order, protect the general public, investigate crimes and prevent criminal activity from happening. ... You might be responsible for preventing heinous crimes and stopping dangerous criminal groups, such as organised crime syndicates.',
@@ -161,6 +172,7 @@ const careers = [
   {
     title: 'Computer Network Specialist',
     background: 'GCE AL (Science) , Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/computer.jpg',
     concours: ['COLTECH', 'ENEF', 'ENSP Bamenda'],
     institutions: ['University of Yaounde', 'University of Douala'],
     description:
@@ -169,6 +181,7 @@ const careers = [
   {
     title: 'Military',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/military.jpg',
     concours: ['EMIA', 'ENEF', "Armee de l'air"],
     description:
       'Participate in, or support, military operations, such as combat or training operations, or humanitarian or disaster relief. Operate, maintain, and repair equipment. Perform technical and support activities. Supervise junior enlisted personnel.',
@@ -176,6 +189,7 @@ const careers = [
   {
     title: 'Political Scientist',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/politician.jpg',
     institutions: ['University of Yaounde 2'],
     description:
       'Political scientists study the origin, development, and operation of political systems. They research political ideas and analyze governments, policies, political trends, and related issues',
@@ -183,6 +197,7 @@ const careers = [
   {
     title: 'Pharmacist',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/nurse.jpg',
     institutions: ['University of Yaounde 2'],
     description:
       'Prepares medications by reviewing and interpreting physician orders and detecting therapeutic incompatibilities. Dispenses medications by compounding, packaging, and labeling pharmaceuticals. Controls medications by monitoring drug therapies; advising interventions.',
@@ -190,6 +205,7 @@ const careers = [
   {
     title: 'Digital Marketer',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/accountant.jpg',
     institutions: [
       'University of Yaounde 2',
       'Seven Academy',
@@ -201,6 +217,7 @@ const careers = [
   {
     title: 'Certified Hacker',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/hacker.jpg',
     institutions: [
       'University of Yaounde( ICT4dev)',
       'Seven Academy',
@@ -211,7 +228,9 @@ const careers = [
   },
   {
     title: 'CyberSecurity Expert',
+
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/hacker.jpg',
     institutions: [
       'University of Yaounde( ICT4dev)',
       'Seven Academy',
@@ -223,6 +242,7 @@ const careers = [
   {
     title: 'Nurse',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
+    image_url: 'assets/images/careers/hacker.jpg',
     institutions: [
       'University of Yaounde( ICT4dev)',
       'Seven Academy',

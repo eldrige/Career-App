@@ -55,26 +55,6 @@
 <section class="main">
   <div class="container">
     <div class="second row">
-      <!-- <div class="col-md-3 text-center" *ngFor="let career of filteredCareerArray">
-
-                <div id="career-list">
-                    <div class="career-article">
-                        <div class="career-title vision">
-                            <div>
-                                <h3>{{ career.title }}</h3>
-                            </div>
-                        </div>
-                        <div class="career-content">
-                            <h4>{{ career.title }}</h4>
-                            <p>{{ career.background }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn">
-                    <button class="btn btn-primary" type="submit" [routerLink]="['/careers', career._id]">Read More</button>
-                </div>
-            </div> -->
-
       <div class="container">
         <div class="row align-middle">
           <div
@@ -87,7 +67,7 @@
                 <h1>{{ career.title }}</h1>
                 <p>{{ career.title }}</p>
               </div>
-              <a href="#" [routerLink]="['/careers', career._id]">more</a>
+              <a [routerLink]="['/careers', career._id]">more</a>
               <div class="ico-card">
                 <i class="fa fa-rebel"></i>
               </div>

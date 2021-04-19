@@ -2,6 +2,7 @@ export interface ICareer {
   _id: string;
   title: string;
   background: string;
+  image_url: string;
   concours?: string[];
   institutions?: string[];
   description: string;
