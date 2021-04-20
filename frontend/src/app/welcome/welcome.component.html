@@ -1,28 +1,31 @@
 <div class="main">
-    <section class="container2">
-        <div class="container text-white">
-            <div class="row hero-text mt-5">
-                <div class="col-md-7 search-bar">
-                    <h1>
-                        Find the perfect career to briss in Cameroon
-                    </h1>
+  <section class="container2">
+    <div class="container text-white">
+      <div class="row hero-text mt-5">
+        <div class="col-md-7 search-bar">
+          <h1>
+            <!-- Find the perfect career to briss in Cameroon -->
+            Bridging unemployment through Orientation & Opportunities
+          </h1>
 
-                    <p>
-                        {{ quoteObject.text }}
-                        <i> {{ quoteObject.author }} </i>
-                    </p>
-                    <button class="btn site-button" [routerLink]="['/careers']">Get Started</button>
-                </div>
-                <div class="vector col-md-5">
-                    <!-- <img src="/assets/images/vector.png" alt="" /> -->
-                </div>
-            </div>
+          <p>
+            {{ quoteObject.text }}
+            <i> {{ quoteObject.author }} </i>
+          </p>
+          <button class="btn site-button" [routerLink]="['/careers']">
+            Get Started
+          </button>
         </div>
+        <div class="vector col-md-5">
+          <!-- <img src="/assets/images/vector.png" alt="" /> -->
+        </div>
+      </div>
+    </div>
 
-        <div class="illustration"></div>
+    <div class="illustration"></div>
 
-        <div class="wave"></div>
-    </section>
+    <div class="wave"></div>
+  </section>
 </div>
 <app-header></app-header>
 <app-career-explained></app-career-explained>

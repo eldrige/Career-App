@@ -242,7 +242,7 @@ const careers = [
   {
     title: 'Nurse',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
-    image_url: 'assets/images/careers/hacker.jpg',
+    image_url: 'assets/images/careers/nurse.jpg',
     institutions: [
       'University of Yaounde( ICT4dev)',
       'Seven Academy',
