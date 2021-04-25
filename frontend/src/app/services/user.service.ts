@@ -31,6 +31,11 @@ export class UserService {
       .pipe(catchError(this.handleError));
   }
 
+  isUserLoggedIn(): any {
+    if (localStorage.getItem('currentUser')) return true;
+    return false;
+  }
+
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
