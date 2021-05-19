@@ -1,5 +1,3 @@
-import { QuestionComponent } from './test/question/question.component';
-import { QuizComponent } from './test/quiz/quiz.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -28,6 +26,7 @@ import { JobExplainedComponent } from './welcome/job-explained/job-explained.com
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { PoliciesComponent } from './policies/policies.component';
+import { QuizComponent } from './multistep/quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +48,6 @@ import { PoliciesComponent } from './policies/policies.component';
     LoginComponent,
     SignUpComponent,
     PoliciesComponent,
-    QuestionComponent,
     QuizComponent,
   ],
   imports: [
@@ -57,7 +55,6 @@ import { PoliciesComponent } from './policies/policies.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    // BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
     MatGridListModule,
