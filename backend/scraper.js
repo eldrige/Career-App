@@ -1,42 +1,32 @@
 import cheerio from 'cheerio';
-import request from 'request';
-import fs, { write } from 'fs';
-// const writeStream = fs.createWriteStream('jobs.json');
-// writeStream.write('Title,Link \n');
-const url = `https://www.cameroondesks.com/search/label/jobs?max-results=20`;
+import axios from 'axios';
+const numberOfJobs = 20;
+import dotenv from 'dotenv';
+import connectDB from './config/db.js';
+import Job from './models/jobModel.js';
+const url = `https://www.cameroondesks.com/search/label/jobs?max-results=${numberOfJobs}`;
 
-const fetchAndLoad = (url) => {
-  request(url, (err, response, html) => {
-    if (!err && response.statusCode === 200) {
-      const $ = cheerio.load(html);
-      let titleArray = [];
-      $('.post.hentry').each((index, element) => {
-        const title = $(element).find('h2').text().replace(/\s\s+/g, '');
+dotenv.config();
+connectDB();
 
-        const link = $(element).find('a').attr('href');
-        // const description = $(element).find('div.resumo').text();
-        // console.log(title);
+var fetchedJobs = [];
+const fetchAndLoad = async (url) => {
+  const { data: html } = await axios.get(url);
 
-        // console.log(title.split(" "))
-
-        let funnyArray = title.split(' ');
-
-        let singleJob = funnyArray.reduce((prev, next) => prev + next);
-        console.log(title);
-
-        // write to json
-        // writeStream.write(`${title}, ${link} \n`);
-      });
-      console.log('Scraping done .....');
-    } else {
-      throw error('An unexpected error occured');
-    }
-  });
+  if (html) {
+    const $ = cheerio.load(html);
+    const jobBlock = $('.post.hentry');
+    jobBlock.each((idx, elt) => {
+      let title = $(elt).find('h2').text().replace(/\s\s+/g, '');
+      let link = $(elt).find('a').attr('href');
+      let datePublished = Date.now();
+      // let imageSrc = $(elt).find('.post-thumb').find('a').attr('style');
+      fetchedJobs.push({ link, title, datePublished });
+      // let shortDescription = $(elt).find('article').text();
+      // console.log(shortDescription);
+    });
+  }
+  await Job.insertMany(fetchedJobs);
 };
 
 fetchAndLoad(url);
-
-// const createJobData = (titles, links) => {
-//   const jobs = [];
-
-// };
