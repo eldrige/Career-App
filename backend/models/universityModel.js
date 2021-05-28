@@ -6,11 +6,11 @@ const universitySchema = mongoose.Schema({
     required: true,
     unique: true,
   },
-  location: {
+  address: {
     type: String,
   },
+  type: {}, // either public or private,
   numberOfFaculties: Number,
-  documentsRequired: [{ String }],
 });
 
 const University = mongoose.model('University', universitySchema);
