@@ -17,8 +17,8 @@ const concourSchema = mongoose.Schema({
   },
   estimatedStartDate: Date,
   numberOfAcceptedCandidates: Number,
-  eligibility: [{ String }],
-  documentsRequired: [{ String }],
+  eligibility: [{ type: String }],
+  documentsRequired: [{ type: String }],
 });
 
 const Concour = mongoose.model('Concour', concourSchema);
