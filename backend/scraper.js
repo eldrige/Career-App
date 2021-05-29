@@ -1,5 +1,6 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
+import cron from 'node-cron';
 const numberOfJobs = 20;
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
@@ -9,24 +10,28 @@ const url = `https://www.cameroondesks.com/search/label/jobs?max-results=${numbe
 dotenv.config();
 connectDB();
 
-var fetchedJobs = [];
-const fetchAndLoad = async (url) => {
-  const { data: html } = await axios.get(url);
+let fetchedJobs = [];
+const fetchAndSaveToDB = async (url) => {
+  try {
+    const { data: html } = await axios.get(url);
 
-  if (html) {
-    const $ = cheerio.load(html);
-    const jobBlock = $('.post.hentry');
-    jobBlock.each((idx, elt) => {
-      let title = $(elt).find('h2').text().replace(/\s\s+/g, '');
-      let link = $(elt).find('a').attr('href');
-      let datePublished = Date.now();
-      // let imageSrc = $(elt).find('.post-thumb').find('a').attr('style');
-      fetchedJobs.push({ link, title, datePublished });
-      // let shortDescription = $(elt).find('article').text();
-      // console.log(shortDescription);
-    });
+    if (html) {
+      const $ = cheerio.load(html);
+      const jobBlock = $('.post.hentry');
+      jobBlock.each((idx, elt) => {
+        let title = $(elt).find('h2').text().replace(/\s\s+/g, '');
+        let link = $(elt).find('a').attr('href');
+        let datePublished = Date.now();
+        fetchedJobs.push({ link, title, datePublished });
+      });
+    }
+    await Job.insertMany(fetchedJobs);
+  } catch (error) {
+    console.error(error);
   }
-  await Job.insertMany(fetchedJobs);
 };
 
-fetchAndLoad(url);
+// Run cron job every wednesday
+cron.schedule('* * * * Wednesday', () => {
+  fetchAndSaveToDB(url);
+});

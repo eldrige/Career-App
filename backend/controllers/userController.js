@@ -27,7 +27,6 @@ const authUser = async (req, res) => {
 // @desc Register a new user
 // @route POST /api/users/
 // @access Public
-
 const registerUser = async (req, res) => {
   // res.send("Success")
   const { email, name, password } = req.body;

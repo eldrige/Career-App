@@ -1,12 +1,18 @@
 import mongoose from 'mongoose';
 
 const concourSchema = mongoose.Schema({
-  title: {
+  name: {
     type: String,
     required: true,
     unique: true,
   },
+  abbrev: {
+    type: String,
+  },
   type: {
+    type: String,
+  },
+  description: {
     type: String,
   },
   estimatedStartDate: Date,
