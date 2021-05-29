@@ -51,6 +51,38 @@ const createConcour = asyncHandler(async (req, res) => {
   res.status(201).json(createdConcour);
 });
 
-export { getConcourById, getConcours, createConcour };
+// @desc Update a concour
+// @route PUT /api/concours/:id
+// @access private/Admin
+const updateConcour = asyncHandler(async (req, res) => {
+  const {
+    name,
+    abbrev,
+    documentsRequired,
+    description,
+    eligibility,
+    numberOfAcceptedCandidates,
+    estimatedStartDate,
+  } = req.body;
+
+  const concour = await Concour.findById(req.params.id);
+  if (concour) {
+    concour.name = name;
+    concour.abbrev = abbrev;
+    concour.documentsRequired = documentsRequired;
+    concour.description = description;
+    concour.eligibility = eligibility;
+    concour.numberOfAcceptedCandidates = numberOfAcceptedCandidates;
+    concour.estimatedStartDate = estimatedStartDate;
+
+    const updatedConcour = await concour.save();
+    res.json(updatedConcour);
+  } else {
+    res.status(404);
+    throw new Error('Concour not found');
+  }
+});
+
+export { getConcourById, getConcours, createConcour, updateConcour };
 
 // ! controllers just encapsulate the logic
