@@ -85,6 +85,7 @@
               <a
                 [routerLink]="['/careers']"
                 routerLinkActive="router-link-active"
+                [routerLinkActiveOptions]="{ exact: true }"
                 >Careers</a
               >
               <!-- <ul class="sub-menu">
@@ -92,12 +93,20 @@
                     </ul> -->
             </li>
             <li>
-              <a [routerLink]="['jobs']" routerLinkActive="router-link-active"
+              <a
+                [routerLink]="['jobs']"
+                routerLinkActive="router-link-active"
+                [routerLinkActiveOptions]="{ exact: true }"
                 >Jobs</a
               >
             </li>
             <li>
-              <a [routerLink]="['dashboard']">Scholarships</a>
+              <a
+                [routerLink]="['dashboard']"
+                routerLinkActive="router-link-active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Scholarships</a
+              >
             </li>
           </ul>
         </div>
