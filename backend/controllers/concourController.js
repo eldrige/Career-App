@@ -30,8 +30,7 @@ const createConcour = asyncHandler(async (req, res) => {
     abbrev: 'FGI Douala',
     type: 'Public',
     estimatedStartDate: Date.now(),
-    numberOfAcceptedCandidatesd: 100,
-    eligibility: 'Sample category',
+    numberOfAcceptedCandidates: 100,
     description:
       'FGI Douala is an engineering concour, designed for students who want to become industrial engineers',
     eligibility: [

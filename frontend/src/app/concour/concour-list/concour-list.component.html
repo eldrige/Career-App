@@ -1,1 +1,64 @@
-<p>concour-list works!</p>
+<div
+  class="dez-bnr-inr overlay-black-middle"
+  style="background-image: url(assets/images/find.jpg)"
+>
+  <div class="container">
+    <div class="dez-bnr-inr-entry hero-text">
+      <!-- <h1 class="text-white">Job Detail</h1> -->
+      <h1>Most Popular Concours In Cameroon</h1>
+
+      <!-- Breadcrumb row -->
+      <div class="breadcrumb-row">
+        <ul class="list-inline">
+          <li><a>Home</a></li>
+          <li>Jobs</li>
+        </ul>
+      </div>
+      <!-- Breadcrumb row END -->
+    </div>
+  </div>
+</div>
+
+<div class="hero-text container my-5">
+  <!-- <h1>Most In Demand Jobs in Cameroon</h1> -->
+
+  <h2>Click on a concour to find out the basics of that concour</h2>
+  <div class="center-input">
+    <input
+      type="text"
+      class="form-control mt-3 mb-2 p-4"
+      [(ngModel)]="listFilter"
+    />
+    <div class="input-group-prepend text-center justify-content-center mb-2">
+      <button class="btn btn-primary site-button">Search</button>
+    </div>
+  </div>
+
+  <h2>Filtered By: {{ listFilter }}</h2>
+</div>
+
+<section class="main">
+  <div class="container">
+    <div class="second row">
+      <div class="container">
+        <div class="row align-middle">
+          <div
+            class="col-md-6 col-lg-4 column"
+            *ngFor="let concour of filteredConcours"
+          >
+            <div class="card gr-1">
+              <div class="txt">
+                <h1>Nigga</h1>
+                <p>whats up</p>
+              </div>
+              <a [routerLink]="['/careers', career._id]">more</a>
+              <div class="ico-card">
+                <i class="fa fa-rebel"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
