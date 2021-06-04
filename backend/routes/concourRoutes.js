@@ -8,7 +8,7 @@ import {
   updateConcour,
 } from '../controllers/concourController.js';
 
-router.route('/').post(protect, admin, createConcour).get(getConcours);
+router.route('/').post(createConcour).get(getConcours);
 router.route('/:id').get(getConcourById).put(protect, admin, updateConcour);
 
 export default router;

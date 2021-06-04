@@ -1,18 +1,11 @@
+import concours from './concours.js';
+
 const careers = [
   {
     title: 'Doctor',
     background: 'GCE AL (Sciences), Bacc A, International Baccaleaurate',
     image_url: 'assets/images/careers/doctor.jpg',
-    concours: [
-      'FMPS Douala',
-      'FMBS Buea',
-      'CUSS',
-      'Universite des montagnes',
-      'FHS Buea',
-      'FHS Bamenda',
-      'Faculte de medicine Kumbo',
-      'Institut superieure des Techniques Medicales (Nkolondom)',
-    ],
+    concours: [concours[1]],
     institutions: [
       'University of Yaounde',
       'University of Douala',
@@ -25,7 +18,7 @@ const careers = [
     title: 'Mechanical Engineer',
     background: 'GCE AL (Sciences), Bacc A, International Baccaleaurate',
     image_url: 'assets/images/careers/mechanical.jpg',
-    concours: ['ENSP Yaounde', 'ENSP Bamenda', 'FGI', 'UDM', 'FET'],
+    concours: [concours[2]],
     institutions: [
       'University of Yaounde',
       'University of Douala',
@@ -38,7 +31,6 @@ const careers = [
     title: 'lawyer / Magistrate',
     background: 'GCE AL (Arts), Bacc Litteraire, International Baccaleaurate',
     image_url: 'assets/images/careers/account.jpg',
-    concours: ['ENAM'],
     institutions: [
       'University of Yaounde',
       'University of Douala',
@@ -83,7 +75,7 @@ const careers = [
     background:
       'GCE AL (Sciences / Arts), Any Bacc, International Baccaleaurate',
     image_url: 'assets/images/careers/agriculture.jpg',
-    concours: ['FASA', 'ENEF'],
+    // concours: ['FASA', 'ENEF'],
     institutions: [
       'Digital College',
       'university of Ebolowa',
@@ -96,7 +88,7 @@ const careers = [
     title: 'Telecom engineer',
     background: 'GCE AL (Sciences / Arts), Bacc A, International Baccaleaurate',
     image_url: 'assets/images/careers/telecom.jpg',
-    concours: ['SUPPTIC', 'Polytechnique Yaounde', 'Polytechnique Bamenda'],
+    concours: [concours[2]],
     institutions: [
       'University of Yaounde( ICT4dev)',
       'university of Ebolowa',
@@ -126,6 +118,7 @@ const careers = [
     title: 'Civil Engineer',
     background: 'GCE AL (Science), Bacc A, International Baccaleaurate',
     image_url: 'assets/images/careers/mechanical.jpg',
+    concours: [concours[2]],
     institutions: [
       'Travaux Publique',
       'Siantou Univeristy',
@@ -139,15 +132,15 @@ const careers = [
     background:
       'GCE AL (Science/ Arts), any Bacc , International Baccaleaurate',
     image_url: 'assets/images/careers/teacher.jpg',
-    concours: [
-      'ENS Yaounde',
-      'ENS Bertoua',
-      'ENS Bambili',
-      'ENSET Kumba',
-      'ENSET Bambili',
-      'ENS Douala',
-      'all ensets and ENS',
-    ],
+    // concours: [
+    //   'ENS Yaounde',
+    //   'ENS Bertoua',
+    //   'ENS Bambili',
+    //   'ENSET Kumba',
+    //   'ENSET Bambili',
+    //   'ENS Douala',
+    //   'all ensets and ENS',
+    // ],
     institutions: ['All State universities'],
     description:
       'A Teacher is responsible for preparing lesson plans and educating students at all levels. Their duties include assigning homework, grading tests, and documenting progress. Teachers must be able to instruct in a variety of subjects and reach students with engaging lesson plans.',
@@ -156,7 +149,7 @@ const careers = [
     title: 'Mining Engineer',
     background: 'GCE AL Science, Bacc  A, International Baccaleaurate',
     image_url: 'assets/images/careers/mining.jpg',
-    concours: ['EGEM', 'FMIP'],
+    // concours: ['EGEM', 'FMIP'],
     institutions: [' All State universities'],
     description:
       'Mining engineers ensure that underground resources such as minerals, metals, oil and gas are extracted safely and efficiently. ... producing models or plans for possible mining sites. planning and implementing extraction systems. using specialist computer applications to maximise planning and production.',
@@ -165,7 +158,7 @@ const careers = [
     title: 'Police',
     background: 'GCE AL (Science/ Arts), Any Bacc, International Baccaleaurate',
     image_url: 'assets/images/careers/police.jpg',
-    concours: ['EMIA', 'ENEF'],
+    // concours: ['EMIA', 'ENEF'],
     description:
       'In a nutshell, police officers maintain law and order, protect the general public, investigate crimes and prevent criminal activity from happening. ... You might be responsible for preventing heinous crimes and stopping dangerous criminal groups, such as organised crime syndicates.',
   },
@@ -173,7 +166,7 @@ const careers = [
     title: 'Computer Network Specialist',
     background: 'GCE AL (Science) , Any Bacc, International Baccaleaurate',
     image_url: 'assets/images/careers/computer.jpg',
-    concours: ['COLTECH', 'ENEF', 'ENSP Bamenda'],
+    // concours: ['COLTECH', 'ENEF', 'ENSP Bamenda'],
     institutions: ['University of Yaounde', 'University of Douala'],
     description:
       'The job of IT Network Specialist was established for the purpose/s of planning, directing, designing, coordinating, and administering network systems and subsystems including all workstations; resolving network operational issues; maintaining computer and network hardware, software and the network; and providing ...',
@@ -182,7 +175,7 @@ const careers = [
     title: 'Military',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
     image_url: 'assets/images/careers/military.jpg',
-    concours: ['EMIA', 'ENEF', "Armee de l'air"],
+    // concours: ['EMIA', 'ENEF', "Armee de l'air"],
     description:
       'Participate in, or support, military operations, such as combat or training operations, or humanitarian or disaster relief. Operate, maintain, and repair equipment. Perform technical and support activities. Supervise junior enlisted personnel.',
   },
@@ -198,6 +191,7 @@ const careers = [
     title: 'Pharmacist',
     background: 'GCE AL  , Any Bacc, International Baccaleaurate',
     image_url: 'assets/images/careers/nurse.jpg',
+    conocurs: [concours[1]],
     institutions: ['University of Yaounde 2'],
     description:
       'Prepares medications by reviewing and interpreting physician orders and detecting therapeutic incompatibilities. Dispenses medications by compounding, packaging, and labeling pharmaceuticals. Controls medications by monitoring drug therapies; advising interventions.',
