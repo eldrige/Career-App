@@ -73,18 +73,15 @@
           id="navbarNavDropdown"
         >
           <ul class="nav m-auto navbar-nav">
-            <li class="active">
-              <a
-                class="site-button"
-                [routerLink]="['/home']"
-                routerLinkActive="router-link-active"
+            <li>
+              <a [routerLink]="['/home']" routerLinkActive="router-link-active"
                 >Home<span class="sr-only">(current)</span></a
               >
             </li>
             <li>
               <a
                 [routerLink]="['/careers']"
-                routerLinkActive="router-link-active"
+                routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
                 >Careers</a
               >

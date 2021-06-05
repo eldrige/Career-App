@@ -44,7 +44,13 @@
                 </div>
                 <div class="col-lg-12 col-md-6">
                   <div
-                    class="widget bg-white p-lr20 p-t20 widget_getintuch radius-sm"
+                    class="
+                      widget
+                      bg-white
+                      p-lr20 p-t20
+                      widget_getintuch
+                      radius-sm
+                    "
                   >
                     <h4 class="text-black font-weight-700 p-t10 m-b15">
                       Career Details
@@ -97,7 +103,9 @@
               </ul>
               <h3 class="p-t30" *ngIf="currentCareer.concours.length !== 0">
                 <strong> Concours: </strong>
-                {{ currentCareer.concours }}
+                <span *ngFor="let concour of currentCareer.concours">
+                  {{ concour.name }}
+                </span>
               </h3>
               <!-- <h5 class="font-weight-600">Job Description</h5> -->
               <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div>

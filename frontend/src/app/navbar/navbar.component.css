@@ -81,5 +81,11 @@ a.site-button.user {
 }
 
 .router-link-active {
-  background-color: red;
+  background-color: #2e55fa;
+}
+
+a.regular-btn {
+  color: #222845;
+  padding: 10px 15px;
+  background-color: transparent;
 }

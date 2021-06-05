@@ -26,7 +26,6 @@ const getConcourById = asyncHandler(async (req, res) => {
 // @access private/Admin
 const createConcour = asyncHandler(async (req, res) => {
   const concour = new Concour({
-    name: 'Faculte de Genies industrielle Douala',
     abbrev: 'FGI Douala',
     type: 'Public',
     estimatedStartDate: Date.now(),
