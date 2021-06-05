@@ -46,16 +46,7 @@
             class="col-md-6 col-lg-4 column"
             *ngFor="let concour of filteredConcours"
           >
-            <div class="card gr-1">
-              <div class="txt">
-                <h1>Nigga</h1>
-                <p>whats up</p>
-              </div>
-              <a [routerLink]="['/careers', career._id]">more</a>
-              <div class="ico-card">
-                <i class="fa fa-rebel"></i>
-              </div>
-            </div>
+            {{ concour.name }}
           </div>
         </div>
       </div>

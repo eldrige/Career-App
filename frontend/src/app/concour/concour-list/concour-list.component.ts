@@ -32,8 +32,7 @@ export class ConcourListComponent implements OnInit {
   getConcours() {
     this.concourService.getConcours().subscribe(
       (data) => {
-        console.table(data[0].name),
-          (this.concours = data),
+        (this.concours = data),
           (this.filteredConcours = this.performFilter(this.listFilter));
       },
 
