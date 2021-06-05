@@ -1,3 +1,4 @@
+import { ConcourItemComponent } from './concour/concour-item/concour-item.component';
 import { ConcourListComponent } from './concour/concour-list/concour-list.component';
 import { QuizComponent } from './multistep/quiz/quiz.component';
 import { AuthGuard } from './services/auth-guard.service';
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'quiz', component: QuizComponent },
   { path: 'policies', component: PoliciesComponent },
   { path: 'concours', component: ConcourListComponent },
+  { path: 'concours/:id', component: ConcourItemComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

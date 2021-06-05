@@ -46,7 +46,9 @@
             class="col-md-6 col-lg-4 column"
             *ngFor="let concour of filteredConcours"
           >
-            {{ concour.name }}
+            <a [routerLink]="['/concours', concour._id]">
+              {{ concour.name }}
+            </a>
           </div>
         </div>
       </div>
