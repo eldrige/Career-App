@@ -1,5 +1,7 @@
-import { Router } from '@angular/router';
+import { UserService } from './../services/user.service';
+// import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+// import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -7,18 +9,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private userService: UserService) {}
   user;
-  ngOnInit(): void {
-    this.user = localStorage.getItem('currentUser')
-      ? JSON.parse(localStorage.getItem('currentUser'))
-      : false;
-  }
-  // isActive(instruction: any[]): boolean {
-  //   return this.router.isRouteActive(this.router.generate(instruction));
-  // }
 
-  logout() {
-    localStorage.removeItem('currentUser');
+  ngOnInit(): void {
+    this.userService.userLoggedIn.subscribe(
+      (response) => (
+        (this.user = response), console.log(response, 'from navbar')
+      )
+    );
   }
+
+  checkIfUserIsLoggedIn(): boolean {
+    return this.userService.isUserLoggedIn();
+  }
+
+  logout(): void {
+    if (window.confirm('sure about this ?')) {
+      this.userService.logout();
+    }
+  }
+  // reloadComponent() {
+  //   let currentUrl = this.router.url;
+  //   this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  //   this.router.onSameUrlNavigation = 'reload';
+  //   this.router.navigate([currentUrl]);
+  // }
 }
