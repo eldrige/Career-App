@@ -22,9 +22,7 @@ export class SignUpComponent implements OnInit {
       password: [''],
     });
   }
-  ngOnInit(): void {
-    console.log('hey there');
-  }
+  ngOnInit(): void {}
 
   onSubmit(): any {
     this.userService.registerUser(this.signUpForm.value).subscribe(
