@@ -4,7 +4,7 @@ const concourSchema = mongoose.Schema({
   name: {
     type: String,
     // required: true,
-    unique: true,
+    // unique: true,
   },
   abbrev: {
     type: String,

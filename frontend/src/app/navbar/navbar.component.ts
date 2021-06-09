@@ -10,14 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   constructor(private userService: UserService) {}
-  user;
+  user: any;
 
   ngOnInit(): void {
-    this.userService.userLoggedIn.subscribe(
-      (response) => (
-        (this.user = response), console.log(response, 'from navbar')
-      )
-    );
+    this.user = localStorage.getItem('currentUser');
+    // console.log(this.user);
   }
 
   checkIfUserIsLoggedIn(): boolean {

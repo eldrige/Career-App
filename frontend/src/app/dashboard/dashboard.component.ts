@@ -1,3 +1,4 @@
+import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  constructor() {}
+  constructor(private userService: UserService) {}
 
-  ngOnInit(): void {}
+  users: any;
+
+  ngOnInit(): void {
+    this.getUsers();
+  }
+
+  getUsers() {
+    return this.userService.getAllUsers().subscribe((response) => {
+      this.users = response;
+    });
+  }
 }
