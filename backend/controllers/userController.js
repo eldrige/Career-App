@@ -1,11 +1,12 @@
 // import asyncHandler from 'express-async-handler';
+import asyncHandler from 'express-async-handler';
 import User from '../models/userModel.js';
 import generateToken from '../utils/generateToken.js';
 
 // @desc Auth user & get token
 // @route POST /api/users/login
 // @access public
-const authUser = async (req, res) => {
+const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
 
@@ -22,13 +23,12 @@ const authUser = async (req, res) => {
     res.status(401);
     throw new Error('Invalid email or password');
   }
-};
+});
 
 // @desc Register a new user
 // @route POST /api/users/
 // @access Public
-
-const registerUser = async (req, res) => {
+const registerUser = asyncHandler(async (req, res) => {
   // res.send("Success")
   const { email, name, password } = req.body;
 
@@ -59,6 +59,14 @@ const registerUser = async (req, res) => {
     res.status(400);
     throw new Error('Invalid user data');
   }
-};
+});
 
-export { authUser, registerUser };
+// @desc Get all users
+// @route GET /api/users/
+// @access private/Admin
+const getAllUsers = asyncHandler(async (req, res) => {
+  const users = await User.find({});
+  res.json(users);
+});
+
+export { authUser, registerUser, getAllUsers };

@@ -1,4 +1,7 @@
+import { UserService } from './../services/user.service';
+// import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+// import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -6,15 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
-  user;
+  constructor(private userService: UserService) {}
+  user: any;
+
   ngOnInit(): void {
-    this.user = localStorage.getItem('currentUser')
-      ? JSON.parse(localStorage.getItem('currentUser'))
-      : false;
+    this.user = JSON.parse(localStorage.getItem('currentUser'));
   }
 
-  logout() {
-    localStorage.removeItem('currentUser');
+  checkIfUserIsLoggedIn(): boolean {
+    return this.userService.isUserLoggedIn();
+  }
+
+  logout(): void {
+    if (window.confirm('sure about this ?')) {
+      this.userService.logout();
+    }
   }
 }

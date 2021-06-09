@@ -6,12 +6,12 @@
   >
     <div class="container">
       <div class="dez-bnr-inr-entry">
-        <h1 class="text-white">Job Detail</h1>
+        <h1 class="text-white">Concour Detail</h1>
         <!-- Breadcrumb row -->
         <div class="breadcrumb-row">
           <ul class="list-inline">
-            <li><a href="#">Job</a></li>
-            <li>Job Detail for {{ currentCareer.title }}</li>
+            <li><a href="#">Concour</a></li>
+            <li>Concour Detail for {{ concour.abbrev }}</li>
           </ul>
         </div>
         <!-- Breadcrumb row END -->
@@ -31,16 +31,16 @@
                 <div class="back">
                   <button
                     class="btn btn-primary site-button mb-3 ml-3"
-                    [routerLink]="['/careers']"
+                    [routerLink]="['/concours']"
                     routerLinkActive="router-link-active"
                   >
                     Back
                   </button>
                 </div>
                 <div class="col-lg-12 col-md-6">
-                  <div class="m-b30">
+                  <!-- <div class="m-b30">
                     <img src="{{ currentCareer.image_url }}" alt="" />
-                  </div>
+                  </div> -->
                 </div>
                 <div class="col-lg-12 col-md-6">
                   <div
@@ -53,7 +53,7 @@
                     "
                   >
                     <h4 class="text-black font-weight-700 p-t10 m-b15">
-                      Career Details
+                      Concour Details
                     </h4>
                     <ul>
                       <li>
@@ -87,57 +87,50 @@
             <div class="job-info-box">
               <h2 class="m-t0 m-b10 font-weight-700 title-head">
                 <a href="#" class="text-secondry m-r30"
-                  >Job Title: {{ currentCareer.title }}</a
+                  >Concour Title: {{ concour.name }}</a
                 >
               </h2>
               <ul class="job-info">
-                <li>
+                <!-- <li>
                   <strong>Background: </strong> {{ currentCareer.background }}
+                </li> -->
+                <li>
+                  <strong>Number of Accepted Candidates</strong>
+                  {{ concour.numberOfAcceptedCandidates }}
                 </li>
-                <li><strong>Deadline:</strong> 25th January 2018</li>
+
+                <li><strong>Deadline:</strong> 25th January 2020</li>
                 <li>
                   <strong
                     ><i class="ti-location-pin text-black m-r5"></i> Cameroon
                   </strong>
                 </li>
               </ul>
-              <h3 class="p-t30" *ngIf="currentCareer.concours.length !== 0">
+              <!-- <h3 class="p-t30" *ngIf="currentCareer.concours.length !== 0">
                 <strong> Concours: </strong>
                 <span *ngFor="let concour of currentCareer.concours">
                   {{ concour.name }}
                 </span>
-              </h3>
+              </h3> -->
               <!-- <h5 class="font-weight-600">Job Description</h5> -->
               <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div>
-              <h2 *ngIf="currentCareer.institutions">Institutions:</h2>
+              <!-- <h2 *ngIf="currentCareer.institutions">Institutions:</h2>
               <p>
                 {{ currentCareer.institutions }}
-              </p>
+              </p> -->
               <!-- <h5 class="font-weight-600">How to Apply</h5> -->
               <!-- <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div> -->
               <p>
-                {{ currentCareer.description }}
+                {{ concour.description }}
               </p>
-              <h5 class="font-weight-900">
-                An aspiring {{ currentCareer.title }} should
-              </h5>
+              <h5 class="font-weight-900">Documents Required</h5>
               <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div>
               <ul class="list-num-count no-round">
-                <li>
-                  The DexignLab Privacy Policy was updated on 25 June 2018.
+                <li *ngFor="let doc of concour.documentsRequired">
+                  {{ doc }}
                 </li>
-                <li>Who We Are and What This Policy Covers</li>
-                <li>
-                  Remaining essentially unchanged It was popularised in the
-                  1960s
-                </li>
-                <li>
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s,
-                </li>
-                <li>DexignLab standard dummy text ever since</li>
               </ul>
-              <a href="#" class="site-button mt-4">See related Careers</a>
+              <a href="#" class="site-button mt-4">See related Concours</a>
             </div>
           </div>
         </div>

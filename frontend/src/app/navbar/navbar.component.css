@@ -79,3 +79,13 @@ a.site-button.user {
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
+
+.router-link-active {
+  background-color: #2e55fa;
+}
+
+a.regular-btn {
+  color: #222845;
+  padding: 10px 15px;
+  background-color: transparent;
+}

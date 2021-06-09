@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import Concour from './concourModel.js';
+let concourSchema = Concour.schema;
 
 const careerSchema = mongoose.Schema({
   title: {
@@ -6,11 +8,12 @@ const careerSchema = mongoose.Schema({
     required: true,
     unique: true,
   },
-  background: String, // background will be an enum
+  background: [{ type: String }], // background will be an enum
   image_url: {
+    title: 'Faculte Medicine des Sciences Biomedicale',
     type: String,
   },
-  concours: [{ type: String }], // change this to a concour schema
+  concours: [concourSchema], // change this to a concour schema
   institutions: [{ type: String }], // another schema
   description: {
     type: String,

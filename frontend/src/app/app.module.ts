@@ -27,6 +27,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { PoliciesComponent } from './policies/policies.component';
 import { QuizComponent } from './multistep/quiz/quiz.component';
+import { ConcourListComponent } from './concour/concour-list/concour-list.component';
+import { ConcourItemComponent } from './concour/concour-item/concour-item.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { QuizComponent } from './multistep/quiz/quiz.component';
     SignUpComponent,
     PoliciesComponent,
     QuizComponent,
+    ConcourListComponent,
+    ConcourItemComponent,
   ],
   imports: [
     BrowserModule,

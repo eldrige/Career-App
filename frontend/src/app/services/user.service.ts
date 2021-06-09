@@ -1,5 +1,6 @@
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+// import { Subject, BehaviorSubject } from 'rxjs';
 import {
   HttpClient,
   HttpHeaders,
@@ -11,12 +12,35 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private http: HttpClient) {}
+
+  user: any;
+
   private userEndpoint = '/api/users';
+
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
+  // .set('Authorization', `Bearer ${userInfo.token}`);
+
+  // const {
+  //     userLogin: { userInfo },
+  //   } = getState();
+  // config = {
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //     Authorization: `Bearer ${userInfo.token}`,
+  //   },
+  // };
+
+  getLoggedInUser() {
+    if (localStorage.getItem('currentUser')) {
+      this.user = localStorage.getItem('currentUser');
+      return this.user;
+    }
+    return 'No user is Logged in';
+  }
 
   registerUser(user): Observable<any> {
-    return this.httpClient
+    return this.http
       .post(this.userEndpoint, JSON.stringify(user), {
         headers: this.httpHeaders,
       })
@@ -24,16 +48,42 @@ export class UserService {
   }
 
   authUser(user): Observable<any> {
-    return this.httpClient
+    return this.http
       .post(`${this.userEndpoint}/login/`, JSON.stringify(user), {
         headers: this.httpHeaders,
       })
       .pipe(catchError(this.handleError));
   }
 
-  isUserLoggedIn(): any {
+  isUserLoggedIn(): boolean {
     if (localStorage.getItem('currentUser')) return true;
     return false;
+  }
+
+  isUserAdmin(): boolean {
+    let user = JSON.parse(localStorage.getItem('currentUser'));
+    if (user.isAdmin) return true;
+    return false;
+  }
+
+  logout(): void {
+    localStorage.removeItem('currentUser');
+  }
+
+  // admin get all users
+  getAllUsers() {
+    this.user = JSON.parse(localStorage.getItem('currentUser'));
+
+    const { token } = this.user;
+    console.log(token);
+
+    return this.http
+      .get(this.userEndpoint, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .pipe(catchError(this.handleError));
   }
 
   handleError(error: HttpErrorResponse) {

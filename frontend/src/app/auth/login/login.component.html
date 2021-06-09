@@ -1,23 +1,3 @@
-<!-- <div class="row justify-content-center mt-5">
-    <div class="col-md-4">
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label>Email</label>
-                <input class="form-control" type="email" formControlName="email" required />
-            </div>
-
-            <div class="form-group">
-                <label>Password</label>
-                <input class="form-control" type="password" formControlName="password" required />
-            </div>
-
-            <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit">Sign In</button>
-            </div>
-        </form>
-    </div>
-</div> -->
-
 <div class="container-form d-flex flex justify-content-center mt-5">
   <div class="col-md-4 my-4 amir-form">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -26,6 +6,9 @@
       </h2>
       <h2 class="text-primary">Login</h2>
       <hr class="style-seven" />
+      <p *ngIf="invalidLogin" class="alert alert-danger">
+        Invalid Email And or Password
+      </p>
 
       <div class="form-group">
         <label>Email</label>

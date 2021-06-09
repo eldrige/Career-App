@@ -9,6 +9,7 @@ import { UserService } from './../../services/user.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  invalidLogin: boolean;
 
   constructor(
     private userService: UserService,
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit {
         this.ngZone.run(() => this.router.navigateByUrl('/dashboard'));
       },
       (err) => {
+        this.invalidLogin = true;
         console.log(err);
       }
     );

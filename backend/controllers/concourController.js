@@ -1,72 +1,86 @@
-// import asyncHandler from 'express-async-handler';
+import asyncHandler from 'express-async-handler';
 import Concour from '../models/concourModel.js';
 
 // @desc fetch all concours
 // @route GET /api/concours
 // @access public
-const getConcours = async (req, res) => {
+const getConcours = asyncHandler(async (req, res) => {
   const concours = await Concour.find({});
   res.json(concours);
-};
+});
 
 // @desc fetch one concour
 // @route GET /api/concour/:id
 // @access public
-const getConcourById = async (req, res) => {
+const getConcourById = asyncHandler(async (req, res) => {
   const concour = await Concour.findById(req.params.id);
-
   if (concour) {
     res.json(concour);
   } else {
     res.status(404).json({ message: 'Concour not found' });
   }
-};
+});
 
 // @desc create a new concour
 // @route POST /api/concour/
-// @access private
-const createConcour = async (req, res) => {
-  const {
-    title,
-    type,
-    estimatedStartDate,
-    numberOfAcceptedCandidates,
-    eligibility,
-    documentsRequired,
-  } = req.body;
-
-  const concourExist = await Concour.findOne({ title });
-  if (concourExist) {
-    // 400 means bad request
-    res.status(400);
-    throw new Error('Concour already exist');
-  }
-  // create is syntactic sugar, it basiclly acts like a save
-  const concour = await Concour.create({
-    title,
-    type,
-    estimatedStartDate,
-    numberOfAcceptedCandidates,
-    eligibility,
-    documentsRequired,
+// @access private/Admin
+const createConcour = asyncHandler(async (req, res) => {
+  const concour = new Concour({
+    abbrev: 'FGI Douala',
+    type: 'Public',
+    estimatedStartDate: Date.now(),
+    numberOfAcceptedCandidates: 100,
+    description:
+      'FGI Douala is an engineering concour, designed for students who want to become industrial engineers',
+    eligibility: [
+      'Has completed high school studies in a scientific field',
+      'Anyone found in the CEMAC region',
+      'Below the age of 30',
+    ],
+    documentsRequired: [
+      'GCE A/L',
+      'High school transcript',
+      'Birth Certificate',
+      '4 x 4 passport photos',
+    ],
   });
 
-  if (concour) {
-    // 201 means a new resource was created
-    res.status(201).json({
-      _id: concour._id,
-      title: concour.title,
-      type: concour.type,
-      estimatedStartDate: concour.estimatedStartDate,
-      eligibility: concour.eligibility,
-      documentsRequired: concour.documentsRequired,
-    });
-  } else {
-    res.status(400);
-    throw new Error('Invalid Concour data');
-  }
-};
+  const createdConcour = await concour.save();
+  res.status(201).json(createdConcour);
+});
 
-export { getConcourById, getConcours, createConcour };
+// @desc Update a concour
+// @route PUT /api/concours/:id
+// @access private/Admin
+const updateConcour = asyncHandler(async (req, res) => {
+  const {
+    name,
+    abbrev,
+    documentsRequired,
+    description,
+    eligibility,
+    numberOfAcceptedCandidates,
+    estimatedStartDate,
+  } = req.body;
+
+  const concour = await Concour.findById(req.params.id);
+  if (concour) {
+    concour.name = name;
+    concour.abbrev = abbrev;
+    concour.documentsRequired = documentsRequired;
+    concour.description = description;
+    concour.eligibility = eligibility;
+    concour.numberOfAcceptedCandidates = numberOfAcceptedCandidates;
+    concour.estimatedStartDate = estimatedStartDate;
+
+    const updatedConcour = await concour.save();
+    res.json(updatedConcour);
+  } else {
+    res.status(404);
+    throw new Error('Concour not found');
+  }
+});
+
+export { getConcourById, getConcours, createConcour, updateConcour };
 
 // ! controllers just encapsulate the logic

@@ -25,7 +25,7 @@ export class CareerDetailsComponent implements OnInit {
     console.log(id);
     this.careerServ.getCareer(id).subscribe(
       (response) => {
-        console.log(response);
+        console.table(response);
         this.currentCareer = response;
       },
       (err) => console.error(err)

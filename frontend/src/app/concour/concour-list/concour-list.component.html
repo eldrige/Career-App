@@ -5,7 +5,7 @@
   <div class="container">
     <div class="dez-bnr-inr-entry hero-text">
       <!-- <h1 class="text-white">Job Detail</h1> -->
-      <h1>Most In Demand Jobs in Cameroon</h1>
+      <h1>Most Popular Concours In Cameroon</h1>
 
       <!-- Breadcrumb row -->
       <div class="breadcrumb-row">
@@ -19,17 +19,13 @@
   </div>
 </div>
 
-<div class="hero-text container my-1">
+<div class="hero-text container my-5">
   <!-- <h1>Most In Demand Jobs in Cameroon</h1> -->
 
-  <h2>
-    Click on a career to discover the possible institutions you can take to
-    pursue a path in that career
-  </h2>
+  <h2>Click on a concour to find out the basics of that concour</h2>
   <div class="center-input">
     <input
       type="text"
-      placeholder="Enter a job to find its path"
       class="form-control mt-3 mb-2 p-4"
       [(ngModel)]="listFilter"
     />
@@ -48,19 +44,11 @@
         <div class="row align-middle">
           <div
             class="col-md-6 col-lg-4 column"
-            *ngFor="let career of filteredCareerArray"
+            *ngFor="let concour of filteredConcours"
           >
-            <div class="card gr-1">
-              <div class="txt">
-                <!-- <h3>{{ career.title }}</h3> -->
-                <h1>{{ career.title }}</h1>
-                <p>{{ career.title }}</p>
-              </div>
-              <a [routerLink]="['/careers', career._id]">more</a>
-              <div class="ico-card">
-                <i class="fa fa-rebel"></i>
-              </div>
-            </div>
+            <a [routerLink]="['/concours', concour._id]">
+              {{ concour.name }}
+            </a>
           </div>
         </div>
       </div>

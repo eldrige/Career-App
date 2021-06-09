@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect('mongodb://127.0.0.1/Jongleur', {
+    const conn = await mongoose.connect(process.env.DB_INSTANCE, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
       useCreateIndex: true,
