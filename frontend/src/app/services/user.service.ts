@@ -60,6 +60,12 @@ export class UserService {
     return false;
   }
 
+  isUserAdmin(): boolean {
+    let user = JSON.parse(localStorage.getItem('currentUser'));
+    if (user.isAdmin) return true;
+    return false;
+  }
+
   logout(): void {
     localStorage.removeItem('currentUser');
   }
