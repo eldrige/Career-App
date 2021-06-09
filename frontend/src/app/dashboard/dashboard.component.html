@@ -82,9 +82,8 @@
                 class="form-select form-select-sm"
                 aria-label="Default select example"
               >
-                <option selected>English</option>
-                <option value="1">French</option>
-                <option value="2">Spanish</option>
+                <option selected>not-admins</option>
+                <option value="1">admins</option>
               </select>
             </div>
           </div>
@@ -278,8 +277,11 @@
         </div>
         <div class="col-md-4 part3">
           <div class="p-3">
-            <p class="dash">My Courses</p>
-            <div class="d-flex justify-content-between bloc3 main-prin">
+            <p class="dash">All Careers</p>
+            <div
+              class="d-flex justify-content-between bloc3 main-prin my-1"
+              *ngFor="let career of careers"
+            >
               <div class="d-flex justify-content-around main-prin">
                 <img
                   src="assets\icons\book-paper.png"
@@ -290,8 +292,7 @@
               </div>
               <div>
                 <p>
-                  English course <br />
-                  20hours
+                  {{ career.title }}
                 </p>
               </div>
 
@@ -303,84 +304,6 @@
                 />
               </div>
             </div>
-            <br />
-            <div class="d-flex justify-content-between main-prin">
-              <div class="d-flex justify-content-around main-prin">
-                <img
-                  src="assets\icons\book-yell.png"
-                  class="cartoon"
-                  alt=""
-                  style="width: 3rem; height: 3rem"
-                />
-              </div>
-              <div>
-                <p>
-                  Spoken course <br />
-                  40hours
-                </p>
-              </div>
-
-              <div>
-                <img
-                  src="assets\icons\dot.png"
-                  alt=""
-                  class="dot .main-prine"
-                />
-              </div>
-            </div>
-            <br />
-            <div class="d-flex justify-content-between main-prin">
-              <div class="d-flex justify-content-around main-prin">
-                <img
-                  src="assets\icons\book-red.png"
-                  class="cartoon"
-                  alt=""
-                  style="width: 3rem; height: 3rem"
-                />
-              </div>
-              <div>
-                <p>
-                  Writting course <br />
-                  20hours
-                </p>
-              </div>
-
-              <div>
-                <img
-                  src="assets\icons\dot.png"
-                  alt=""
-                  class="dot .main-prine"
-                />
-              </div>
-            </div>
-            <br />
-            <div class="d-flex justify-content-between main-prin">
-              <div class="d-flex justify-content-around main-prin">
-                <img
-                  src="assets\icons\book-blue.png"
-                  class="cartoon"
-                  alt=""
-                  style="width: 3rem; height: 3rem"
-                />
-              </div>
-              <div>
-                <p>
-                  Language course <br />
-                  20hours
-                </p>
-              </div>
-
-              <div>
-                <img
-                  src="assets\icons\dot.png"
-                  alt=""
-                  class="dot .main-prine"
-                />
-              </div>
-            </div>
-
-            <br />
-            <br />
 
             <p class="dash">Account Progress</p>
 
