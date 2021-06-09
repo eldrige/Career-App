@@ -13,8 +13,7 @@ export class NavbarComponent implements OnInit {
   user: any;
 
   ngOnInit(): void {
-    this.user = localStorage.getItem('currentUser');
-    // console.log(this.user);
+    this.user = JSON.parse(localStorage.getItem('currentUser'));
   }
 
   checkIfUserIsLoggedIn(): boolean {
@@ -26,10 +25,4 @@ export class NavbarComponent implements OnInit {
       this.userService.logout();
     }
   }
-  // reloadComponent() {
-  //   let currentUrl = this.router.url;
-  //   this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-  //   this.router.onSameUrlNavigation = 'reload';
-  //   this.router.navigate([currentUrl]);
-  // }
 }
