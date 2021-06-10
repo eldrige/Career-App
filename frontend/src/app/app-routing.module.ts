@@ -1,3 +1,4 @@
+import { ConcourEditComponent } from './concour/concour-edit/concour-edit.component';
 import { CareerEditComponent } from './careers/career-edit/career-edit.component';
 import { AdminGuard } from './services/admin.guard';
 import { ConcourItemComponent } from './concour/concour-item/concour-item.component';
@@ -38,6 +39,12 @@ const routes: Routes = [
   { path: 'policies', component: PoliciesComponent },
   { path: 'concours', component: ConcourListComponent },
   { path: 'concours/:id', component: ConcourItemComponent },
+  {
+    path: 'concours/edit/:id',
+    component: ConcourEditComponent,
+    canActivate: [AuthGuard, AdminGuard],
+  },
+
   { path: '**', component: NotFoundComponent },
 ];
 

@@ -22,6 +22,19 @@ const getCareerById = async (req, res) => {
   }
 };
 
-export { getCareers, getCareerById };
+// @desc Update a career
+// @route GET /api/careers/edit/:id
+// @access private/Admin
+const editCareer = async (req, res) => {
+  const career = await Career.findById(req.params.id);
+
+  if (career) {
+    res.json(career);
+  } else {
+    res.status(404).json({ message: 'Career not found' });
+  }
+};
+
+export { getCareers, getCareerById, editCareer };
 
 // ! controllers just encapsulate the logic

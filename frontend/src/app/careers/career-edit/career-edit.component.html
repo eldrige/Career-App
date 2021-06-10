@@ -1,17 +1,77 @@
-<div>
-  <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput />
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
+<div class="container-form d-flex flex justify-content-center my-5">
+  <div class="col-md-4 mt-5">
+    <mat-form-field appearance="fill">
+      <mat-label>Input</mat-label>
+      <input matInput />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Textarea</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </div>
 </div>
+
+<!-- <div class="container-form d-flex flex justify-content-center mt-5">
+  <div class="col-md-4 my-4 amir-form">
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <h2 class="text-center">
+        <img src="assets/images/jongleur.png" alt="" />
+      </h2>
+      <h2 class="text-primary">Account Registration</h2>
+      <hr class="style-seven" />
+      <div class="form-group">
+        <label>Name</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="name"
+          required
+          placeholder="Name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          class="form-control"
+          type="email"
+          formControlName="email"
+          required
+          placeholder="Type your email address"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          class="form-control"
+          type="password"
+          formControlName="password"
+          required
+          placeholder="password"
+        />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+      </div>
+      <p>
+        Already have an account ?
+        <a
+          [routerLink]="['/login']"
+          class="p-2 ml-1 font-16 text-primary"
+          routerLinkActive="router-link-active"
+          >Login</a
+        >
+      </p>
+    </form>
+  </div>
+</div>
+
+ -->
