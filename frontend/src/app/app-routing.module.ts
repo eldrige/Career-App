@@ -1,3 +1,4 @@
+import { CareerEditComponent } from './careers/career-edit/career-edit.component';
 import { AdminGuard } from './services/admin.guard';
 import { ConcourItemComponent } from './concour/concour-item/concour-item.component';
 import { ConcourListComponent } from './concour/concour-list/concour-list.component';
@@ -17,8 +18,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   { path: 'home', component: WelcomeComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
+
   { path: 'careers', component: CareerListComponent },
   { path: 'careers/:id', component: CareerDetailsComponent },
+  {
+    path: 'careers/edit/:id',
+    component: CareerEditComponent,
+    canActivate: [AuthGuard, AdminGuard],
+  },
+
   { path: 'jobs', component: JobsComponent },
   {
     path: 'dashboard',

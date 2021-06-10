@@ -29,6 +29,7 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { PoliciesComponent } from './policies/policies.component';
 import { ConcourListComponent } from './concour/concour-list/concour-list.component';
 import { ConcourItemComponent } from './concour/concour-item/concour-item.component';
+import { CareerEditComponent } from './careers/career-edit/career-edit.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ConcourItemComponent } from './concour/concour-item/concour-item.compon
     PoliciesComponent,
     ConcourListComponent,
     ConcourItemComponent,
+    CareerEditComponent,
   ],
   imports: [
     BrowserModule,

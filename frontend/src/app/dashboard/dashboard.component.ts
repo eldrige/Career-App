@@ -1,3 +1,4 @@
+import { ConcourService } from './../services/concour.service';
 import { CareerService } from './../shared/career.service';
 import { UserService } from './../services/user.service';
 
@@ -12,15 +13,18 @@ import { ICareer } from '../shared/career';
 export class DashboardComponent implements OnInit {
   constructor(
     private userService: UserService,
-    private careerService: CareerService
+    private careerService: CareerService,
+    private concourService: ConcourService
   ) {}
 
   users: any;
   careers: ICareer[];
+  concours: any;
 
   ngOnInit(): void {
     this.getUsers();
     this.getCareers();
+    this.getConcours();
   }
 
   getUsers() {
@@ -32,6 +36,12 @@ export class DashboardComponent implements OnInit {
   getCareers() {
     return this.careerService.getCareers().subscribe((response) => {
       this.careers = response;
+    });
+  }
+
+  getConcours() {
+    return this.concourService.getConcours().subscribe((response) => {
+      this.concours = response;
     });
   }
 }

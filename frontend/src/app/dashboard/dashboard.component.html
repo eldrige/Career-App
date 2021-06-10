@@ -53,6 +53,7 @@
                   alt=""
                   style="width: 3rem"
                 />
+                <!-- button will be used to create new concours/jobs/careers -->
               </div>
               <div class="">
                 <img src="assets\icons\cloche.png" alt="" style="width: 3rem" />
@@ -105,41 +106,6 @@
               <img src="assets\icons\dot.png" alt="" class="dot .main-prine" />
             </div>
           </div>
-
-          <!-- <div class="d-flex justify-content-between main-prin">
-            <div class="d-flex justify-content-around main-prin">
-              <img src="assets\icons\cartoon2.png" class="cartoon" alt="" />
-
-              <p>Prof.Fadi</p>
-            </div>
-            <div>
-              <p>2 hours lecture</p>
-            </div>
-            <div>
-              <p>$120/hr</p>
-            </div>
-            <div>
-              <img src="assets\icons\dot.png" alt="" class="dot" />
-            </div>
-          </div>
-          <br />
-          <div class="d-flex justify-content-between main-prin">
-            <div class="d-flex justify-content-around main-prin">
-              <img src="assets\icons\cartoon3.png" class="cartoon" alt="" />
-              <p>Prof.Alex</p>
-            </div>
-            <div>
-              <p>4 hours lecture</p>
-            </div>
-            <div>
-              <p>$150/hr</p>
-            </div>
-            <div>
-              <img src="assets\icons\dot.png" alt="" class="dot" />
-            </div>
-          </div>
-          <br />
-          <br /> -->
 
           <div class="row">
             <div class="col">
@@ -297,11 +263,12 @@
               </div>
 
               <div>
-                <img
-                  src="assets\icons\dot.png"
-                  alt=""
-                  class="dot .main-prine"
-                />
+                <a [routerLink]="['/careers/edit', career._id]">
+                  <img
+                    src="assets\icons\dot.png"
+                    alt=""
+                    class="dot .main-prine"
+                /></a>
               </div>
             </div>
 
