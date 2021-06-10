@@ -1,7 +1,6 @@
 import { UserService } from './../services/user.service';
-// import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-// import { Location } from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-navbar',
@@ -9,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    private _snackBar: MatSnackBar
+  ) {}
   user: any;
 
   ngOnInit(): void {
     this.user = JSON.parse(localStorage.getItem('currentUser'));
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    });
   }
 
   checkIfUserIsLoggedIn(): boolean {

@@ -1,12 +1,13 @@
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MaterialModule } from './shared/material-module';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { QuizModule } from './quiz/quiz.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -26,7 +27,6 @@ import { JobExplainedComponent } from './welcome/job-explained/job-explained.com
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { PoliciesComponent } from './policies/policies.component';
-import { QuizComponent } from './multistep/quiz/quiz.component';
 import { ConcourListComponent } from './concour/concour-list/concour-list.component';
 import { ConcourItemComponent } from './concour/concour-item/concour-item.component';
 
@@ -50,7 +50,6 @@ import { ConcourItemComponent } from './concour/concour-item/concour-item.compon
     LoginComponent,
     SignUpComponent,
     PoliciesComponent,
-    QuizComponent,
     ConcourListComponent,
     ConcourItemComponent,
   ],
@@ -64,6 +63,8 @@ import { ConcourItemComponent } from './concour/concour-item/concour-item.compon
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
