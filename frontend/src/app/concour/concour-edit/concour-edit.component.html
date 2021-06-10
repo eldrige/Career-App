@@ -1,1 +1,100 @@
-<p>concour-edit works!</p>
+<div class="container-form d-flex flex justify-content-center mt-5">
+  <div class="col-md-7 my-4 amir-form">
+    <form [formGroup]="concourForm" (ngSubmit)="onSubmit()">
+      <h2 class="text-center">
+        <img src="assets/images/careers/doctor.jpg" height="50rem" />
+      </h2>
+      <h2 class="text-primary display-2">Edit Concour</h2>
+      <hr class="style-seven" />
+      <div class="form-group">
+        <label>Name</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="name"
+          required
+          [placeholder]="concour.name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Abbrev</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="abbrev"
+          required
+          [placeholder]="concour.abbrev"
+        />
+      </div>
+      <div class="form-group">
+        <label>Type</label>
+        <select class="custom-select" formControlName="type">
+          <option value="1">Public</option>
+          <option value="2">Private</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Number of candidates accepted</label>
+        <input
+          class="form-control"
+          type="number"
+          formControlName="numberOfAcceptedCandidates"
+          required
+          [placeholder]="concour.numberOfAcceptedCandidates"
+        />
+      </div>
+      <div class="form-group">
+        <label>Start Date</label>
+        <input
+          class="form-control"
+          type="date"
+          formControlName="estimatedStartDate"
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Documents Required To Apply</label>
+        <select
+          multiple
+          class="form-control"
+          formControlName="documentsRequired"
+          required
+        >
+          <option>GCE A/L</option>
+          <option>High School transcript</option>
+          <option>Birth Certificate</option>
+          <option>4 x 4 photos</option>
+          <option>GCE O/L</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Eligibility</label>
+        <select
+          multiple
+          class="form-control"
+          formControlName="eligibility"
+          required
+        >
+          <option>Anyone found in the CEMAC region</option>
+          <option>Below the age of 30</option>
+          <option>Completed high scholl studies</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea
+          class="form-control"
+          id="description"
+          rows="3"
+          formControlName="description"
+          [placeholder]="concour.description"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

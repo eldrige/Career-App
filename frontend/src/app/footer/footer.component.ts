@@ -10,6 +10,8 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class FooterComponent implements OnInit {
   emailEndpoint: String = 'api/emails';
 
+  today: Date = new Date();
+
   signUpForm: FormGroup;
   constructor(
     private emailService: EmailService,

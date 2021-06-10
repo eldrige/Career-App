@@ -5,7 +5,9 @@
         <h3><strong>Hot Links</strong></h3>
         <nav class="nav flex-column">
           <a class="nav-link active" routerLink="/home">Home</a>
-          <a class="nav-link" [routerLink]="['/home']">Team</a>
+          <a class="nav-link" [routerLink]="['/careers']">Careers</a>
+          <a class="nav-link" [routerLink]="['/concours']">Concours</a>
+          <a class="nav-link" [routerLink]="['/jobs']">Jobs</a>
           <a class="nav-link" [routerLink]="['/home']">Contact Us</a>
         </nav>
       </div>
@@ -67,7 +69,9 @@
     </div>
 
     <div class="row mt-3">
-      <div class="col text-center">© 2021 Jongluer. All Rights Reserved</div>
+      <div class="col text-center">
+        © {{ today.getFullYear() }} Jongleur. All Rights Reserved
+      </div>
     </div>
   </div>
 </footer>

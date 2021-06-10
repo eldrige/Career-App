@@ -1,6 +1,7 @@
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MaterialModule } from './shared/material-module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -68,6 +69,7 @@ import { ConcourEditComponent } from './concour/concour-edit/concour-edit.compon
     MatButtonModule,
     MatCardModule,
     MatSnackBarModule,
+    MatFormFieldModule,
     BrowserAnimationsModule,
   ],
   providers: [],
