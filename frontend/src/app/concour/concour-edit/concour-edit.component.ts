@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ConcourService } from 'src/app/services/concour.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-concour-edit',
@@ -12,13 +13,15 @@ import { ConcourService } from 'src/app/services/concour.service';
 export class ConcourEditComponent implements OnInit {
   concourForm: FormGroup;
   concour: any;
+  id = this.route.snapshot.paramMap.get('id');
   constructor(
     public formBuilder: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
     private ngZone: NgZone,
     private _snackBar: MatSnackBar,
-    private concourService: ConcourService
+    private concourService: ConcourService,
+    private userService: UserService
   ) {
     this.concourForm = this.formBuilder.group({
       name: [''],
@@ -29,6 +32,7 @@ export class ConcourEditComponent implements OnInit {
       documentsRequired: [''],
       eligibility: [''],
       description: [''],
+      _id: [this.id],
     });
   }
   ngOnInit(): void {

@@ -19,17 +19,6 @@ export class UserService {
   private userEndpoint = '/api/users';
 
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
-  // .set('Authorization', `Bearer ${userInfo.token}`);
-
-  // const {
-  //     userLogin: { userInfo },
-  //   } = getState();
-  // config = {
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //     Authorization: `Bearer ${userInfo.token}`,
-  //   },
-  // };
 
   getLoggedInUser() {
     if (localStorage.getItem('currentUser')) {
@@ -84,6 +73,12 @@ export class UserService {
         },
       })
       .pipe(catchError(this.handleError));
+  }
+
+  getUser() {
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    if (user) return user;
+    throw new Error('No user is logged in');
   }
 
   handleError(error: HttpErrorResponse) {
