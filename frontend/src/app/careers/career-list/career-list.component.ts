@@ -30,6 +30,9 @@ export class CareerListComponent implements OnInit {
       ? this.performFilter(this.listFilter)
       : this.careerArray;
   }
+
+  paginatedCareers: any[];
+  maxCount: any;
   ngOnInit(): void {
     this.getCareers();
     //call getCareers() on cretion of component
@@ -58,6 +61,11 @@ export class CareerListComponent implements OnInit {
   onPaginate(pageEvent: PageEvent) {
     this.careersPerPage = +pageEvent.pageSize;
     this.pageNumber = +pageEvent.pageIndex + 1;
-    this.careerServ.getPaginatedCareers(this.careersPerPage, this.pageNumber);
+    this.careerServ
+      .getPaginatedCareers(this.careersPerPage, this.pageNumber)
+      .subscribe((res) => {
+        console.log(res);
+        this.paginatedCareers = res.careers;
+      });
   }
 }

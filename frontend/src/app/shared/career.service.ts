@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable, pipe } from 'rxjs';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +10,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 export class CareerService {
   // careerEndpoint = '../../assets/career-data.json';[]
   private careerEndpoint = '/api/careers';
-  careers: any;
+  paginatedCareers: any;
   maxCount: any;
 
   constructor(private http: HttpClient) {}
@@ -30,7 +29,7 @@ export class CareerService {
     const queryParams = `?pageSize=${pageSize}&page=${currentPage}`;
 
     return this.http
-      .get<any>(this.careerEndpoint + queryParams)
+      .get<any>(`${this.careerEndpoint}/paginated` + queryParams)
       .pipe(
         map((careerData) => {
           return {
@@ -38,10 +37,6 @@ export class CareerService {
             maxCount: careerData.maxCount,
           };
         })
-      )
-      .subscribe((res) => {
-        this.careers = res.careers;
-        this.maxCount = res.maxCount;
-      });
+      );
   }
 }

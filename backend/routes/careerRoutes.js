@@ -11,8 +11,8 @@ import {
 
 router.route('/').get(getCareers);
 //  ? this is equivalent to router.get('/', getProducts)
+router.route('/paginated').get(getPaginatedCareers);
 router.route('/:id').get(getCareerById);
 router.route('/edit/:id').post(protect, admin, editCareer);
-router.route('/paginated').get(getPaginatedCareers);
 
 export default router;
