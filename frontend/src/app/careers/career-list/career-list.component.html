@@ -5,27 +5,17 @@
   <div class="container">
     <div class="dez-bnr-inr-entry hero-text">
       <h1>Most In Demand Jobs in Cameroon</h1>
-
       <div class="breadcrumb-row">
         <ul class="list-inline">
           <li><a>Home</a></li>
           <li>Jobs</li>
         </ul>
       </div>
-      <mat-paginator
-        class="my-3"
-        [length]="20"
-        [pageSize]="careersPerPage"
-        [pageSizeOptions]="[6, 12, 18, 20]"
-        (page)="onPaginate($event)"
-      >
-      </mat-paginator>
     </div>
   </div>
 </div>
 
-<!-- <div class="hero-text container my-1">
-
+<div class="hero-text container my-1">
   <h2>
     Click on a career to discover the possible institutions you can take to
     pursue a path in that career
@@ -44,9 +34,9 @@
   </div>
 
   <h2>Filtered By: {{ listFilter }}</h2>
-</div> -->
+</div>
 
-<!-- <section class="main">
+<section class="main">
   <div class="container">
     <div class="second row">
       <div class="container">
@@ -68,10 +58,12 @@
           </div>
         </div>
       </div>
-    </div> -->
-
-<!-- </div>
-</section> -->
-
-<!-- length = totoalItemsFromBackend -->
-<!-- pageSize = itemsPerPage -->
+    </div>
+  </div>
+  <mat-paginator
+    [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+  >
+  </mat-paginator>
+</section>

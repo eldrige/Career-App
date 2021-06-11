@@ -2,9 +2,9 @@
 import Career from '../models/careerModel.js';
 
 // @desc fetch all careers
-// @route GET /api/careers
+// @route GET /api/careers/paginated
 // @access public
-const getCareers = async (req, res) => {
+const getPaginatedCareers = async (req, res) => {
   const pageSize = +req.query.pageSize || 6;
   const currentPage = +req.query.page || 1;
   const count = await Career.countDocuments();
@@ -19,16 +19,18 @@ const getCareers = async (req, res) => {
     maxCount: count,
     pages: Math.ceil(count / pageSize),
   });
-  // const pageSize = +req.query.pageSize;
-  // const currentPage = +req.query.page;
+};
 
-  // let fetchedItems;
-
-  // const careerQuery = Career.find();
-
-  // if (pageSize && currentPage) {
-  //   careerQuery.limit(pageSize).skip(pageSize * (currentPage - 1));
-  // }
+// @desc fetch paginated careers
+// @route GET /api/careers/
+// @access public
+const getCareers = async (req, res) => {
+  try {
+    const careers = await Career.find({});
+    res.json(careers);
+  } catch (error) {
+    throw new Error('No career found');
+  }
 };
 
 // @desc fetch one careers
@@ -57,6 +59,6 @@ const editCareer = async (req, res) => {
   }
 };
 
-export { getCareers, getCareerById, editCareer };
+export { getCareers, getCareerById, editCareer, getPaginatedCareers };
 
 // ! controllers just encapsulate the logic
