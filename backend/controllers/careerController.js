@@ -5,8 +5,30 @@ import Career from '../models/careerModel.js';
 // @route GET /api/careers
 // @access public
 const getCareers = async (req, res) => {
-  const careers = await Career.find({});
-  res.json(careers);
+  const pageSize = +req.query.pageSize || 6;
+  const currentPage = +req.query.page || 1;
+  const count = await Career.countDocuments();
+
+  const careers = await Career.find({})
+    .limit(pageSize)
+    .skip(pageSize * (currentPage - 1));
+
+  res.json({
+    careers,
+    currentPage,
+    maxCount: count,
+    pages: Math.ceil(count / pageSize),
+  });
+  // const pageSize = +req.query.pageSize;
+  // const currentPage = +req.query.page;
+
+  // let fetchedItems;
+
+  // const careerQuery = Career.find();
+
+  // if (pageSize && currentPage) {
+  //   careerQuery.limit(pageSize).skip(pageSize * (currentPage - 1));
+  // }
 };
 
 // @desc fetch one careers
