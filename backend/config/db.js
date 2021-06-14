@@ -7,7 +7,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useCreateIndex: true,
     });
-    console.log(`Mongo Db connected`);
+    console.log(`Mongo Db connected:Jongleur `);
   } catch (error) {
     console.error(error);
     process.exit(1);

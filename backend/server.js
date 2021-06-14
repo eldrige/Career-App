@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
-  res.send('API is running');
+  res.send('Jongleur API is running');
 });
 
 app.use(cors());
