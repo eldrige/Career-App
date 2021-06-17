@@ -21,7 +21,7 @@ const getPaginatedCareers = async (req, res) => {
   });
 };
 
-// @desc fetch paginated careers
+// @desc fetch all careers
 // @route GET /api/careers/
 // @access public
 const getCareers = async (req, res) => {
