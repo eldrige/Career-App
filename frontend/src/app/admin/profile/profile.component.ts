@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ConcourService } from './../services/concour.service';
-import { CareerService } from './../shared/career.service';
-import { UserService } from './../services/user.service';
-import { ICareer } from '../shared/career';
+import { ConcourService } from '../../services/concour.service';
+import { CareerService } from '../../shared/career.service';
+import { UserService } from '../../services/user.service';
+import { ICareer } from '../../shared/career';
 
 @Component({
   selector: 'app-profile',

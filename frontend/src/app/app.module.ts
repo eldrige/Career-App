@@ -1,4 +1,4 @@
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './admin/profile/profile.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';

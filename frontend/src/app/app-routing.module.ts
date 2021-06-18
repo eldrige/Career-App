@@ -1,4 +1,5 @@
-import { ProfileComponent } from './profile/profile.component';
+import { TableComponent } from './admin/tables/table.component';
+import { ProfileComponent } from './admin/profile/profile.component';
 import { ConcourEditComponent } from './concour/concour-edit/concour-edit.component';
 import { CareerEditComponent } from './careers/career-edit/career-edit.component';
 import { AdminGuard } from './services/admin.guard';
@@ -46,6 +47,7 @@ const routes: Routes = [
     canActivate: [AuthGuard, AdminGuard],
   },
   { path: 'profile', component: ProfileComponent },
+  { path: 'table', component: TableComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
