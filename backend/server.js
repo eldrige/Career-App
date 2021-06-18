@@ -28,7 +28,7 @@ app.use('/api/users/', userRouter);
 app.use('/api/careers/', careerRouter);
 app.use('/api/jobs/', jobRouter);
 app.use('/api/concours/', concourRouter);
-app.use('/api/emails', emailRouter);
+app.use('/api/emails/', emailRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

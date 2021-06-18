@@ -177,6 +177,81 @@ const updateUser = asyncHandler(async (req, res) => {
   }
 });
 
+// @desc Request for a password reset token
+// @route POST /api/users/reset-request
+// @access Public
+const requestPasswordReset = asyncHandler(async (req, res) => {
+  const { email } = req.body;
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    throw new Error('User does not exist');
+  } else {
+    let token = await Token.findOne({ userId: user._id });
+    if (token) await token.deleteOne();
+
+    let resetToken = crypto.randomBytes(32).toString('hex');
+
+    await new Token({
+      userId: user._id,
+      token: resetToken,
+      createdAt: Date.now(),
+    }).save();
+
+    const link = `${clientURL}/passwordReset?token=${resetToken}&id=${user._id}`;
+
+    try {
+      await sendMail(
+        email,
+        'Password Reset Request',
+        `Please click this link to reset your password:\n ${link}`
+      );
+      res.send(`${link}`);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+});
+
+// @desc Reset Password
+// @route POST /api/users/reset
+// @access Public
+const resetPassword = asyncHandler(async (req, res) => {
+  const { id, token } = req.query;
+  const { password } = req.body;
+  const user = await User.findById({ _id: id });
+
+  if (!user) {
+    res.status(400).send('User does not exist');
+  } else {
+    let passwordResetToken = await Token.findOne({ userId: id });
+    const isValid = token == passwordResetToken.token;
+    if (!passwordResetToken || !isValid) {
+      throw new Error('Invalid or expired password reset token');
+    }
+
+    user.password = password;
+
+    try {
+      const updatedUser = await user.save();
+      await sendMail(
+        user.email,
+        'Password Reset Status',
+        `Hi, ${user.name} Please login to GarbageBinTracker.com with your new password`
+      );
+      await passwordResetToken.deleteOne();
+      res.json({
+        _id: updatedUser._id,
+        name: updatedUser.name,
+        email: updatedUser.email,
+        isAdmin: updatedUser.isAdmin,
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+});
+
 export {
   authUser,
   registerUser,
@@ -186,4 +261,6 @@ export {
   deleteUser,
   updateUser,
   getUserById,
+  resetPassword,
+  requestPasswordReset,
 };
