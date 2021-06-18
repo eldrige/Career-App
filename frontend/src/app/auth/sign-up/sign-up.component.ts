@@ -32,15 +32,19 @@ export class SignUpComponent implements OnInit {
     });
   }
 
+  refreshPage() {
+    window.location.reload();
+  }
+
   onSubmit(): any {
     this.userService.registerUser(this.signUpForm.value).subscribe(
-      () => {
-        // console.log('Data added successfully!');
+      (res) => {
+        console.log(res, ': From sign up form');
         this.openSnackBar('Please Login to continue', 'Account Created');
         this.ngZone.run(() => this.router.navigateByUrl('/login'));
       },
       (err) => {
-        console.log(err);
+        console.log(err.message);
       }
     );
   }

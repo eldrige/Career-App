@@ -27,10 +27,15 @@ export class NavbarComponent implements OnInit {
   checkIfUserIsLoggedIn(): boolean {
     return this.userService.isUserLoggedIn();
   }
+  refreshPage() {
+    window.location.reload();
+  }
 
   logout(): void {
     if (window.confirm('sure about this ?')) {
       this.userService.logout();
+      this.openSnackBar('Succesfull Logout', '');
+      this.refreshPage();
     }
   }
 }

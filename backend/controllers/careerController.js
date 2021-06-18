@@ -1,4 +1,4 @@
-// import asyncHandler from 'express-async-handler';
+import asyncHandler from 'express-async-handler';
 import Career from '../models/careerModel.js';
 
 // @desc fetch all careers

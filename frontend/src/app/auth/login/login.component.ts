@@ -34,16 +34,21 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  refreshPage() {
+    window.location.reload();
+  }
+
   onSubmit(): any {
     this.userService.authUser(this.loginForm.value).subscribe(
-      (data) => {
-        localStorage.setItem('currentUser', JSON.stringify(data));
+      (res) => {
+        localStorage.setItem('currentUser', JSON.stringify(res));
         this.openSnackBar('Succesfull Login', '');
         this.ngZone.run(() => this.router.navigateByUrl('/home'));
+        this.refreshPage();
       },
       (err) => {
         this.invalidLogin = true;
-        console.log(err);
+        console.log(err.message);
       }
     );
   }
