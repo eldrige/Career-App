@@ -1,3 +1,4 @@
+import { ProfileComponent } from './profile/profile.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
@@ -58,6 +59,7 @@ import { ConcourEditComponent } from './concour/concour-edit/concour-edit.compon
     ConcourItemComponent,
     CareerEditComponent,
     ConcourEditComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
