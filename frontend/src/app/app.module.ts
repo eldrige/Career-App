@@ -35,6 +35,7 @@ import { ConcourItemComponent } from './concour/concour-item/concour-item.compon
 import { CareerEditComponent } from './careers/career-edit/career-edit.component';
 import { ConcourEditComponent } from './concour/concour-edit/concour-edit.component';
 import { TableComponent } from './admin/tables/table.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { TableComponent } from './admin/tables/table.component';
     ConcourEditComponent,
     ProfileComponent,
     TableComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

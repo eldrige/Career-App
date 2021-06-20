@@ -1,3 +1,4 @@
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TableComponent } from './admin/tables/table.component';
 import { ProfileComponent } from './admin/profile/profile.component';
 import { ConcourEditComponent } from './concour/concour-edit/concour-edit.component';
@@ -48,6 +49,7 @@ const routes: Routes = [
   },
   { path: 'profile', component: ProfileComponent },
   { path: 'table', component: TableComponent },
+  { path: 'contact', component: ContactUsComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
