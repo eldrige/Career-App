@@ -47,7 +47,11 @@ const routes: Routes = [
     component: ConcourEditComponent,
     canActivate: [AuthGuard, AdminGuard],
   },
-  { path: 'profile', component: ProfileComponent },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuard, AdminGuard],
+  },
   { path: 'table', component: TableComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: '**', component: NotFoundComponent },
