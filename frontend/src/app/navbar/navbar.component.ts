@@ -31,6 +31,10 @@ export class NavbarComponent implements OnInit {
     window.location.reload();
   }
 
+  isAdmin() {
+    return this.userService.isUserAdmin();
+  }
+
   logout(): void {
     if (window.confirm('sure about this ?')) {
       this.userService.logout();
