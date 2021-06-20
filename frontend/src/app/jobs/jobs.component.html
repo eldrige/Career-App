@@ -145,7 +145,14 @@
   <!-- About Us END -->
   <!-- Call To Action -->
   <div
-    class="section-full content-inner-2 call-to-action overlay-black-dark text-white text-center bg-img-fix"
+    class="
+      section-full
+      content-inner-2
+      call-to-action
+      overlay-black-dark
+      text-white text-center
+      bg-img-fix
+    "
     style="background-image: url(images/background/bg4.jpg)"
   >
     <div class="container">
@@ -156,7 +163,10 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry...
           </p>
-          <a href="#" class="site-button m-t20 outline outline-2 radius-xl"
+          <a
+            [routerLink]="['/sign-up']"
+            routerLinkActive="router-link-active"
+            class="site-button m-t20 outline outline-2 radius-xl"
             >Create an Account</a
           >
         </div>
@@ -181,171 +191,20 @@
       <div class="row">
         <div class="col-lg-9">
           <ul class="post-job-bx">
-            <li>
+            <li *ngFor="let job of jobs">
               <a href="#">
                 <div class="d-flex m-b30">
                   <div class="job-post-company">
                     <span><img src="images/logo/icon1.png" /></span>
                   </div>
                   <div class="job-post-info">
-                    <h4>Digital Marketing Executive</h4>
+                    <h4>{{ job.title }}</h4>
                     <ul>
-                      <li>
-                        <i class="fa fa-map-marker"></i> Sacramento, California
-                      </li>
+                      <li><i class="fa fa-map-marker"></i> Cameroon</li>
                       <li><i class="fa fa-bookmark-o"></i> Full Time</li>
                       <li>
-                        <i class="fa fa-clock-o"></i> Published 11 months ago
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="d-flex">
-                  <div class="job-time mr-auto">
-                    <span>Full Time</span>
-                  </div>
-                  <div class="salary-bx">
-                    <span>50 - 75000 FCFA</span>
-                  </div>
-                </div>
-                <span class="post-like fa fa-heart-o"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="d-flex m-b30">
-                  <div class="job-post-company">
-                    <span><img src="images/logo/icon1.png" /></span>
-                  </div>
-                  <div class="job-post-info">
-                    <h4>Full Stack Web Developer</h4>
-                    <ul>
-                      <li>
-                        <i class="fa fa-map-marker"></i> Sacramento, California
-                      </li>
-                      <li><i class="fa fa-bookmark-o"></i> Full Time</li>
-                      <li>
-                        <i class="fa fa-clock-o"></i> Published 11 months ago
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="d-flex">
-                  <div class="job-time mr-auto">
-                    <span>Full Time</span>
-                  </div>
-                  <div class="salary-bx">
-                    <span>50 - 75000 FCFA</span>
-                  </div>
-                </div>
-                <span class="post-like fa fa-heart-o"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="d-flex m-b30">
-                  <div class="job-post-company">
-                    <span><img src="images/logo/icon1.png" /></span>
-                  </div>
-                  <div class="job-post-info">
-                    <h4>Senior Security Analyst</h4>
-                    <ul>
-                      <li>
-                        <i class="fa fa-map-marker"></i> Sacramento, California
-                      </li>
-                      <li><i class="fa fa-bookmark-o"></i> Full Time</li>
-                      <li>
-                        <i class="fa fa-clock-o"></i> Published 11 months ago
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="d-flex">
-                  <div class="job-time mr-auto">
-                    <span>Full Time</span>
-                  </div>
-                  <div class="salary-bx">
-                    <span>50 - 75000 FCFA</span>
-                  </div>
-                </div>
-                <span class="post-like fa fa-heart-o"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="d-flex m-b30">
-                  <div class="job-post-company">
-                    <span><img src="images/logo/icon1.png" /></span>
-                  </div>
-                  <div class="job-post-info">
-                    <h4>Vocal Producer</h4>
-                    <ul>
-                      <li>
-                        <i class="fa fa-map-marker"></i> Sacramento, California
-                      </li>
-                      <li><i class="fa fa-bookmark-o"></i> Full Time</li>
-                      <li>
-                        <i class="fa fa-clock-o"></i> Published 11 months ago
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="d-flex">
-                  <div class="job-time mr-auto">
-                    <span>Full Time</span>
-                  </div>
-                  <div class="salary-bx">
-                    <span>50 - 75000 FCFA</span>
-                  </div>
-                </div>
-                <span class="post-like fa fa-heart-o"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="d-flex m-b30">
-                  <div class="job-post-company">
-                    <span><img src="images/logo/icon1.png" /></span>
-                  </div>
-                  <div class="job-post-info">
-                    <h4>Digital Marketing Executive</h4>
-                    <ul>
-                      <li>
-                        <i class="fa fa-map-marker"></i> Sacramento, California
-                      </li>
-                      <li><i class="fa fa-bookmark-o"></i> Full Time</li>
-                      <li>
-                        <i class="fa fa-clock-o"></i> Published 11 months ago
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="d-flex">
-                  <div class="job-time mr-auto">
-                    <span>Full Time</span>
-                  </div>
-                  <div class="salary-bx">
-                    <span>50 - 75000 FCFA</span>
-                  </div>
-                </div>
-                <span class="post-like fa fa-heart-o"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="d-flex m-b30">
-                  <div class="job-post-company">
-                    <span><img src="images/logo/icon1.png" /></span>
-                  </div>
-                  <div class="job-post-info">
-                    <h4>Marketing Strategies</h4>
-                    <ul>
-                      <li>
-                        <i class="fa fa-map-marker"></i> Sacramento, California
-                      </li>
-                      <li><i class="fa fa-bookmark-o"></i> Full Time</li>
-                      <li>
-                        <i class="fa fa-clock-o"></i> Published 11 months ago
+                        <i class="fa fa-clock-o"></i>
+                        {{ formatDate(job.datePublished) }}
                       </li>
                     </ul>
                   </div>
@@ -387,13 +246,13 @@
                 </div>
                 <div class="testimonial-text">
                   <p>
-                    I just got a job that I applied for via careerfy! I used the
+                    I just got a job that I applied for via Jongleur! I used the
                     site all the time during my job hunt.
                   </p>
                 </div>
                 <div class="testimonial-detail">
-                  <strong class="testimonial-name">Richard Anderson</strong>
-                  <span class="testimonial-position">Nevada, USA</span>
+                  <strong class="testimonial-name">Tk Dingue</strong>
+                  <span class="testimonial-position">Douala, CM</span>
                 </div>
               </div>
             </div>
@@ -401,7 +260,7 @@
               <div class="quote-info">
                 <h4>Make a Difference with Your Online Resume!</h4>
                 <p>
-                  Your resume in minutes with JobBoard resume assistant is
+                  Your resume in minutes with Jongleur resume assistant is
                   ready!
                 </p>
                 <a
@@ -486,7 +345,15 @@
             </p>
           </div>
           <div
-            class="blog-carousel owl-carousel owl-btn-center-lr owl-btn-3 owl-theme owl-btn-center-lr owl-btn-1"
+            class="
+              blog-carousel
+              owl-carousel
+              owl-btn-center-lr
+              owl-btn-3
+              owl-theme
+              owl-btn-center-lr
+              owl-btn-1
+            "
           >
             <div class="item">
               <div class="blog-post blog-grid blog-style-1">

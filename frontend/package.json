@@ -26,6 +26,7 @@
     "fusioncharts": "^3.16.0",
     "inspirational-quotes": "^1.0.8",
     "jquery": "^3.5.1",
+    "moment": "^2.29.1",
     "rxjs": "~6.6.3",
     "survey-angular": "^1.8.43",
     "tslib": "^2.1.0",
