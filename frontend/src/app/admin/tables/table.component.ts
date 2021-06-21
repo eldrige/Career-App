@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { CareerService } from '../../shared/career.service';
 import { PageEvent } from '@angular/material/paginator';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-table',
@@ -29,6 +30,10 @@ export class TableComponent implements OnInit {
     return this.userService.getAllUsers().subscribe((response) => {
       this.users = response;
     });
+  }
+
+  formatDate(date) {
+    return moment(date).format('L');
   }
 
   getCareers() {

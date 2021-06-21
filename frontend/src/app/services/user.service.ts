@@ -14,7 +14,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  user: any;
+  public user: any;
 
   private userEndpoint = '/api/users';
 
@@ -51,7 +51,7 @@ export class UserService {
 
   isUserAdmin(): boolean {
     let user = JSON.parse(localStorage.getItem('currentUser'));
-    if (user.isAdmin) return true;
+    if (user?.isAdmin) return true;
     return false;
   }
 
@@ -77,8 +77,10 @@ export class UserService {
 
   getUser() {
     const user = JSON.parse(localStorage.getItem('currentUser'));
+    if (!user || user == null) {
+      throw new Error('No user is logged in');
+    }
     if (user) return user;
-    throw new Error('No user is logged in');
   }
 
   handleError(error: HttpErrorResponse) {

@@ -21,7 +21,7 @@ const importData = async () => {
     await Job.deleteMany();
     await Concour.deleteMany();
     // * Now insert into a clean database
-    // await Concour.insertMany(concours);
+    await Concour.insertMany(concours);
     await Career.insertMany(careers);
 
     // console.log(createdCareers);
