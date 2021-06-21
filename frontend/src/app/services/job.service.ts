@@ -1,7 +1,7 @@
 // import { IJob } from '../shared/career';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,12 +14,21 @@ export class JobService {
   constructor(private http: HttpClient) {}
 
   getJobs(): Observable<any> {
-    return this.http.get<any[]>(this.jobsEndPoint);
+    return this.http.get<any[]>(`${this.jobsEndPoint}/paginated`);
   }
 
-  // getJob(id: String): Observable<IJob> {
-  //   return this.getJobs().pipe(
-  //     map((jobs) => jobs.find((job) => job._id === id))
-  //   );
-  // }
+  getPaginatedJobs(pageSize: number, currentPage: number) {
+    const queryParams = `?pageSize=${pageSize}&page=${currentPage}`;
+
+    return this.http
+      .get<any>(`${this.jobsEndPoint}/paginated` + queryParams)
+      .pipe(
+        map((jobData) => {
+          return {
+            jobs: jobData.jobs,
+            maxCount: jobData.maxCount,
+          };
+        })
+      );
+  }
 }

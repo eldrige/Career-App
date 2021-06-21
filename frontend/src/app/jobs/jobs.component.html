@@ -222,12 +222,13 @@
           </ul>
           <div class="m-t30">
             <div class="d-flex">
-              <a class="site-button button-sm mr-auto" href="#"
-                ><i class="ti-arrow-left"></i> Prev</a
-              >
-              <a class="site-button button-sm" href="#"
-                >Next <i class="ti-arrow-right"></i
-              ></a>
+              <mat-paginator
+                class="mt-5 mr-3"
+                [length]="21"
+                [pageSize]="5"
+                [pageSizeOptions]="[3, 5, 8, 10]"
+                (page)="onPaginate($event)"
+              ></mat-paginator>
             </div>
           </div>
         </div>
