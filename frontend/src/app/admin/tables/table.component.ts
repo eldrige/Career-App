@@ -38,8 +38,8 @@ export class TableComponent implements OnInit {
 
   getCareers() {
     return this.careerService.getCareers().subscribe((response) => {
-      this.careers = response;
-      this.paginatedCareers = response;
+      this.careers = response.careers;
+      this.paginatedCareers = response.careers;
     });
   }
 
