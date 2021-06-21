@@ -1,6 +1,7 @@
 import { CareerService } from './../../shared/career.service';
 import { Component, OnInit } from '@angular/core';
 import { ICareer } from '../../shared/career';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-career-list',
@@ -12,6 +13,9 @@ export class CareerListComponent implements OnInit {
   // map careerArray to take the career interface
   careerArray: ICareer[] = [];
   filteredCareerArray: ICareer[];
+
+  careersPerPage: any;
+  pageNumber: any;
 
   // falsy initially
   _listFilter: string = '';
@@ -26,6 +30,9 @@ export class CareerListComponent implements OnInit {
       ? this.performFilter(this.listFilter)
       : this.careerArray;
   }
+
+  paginatedCareers: any[];
+  maxCount: any;
   ngOnInit(): void {
     this.getCareers();
     //call getCareers() on cretion of component
@@ -39,15 +46,26 @@ export class CareerListComponent implements OnInit {
           (this.filteredCareerArray = this.performFilter(this.listFilter));
       },
 
-      (err) => console.error(err)
+      (err) => console.error(err.message)
     );
   }
 
-  // fiter careerArray based on input
+  // filter careerArray based on input
   performFilter(filterBy: string): ICareer[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.careerArray.filter(
       (career) => career.title.toLocaleLowerCase().indexOf(filterBy) !== -1
     );
+  }
+
+  onPaginate(pageEvent: PageEvent) {
+    this.careersPerPage = +pageEvent.pageSize;
+    this.pageNumber = +pageEvent.pageIndex + 1;
+    this.careerServ
+      .getPaginatedCareers(this.careersPerPage, this.pageNumber)
+      .subscribe((res) => {
+        console.log(res);
+        this.paginatedCareers = res.careers;
+      });
   }
 }

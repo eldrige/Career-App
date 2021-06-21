@@ -34,6 +34,9 @@
         <!-- extra nav -->
         <div class="extra-nav">
           <div class="extra-cell">
+            <a *ngIf="isAdmin()" class="site-button" [routerLink]="['/profile']"
+              ><i class="fa fa-user"></i> Admin</a
+            >
             <a *ngIf="user" class="site-button" (click)="logout()"
               ><i class="fa fa-user"></i> {{ user.name }}</a
             >

@@ -1,7 +1,11 @@
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { TableComponent } from './admin/tables/table.component';
+import { ProfileComponent } from './admin/profile/profile.component';
+import { ConcourEditComponent } from './concour/concour-edit/concour-edit.component';
+import { CareerEditComponent } from './careers/career-edit/career-edit.component';
 import { AdminGuard } from './services/admin.guard';
 import { ConcourItemComponent } from './concour/concour-item/concour-item.component';
 import { ConcourListComponent } from './concour/concour-list/concour-list.component';
-import { QuizComponent } from './multistep/quiz/quiz.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { PoliciesComponent } from './policies/policies.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -18,8 +22,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   { path: 'home', component: WelcomeComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
+
   { path: 'careers', component: CareerListComponent },
   { path: 'careers/:id', component: CareerDetailsComponent },
+  {
+    path: 'careers/edit/:id',
+    component: CareerEditComponent,
+    canActivate: [AuthGuard, AdminGuard],
+  },
+
   { path: 'jobs', component: JobsComponent },
   {
     path: 'dashboard',
@@ -28,10 +39,17 @@ const routes: Routes = [
   },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'quiz', component: QuizComponent },
   { path: 'policies', component: PoliciesComponent },
   { path: 'concours', component: ConcourListComponent },
   { path: 'concours/:id', component: ConcourItemComponent },
+  {
+    path: 'concours/edit/:id',
+    component: ConcourEditComponent,
+    canActivate: [AuthGuard, AdminGuard],
+  },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'table', component: TableComponent },
+  { path: 'contact', component: ContactUsComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

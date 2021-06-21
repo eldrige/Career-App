@@ -24,12 +24,15 @@ const fetchAndSaveToDB = async (url) => {
         let datePublished = Date.now();
         fetchedJobs.push({ link, title, datePublished });
       });
+      console.log('Data scraped!');
     }
     await Job.insertMany(fetchedJobs);
   } catch (error) {
     console.error(error);
   }
 };
+
+fetchAndSaveToDB(url);
 
 // Run cron job every wednesday
 cron.schedule('* * * * Wednesday', () => {

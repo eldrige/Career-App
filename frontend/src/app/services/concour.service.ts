@@ -6,6 +6,7 @@ import {
 } from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,7 @@ export class ConcourService {
 
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private userService: UserService) {}
 
   getConcours(): Observable<any> {
     return this.http.get<any>(this.concourEndpoint);
@@ -34,12 +35,17 @@ export class ConcourService {
   }
 
   updateConcour(concour): Observable<any> {
+    const { token } = this.userService.getUser();
+
     return this.http
       .put<any>(
         `${this.concourEndpoint}/${concour._id}`,
         JSON.stringify(concour),
         {
-          headers: this.httpHeaders,
+          headers: new HttpHeaders({
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          }),
         }
       )
       .pipe(catchError(this.handleError));

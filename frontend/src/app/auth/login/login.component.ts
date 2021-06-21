@@ -2,6 +2,8 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from './../../services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +17,8 @@ export class LoginComponent implements OnInit {
     private userService: UserService,
     public formBuilder: FormBuilder,
     private router: Router,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    private _snackBar: MatSnackBar
   ) {
     this.loginForm = this.formBuilder.group({
       email: [''],
@@ -25,15 +28,27 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 3000,
+    });
+  }
+
+  refreshPage() {
+    window.location.reload();
+  }
+
   onSubmit(): any {
     this.userService.authUser(this.loginForm.value).subscribe(
-      (data) => {
-        localStorage.setItem('currentUser', JSON.stringify(data));
-        this.ngZone.run(() => this.router.navigateByUrl('/dashboard'));
+      (res) => {
+        localStorage.setItem('currentUser', JSON.stringify(res));
+        this.openSnackBar('Succesfull Login', '');
+        this.ngZone.run(() => this.router.navigateByUrl('/home'));
+        this.refreshPage();
       },
       (err) => {
         this.invalidLogin = true;
-        console.log(err);
+        console.log(err.message);
       }
     );
   }

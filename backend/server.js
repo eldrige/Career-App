@@ -13,13 +13,13 @@ dotenv.config();
 connectDB();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
-  res.send('API is running');
+  res.send('Jongleur API is running');
 });
 
 app.use(cors());
@@ -28,7 +28,7 @@ app.use('/api/users/', userRouter);
 app.use('/api/careers/', careerRouter);
 app.use('/api/jobs/', jobRouter);
 app.use('/api/concours/', concourRouter);
-app.use('/api/emails', emailRouter);
+app.use('/api/emails/', emailRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

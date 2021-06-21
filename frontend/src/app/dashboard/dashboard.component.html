@@ -53,6 +53,7 @@
                   alt=""
                   style="width: 3rem"
                 />
+                <!-- button will be used to create new concours/jobs/careers -->
               </div>
               <div class="">
                 <img src="assets\icons\cloche.png" alt="" style="width: 3rem" />
@@ -64,7 +65,7 @@
                   style="width: 3rem"
                 />
               </div>
-              <p class="dash">Fadi T</p>
+              <p class="dash">Admin</p>
             </div>
           </nav>
         </div>
@@ -105,41 +106,6 @@
               <img src="assets\icons\dot.png" alt="" class="dot .main-prine" />
             </div>
           </div>
-
-          <!-- <div class="d-flex justify-content-between main-prin">
-            <div class="d-flex justify-content-around main-prin">
-              <img src="assets\icons\cartoon2.png" class="cartoon" alt="" />
-
-              <p>Prof.Fadi</p>
-            </div>
-            <div>
-              <p>2 hours lecture</p>
-            </div>
-            <div>
-              <p>$120/hr</p>
-            </div>
-            <div>
-              <img src="assets\icons\dot.png" alt="" class="dot" />
-            </div>
-          </div>
-          <br />
-          <div class="d-flex justify-content-between main-prin">
-            <div class="d-flex justify-content-around main-prin">
-              <img src="assets\icons\cartoon3.png" class="cartoon" alt="" />
-              <p>Prof.Alex</p>
-            </div>
-            <div>
-              <p>4 hours lecture</p>
-            </div>
-            <div>
-              <p>$150/hr</p>
-            </div>
-            <div>
-              <img src="assets\icons\dot.png" alt="" class="dot" />
-            </div>
-          </div>
-          <br />
-          <br /> -->
 
           <div class="row">
             <div class="col">
@@ -205,6 +171,7 @@
             </div>
             <div class="col bloc2">
               <div
+                *ngFor="let concour of concours"
                 class="
                   d-flex
                   justify-content-around
@@ -213,45 +180,16 @@
                   border border-danger
                 "
               >
-                <p class="line">12</p>
+                <a
+                  [routerLink]="['/concours/edit', concour._id]"
+                  class="m-2 p-3"
+                >
+                  <p class="line">12</p>
 
-                <p>
-                  Dec <br />
-                  Monday
-                </p>
-              </div>
-              <br />
-              <div
-                class="
-                  d-flex
-                  justify-content-around
-                  main-prin
-                  border
-                  blox
-                  border-danger
-                "
-              >
-                <p class="line">13</p>
-
-                <p>Dec <br />Tuesday</p>
-              </div>
-              <br />
-              <div
-                class="
-                  d-flex
-                  justify-content-around
-                  main-prin
-                  border
-                  blox
-                  border-warning
-                "
-              >
-                <p class="line">14</p>
-
-                <p>
-                  Dec <br />
-                  Wednesday
-                </p>
+                  <p>
+                    {{ concour.abbrev }}
+                  </p>
+                </a>
               </div>
             </div>
             <div class="col">
@@ -297,11 +235,12 @@
               </div>
 
               <div>
-                <img
-                  src="assets\icons\dot.png"
-                  alt=""
-                  class="dot .main-prine"
-                />
+                <a [routerLink]="['/careers/edit', career._id]">
+                  <img
+                    src="assets\icons\dot.png"
+                    alt=""
+                    class="dot .main-prine"
+                /></a>
               </div>
             </div>
 

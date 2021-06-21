@@ -1,7 +1,7 @@
-import { IJob } from '../shared/career';
+// import { IJob } from '../shared/career';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+// import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -13,13 +13,13 @@ export class JobService {
 
   constructor(private http: HttpClient) {}
 
-  getJobs(): Observable<IJob[]> {
-    return this.http.get<IJob[]>(this.jobsEndPoint);
+  getJobs(): Observable<any> {
+    return this.http.get<any[]>(this.jobsEndPoint);
   }
 
-  getJob(id: String): Observable<IJob> {
-    return this.getJobs().pipe(
-      map((jobs) => jobs.find((job) => job._id === id))
-    );
-  }
+  // getJob(id: String): Observable<IJob> {
+  //   return this.getJobs().pipe(
+  //     map((jobs) => jobs.find((job) => job._id === id))
+  //   );
+  // }
 }

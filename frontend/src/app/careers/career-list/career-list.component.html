@@ -4,28 +4,23 @@
 >
   <div class="container">
     <div class="dez-bnr-inr-entry hero-text">
-      <!-- <h1 class="text-white">Job Detail</h1> -->
       <h1>Most In Demand Jobs in Cameroon</h1>
-
-      <!-- Breadcrumb row -->
       <div class="breadcrumb-row">
         <ul class="list-inline">
           <li><a>Home</a></li>
           <li>Jobs</li>
         </ul>
       </div>
-      <!-- Breadcrumb row END -->
     </div>
   </div>
 </div>
 
 <div class="hero-text container my-1">
-  <!-- <h1>Most In Demand Jobs in Cameroon</h1> -->
-
   <h2>
     Click on a career to discover the possible institutions you can take to
     pursue a path in that career
   </h2>
+
   <div class="center-input">
     <input
       type="text"
@@ -52,7 +47,6 @@
           >
             <div class="card gr-1">
               <div class="txt">
-                <!-- <h3>{{ career.title }}</h3> -->
                 <h1>{{ career.title }}</h1>
                 <p>{{ career.title }}</p>
               </div>
@@ -65,5 +59,12 @@
         </div>
       </div>
     </div>
+    <!-- <mat-paginator
+      class="mt-5"
+      [length]="21"
+      [pageSize]="6"
+      [pageSizeOptions]="[3, 6, 9, 12]"
+      (page)="onPaginate($event)"
+    ></mat-paginator> -->
   </div>
 </section>

@@ -1,16 +1,17 @@
-import { ConcourService } from './../services/concour.service';
-import { CareerService } from './../shared/career.service';
-import { UserService } from './../services/user.service';
-
 import { Component, OnInit } from '@angular/core';
-import { ICareer } from '../shared/career';
+import { ConcourService } from '../../services/concour.service';
+import { CareerService } from '../../shared/career.service';
+import { UserService } from '../../services/user.service';
+import { ICareer } from '../../shared/career';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css'],
 })
-export class DashboardComponent implements OnInit {
+export class ProfileComponent implements OnInit {
+  elts: any[] = ['dashboard', 'users', 'careers', 'concours'];
+
   constructor(
     private userService: UserService,
     private careerService: CareerService,
