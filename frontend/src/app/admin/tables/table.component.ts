@@ -38,8 +38,9 @@ export class TableComponent implements OnInit {
 
   getCareers() {
     return this.careerService.getCareers().subscribe((response) => {
-      this.careers = response.careers;
-      this.paginatedCareers = response.careers;
+      // this.careers = response.careers;
+      // this.paginatedCareers = response.careers;
+      console.log(response);
     });
   }
 
@@ -50,7 +51,7 @@ export class TableComponent implements OnInit {
       .getPaginatedCareers(this.careersPerPage, this.pageNumber)
       .subscribe((res) => {
         console.log(res);
-        this.paginatedCareers = res.careers;
+        // this.paginatedCareers = res.careers;
       });
   }
 }

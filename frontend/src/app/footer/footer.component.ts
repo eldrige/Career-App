@@ -36,7 +36,7 @@ export class FooterComponent implements OnInit {
     this.emailService.saveEmail(this.signUpForm.value).subscribe(
       (data) => {
         this.openSnackBar('Subscribed to mailing list', '');
-        this.signUpForm.reset;
+        this.signUpForm.reset();
         console.log(data);
       },
       (err) => {
