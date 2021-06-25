@@ -10,7 +10,7 @@
               <img
                 src="assets/images/jongleur.png"
                 class="logo"
-                alt=""
+                alt="Jongleur Logo"
                 width="100px"
               />
             </h1>
@@ -37,13 +37,17 @@
             <a *ngIf="isAdmin()" class="site-button" [routerLink]="['/profile']"
               ><i class="fa fa-user"></i> Admin</a
             >
-            <a *ngIf="user" class="site-button" (click)="logout()"
+            <a
+              *ngIf="user"
+              class="site-button"
+              [routerLink]="['/dashboard']"
+              routerLinkActive="router-link-active"
               ><i class="fa fa-user"></i> {{ user.name }}</a
             >
 
             <a
               *ngIf="!user"
-              class="site-button user"
+              class="site-button"
               [routerLink]="['/sign-up']"
               routerLinkActive="router-link-active"
               ><i class="fa fa-user"></i> Register</a
@@ -107,7 +111,7 @@
             </li>
             <li>
               <a
-                [routerLink]="['dashboard']"
+                [routerLink]="['scholarships']"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
                 >Scholarships</a

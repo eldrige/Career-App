@@ -82,10 +82,9 @@ a.site-button.user {
 
 .active {
   background-color: #2e55fa !important;
+  color: "white" !important;
 }
 
-a.regular-btn {
-  color: #222845;
-  padding: 10px 15px;
-  background-color: transparent;
+.header-nav .nav > li {
+  color: white;
 }
