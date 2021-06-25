@@ -80,8 +80,8 @@ a.site-button.user {
   transform: rotate(-135deg);
 }
 
-.router-link-active {
-  background-color: #2e55fa;
+.active {
+  background-color: #2e55fa !important;
 }
 
 a.regular-btn {
