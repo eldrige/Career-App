@@ -16,7 +16,7 @@ export class CareerService {
   constructor(private http: HttpClient) {}
 
   getCareers(): Observable<ICareer[]> {
-    return this.http.get<ICareer[]>(`${this.careerEndpoint}/paginated`);
+    return this.http.get<ICareer[]>(this.careerEndpoint);
   }
 
   getCareer(id: String): Observable<ICareer> {

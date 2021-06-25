@@ -6,12 +6,12 @@
   >
     <div class="container">
       <div class="dez-bnr-inr-entry">
-        <h1 class="text-white">Job Detail</h1>
+        <h1 class="text-white">Career Detail</h1>
         <!-- Breadcrumb row -->
         <div class="breadcrumb-row">
           <ul class="list-inline">
-            <li><a href="#">Job</a></li>
-            <li>Job Detail for {{ currentCareer.title }}</li>
+            <li><a href="">Career</a></li>
+            <li>Career Detail for {{ currentCareer.title }}</li>
           </ul>
         </div>
         <!-- Breadcrumb row END -->
@@ -75,7 +75,7 @@
                         <i class="ti-shield"></i
                         ><strong class="font-weight-700 text-black"
                           >Length of Training</strong
-                        >2 Years +
+                        >5 Years +
                       </li>
                     </ul>
                   </div>
@@ -90,15 +90,16 @@
                   >Job Title: {{ currentCareer.title }}</a
                 >
               </h2>
+              <div>
+                <strong>Description</strong>
+                <p class="mt-2">
+                  {{ currentCareer.description }}
+                </p>
+              </div>
+
               <ul class="job-info">
                 <li>
                   <strong>Background: </strong> {{ currentCareer.background }}
-                </li>
-                <li><strong>Deadline:</strong> 25th January 2018</li>
-                <li>
-                  <strong
-                    ><i class="ti-location-pin text-black m-r5"></i> Cameroon
-                  </strong>
                 </li>
               </ul>
               <h3 class="p-t30" *ngIf="currentCareer.concours.length !== 0">
@@ -107,16 +108,10 @@
                   {{ concour.name }}
                 </span>
               </h3>
-              <!-- <h5 class="font-weight-600">Job Description</h5> -->
               <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div>
               <h2 *ngIf="currentCareer.institutions">Institutions:</h2>
               <p>
                 {{ currentCareer.institutions }}
-              </p>
-              <!-- <h5 class="font-weight-600">How to Apply</h5> -->
-              <!-- <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0"></div> -->
-              <p>
-                {{ currentCareer.description }}
               </p>
               <h5 class="font-weight-900">
                 An aspiring {{ currentCareer.title }} should
