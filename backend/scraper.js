@@ -2,10 +2,13 @@ import cheerio from 'cheerio';
 import axios from 'axios';
 import cron from 'node-cron';
 const numberOfJobs = 20;
+const numberOfScholarships = 20;
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
-import Job from './models/jobModel.js';
+// import Job from './models/jobModel.js';
+import Scholarship from './models/scholarshipModel.js';
 const url = `https://www.cameroondesks.com/search/label/jobs?max-results=${numberOfJobs}`;
+const scholarshipUrl = `https://www.cameroondesks.com/search/label/scholarship?&max-results=${numberOfScholarships}`;
 
 dotenv.config();
 connectDB();
@@ -25,14 +28,15 @@ const fetchAndSaveToDB = async (url) => {
         fetchedJobs.push({ link, title, datePublished });
       });
       console.log('Data scraped!');
+      console.log(fetchedJobs);
     }
-    await Job.insertMany(fetchedJobs);
+    await Scholarship.insertMany(fetchedJobs);
   } catch (error) {
     console.error(error);
   }
 };
 
-fetchAndSaveToDB(url);
+fetchAndSaveToDB(scholarshipUrl);
 
 // Run cron job every wednesday
 cron.schedule('* * * * Wednesday', () => {

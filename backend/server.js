@@ -7,6 +7,7 @@ import userRouter from './routes/userRoutes.js';
 import emailRouter from './routes/emailRoutes.js';
 import jobRouter from './routes/jobRoutes.js';
 import concourRouter from './routes/concourRoutes.js';
+import scholarshipRouter from './routes/scholarshipRoutes.js';
 import connectDB from './config/db.js';
 
 dotenv.config();
@@ -29,6 +30,7 @@ app.use('/api/careers/', careerRouter);
 app.use('/api/jobs/', jobRouter);
 app.use('/api/concours/', concourRouter);
 app.use('/api/emails/', emailRouter);
+app.use('/api/scholarships/', scholarshipRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
