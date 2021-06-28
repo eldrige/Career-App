@@ -45,6 +45,15 @@
               ><i class="fa fa-user"></i> {{ user.name }}</a
             >
 
+            <button
+              *ngIf="user"
+              class="btn btn-danger btn-sm"
+              (click)="logout()"
+            >
+              <i class="fa fa-sign-out"></i>
+              Logout
+            </button>
+
             <a
               *ngIf="!user"
               class="site-button"
