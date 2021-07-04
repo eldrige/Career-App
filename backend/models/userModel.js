@@ -24,6 +24,12 @@ const userSchema = mongoose.Schema(
     },
     levelOfEducation: {
       type: String,
+      enum: ['High School', 'Degree', 'Masters', 'PhD'],
+      default: 'High School',
+    },
+    sex: {
+      type: String,
+      enum: ['M', 'F'],
     },
     isAdmin: {
       type: Boolean,

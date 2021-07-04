@@ -1,0 +1,72 @@
+<div class="container my-5">
+  <div class="row mt-5">
+    <div class="col-md-4 mt-5">
+      <h1>User Profile</h1>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Name"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dateOfBirth">Date of Birth</label>
+          <input type="date" class="form-control" id="dateOfBirth" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-8">
+            <label for="levelOfEducation">Current Level Of Education</label>
+            <!-- <input type="text" class="form-control" id="levelOfEducation" /> -->
+            <select id="levelOfEducation" class="form-control">
+              <option selected>High School</option>
+              <option>Degree</option>
+              <option>Masters</option>
+              <option>PhD</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="sex">Sex</label>
+            <select id="sex" class="form-control">
+              <option selected>Choose...</option>
+              <option>M</option>
+              <option>F</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+    <div class="col-md-8 mt-5">
+      <h1>Discover more</h1>
+
+      <h3>Orientation Quiz</h3>
+      <div>
+        <p>Take the quiz and discover more about yourself</p>
+        <button type="submit" class="btn btn-primary">Start</button>
+      </div>
+    </div>
+  </div>
+</div>

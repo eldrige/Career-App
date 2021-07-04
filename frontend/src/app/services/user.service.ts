@@ -44,7 +44,7 @@ export class UserService {
       .pipe(catchError(this.handleError));
   }
 
-  isUserLoggedIn(): boolean {
+  isUserLoggedIn(u): boolean {
     if (localStorage.getItem('currentUser')) return true;
     return false;
   }
@@ -83,6 +83,13 @@ export class UserService {
     if (user) return user;
   }
 
+  updateUserProfile(data) {
+    return this.http
+      .put(`${this.userEndpoint}/login/`, JSON.stringify(data), {
+        headers: this.httpHeaders,
+      })
+      .pipe(catchError(this.handleError));
+  }
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {

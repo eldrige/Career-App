@@ -34,9 +34,9 @@
         <!-- extra nav -->
         <div class="extra-nav">
           <div class="extra-cell">
-            <a *ngIf="isAdmin()" class="site-button" [routerLink]="['/profile']"
+            <!-- <a *ngIf="isAdmin()" class="site-button" [routerLink]="['/profile']"
               ><i class="fa fa-user"></i> Admin</a
-            >
+            > -->
             <a
               *ngIf="user"
               class="site-button"
@@ -120,7 +120,7 @@
             </li>
             <li>
               <a
-                [routerLink]="['scholarships']"
+                [routerLink]="['user']"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
                 >Scholarships</a

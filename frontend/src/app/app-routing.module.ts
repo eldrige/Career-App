@@ -1,3 +1,4 @@
+import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TableComponent } from './admin/tables/table.component';
 import { ProfileComponent } from './admin/profile/profile.component';
@@ -53,6 +54,7 @@ const routes: Routes = [
     canActivate: [AuthGuard, AdminGuard],
   },
   { path: 'table', component: TableComponent },
+  { path: 'user', component: UserProfileComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: '**', component: NotFoundComponent },
 ];
