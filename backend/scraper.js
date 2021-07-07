@@ -37,7 +37,7 @@ const fetchAndSaveToDB = async (url, model) => {
   }
 };
 
-fetchAndSaveToDB(jobUrl, Job);
+// fetchAndSaveToDB(jobUrl, Job);
 fetchAndSaveToDB(scholarshipUrl, Scholarship);
 
 // Run cron job every wednesday

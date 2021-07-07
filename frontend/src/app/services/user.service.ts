@@ -85,12 +85,13 @@ export class UserService {
 
   updateUserProfile(data) {
     this.user = JSON.parse(localStorage.getItem('currentUser'));
+    console.log(data, 'From user service ts');
 
     const { token } = this.user;
     console.log(token);
 
     return this.http
-      .put(`${this.userEndpoint}/profile/`, JSON.stringify(data), {
+      .put(`${this.userEndpoint}/profile/`, data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

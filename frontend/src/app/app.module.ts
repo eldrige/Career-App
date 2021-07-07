@@ -7,6 +7,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MaterialModule } from './shared/material-module';
+import { MatMenuModule } from '@angular/material/menu';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -81,6 +82,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

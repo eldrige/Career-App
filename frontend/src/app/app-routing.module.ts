@@ -54,7 +54,7 @@ const routes: Routes = [
     canActivate: [AuthGuard, AdminGuard],
   },
   { path: 'table', component: TableComponent },
-  { path: 'user', component: UserProfileComponent },
+  { path: 'user', canActivate: [AuthGuard], component: UserProfileComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: '**', component: NotFoundComponent },
 ];

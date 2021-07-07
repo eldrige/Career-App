@@ -37,22 +37,28 @@
             <!-- <a *ngIf="isAdmin()" class="site-button" [routerLink]="['/profile']"
               ><i class="fa fa-user"></i> Admin</a
             > -->
-            <a
-              *ngIf="user"
-              class="site-button"
-              [routerLink]="['/dashboard']"
-              routerLinkActive="router-link-active"
-              ><i class="fa fa-user"></i> {{ user.name }}</a
-            >
 
-            <button
-              *ngIf="user"
-              class="btn btn-danger btn-sm"
-              (click)="logout()"
-            >
-              <i class="fa fa-sign-out"></i>
-              Logout
-            </button>
+            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-menu #menu="matMenu">
+              <div class="extra-cell">
+                <a
+                  *ngIf="user"
+                  class="site-button"
+                  [routerLink]="['/dashboard']"
+                  routerLinkActive="router-link-active"
+                  ><i class="fa fa-user"></i> {{ user.name }}</a
+                >
+
+                <button
+                  *ngIf="user"
+                  class="btn btn-danger btn-sm"
+                  (click)="logout()"
+                >
+                  <i class="fa fa-sign-out"></i>
+                  Logout
+                </button>
+              </div>
+            </mat-menu>
 
             <a
               *ngIf="!user"
