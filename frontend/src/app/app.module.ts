@@ -1,3 +1,4 @@
+import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ProfileComponent } from './admin/profile/profile.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -63,6 +64,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ConcourEditComponent,
     ProfileComponent,
     TableComponent,
+    UserProfileComponent,
     ContactUsComponent,
   ],
   imports: [

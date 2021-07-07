@@ -44,7 +44,7 @@ export class UserService {
       .pipe(catchError(this.handleError));
   }
 
-  isUserLoggedIn(u): boolean {
+  isUserLoggedIn(): boolean {
     if (localStorage.getItem('currentUser')) return true;
     return false;
   }
@@ -84,9 +84,16 @@ export class UserService {
   }
 
   updateUserProfile(data) {
+    this.user = JSON.parse(localStorage.getItem('currentUser'));
+
+    const { token } = this.user;
+    console.log(token);
+
     return this.http
-      .put(`${this.userEndpoint}/login/`, JSON.stringify(data), {
-        headers: this.httpHeaders,
+      .put(`${this.userEndpoint}/profile/`, JSON.stringify(data), {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       })
       .pipe(catchError(this.handleError));
   }

@@ -101,13 +101,12 @@ const updateUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
   if (user) {
-    const { dateOfBirth, address, levelOfEducation } = req.body;
-    console.log(dateOfBirth, address, levelOfEducation);
     user.name = req.body.name || user.name;
     user.email = req.body.email || user.email;
-    user.address = address;
-    user.dateOfBirth = dateOfBirth;
-    user.levelOfEducation = levelOfEducation;
+    user.address = req.body.address;
+    user.dateOfBirth = req.body.dateOfBirth;
+    user.levelOfEducation = req.body.levelOfEducation;
+    user.sex = req.body.sex;
 
     if (req.body.password) {
       user.password = req.body.password;
@@ -123,6 +122,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
       address: updatedUser.address,
       dateOfBirth: updatedUser.dateOfBirth,
       levelOfEducation: updatedUser.levelOfEducation,
+      sex: updatedUser.sex,
       token: generateToken(updatedUser._id),
     });
   } else {
