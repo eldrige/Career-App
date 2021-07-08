@@ -32,10 +32,19 @@ app.use('/api/concours/', concourRouter);
 
 app.use(express.static(path.join(__dirname, '/frontend/dist/career-app/')));
 
-app.get('*', (req, res) => {
-  res.sendFile(
-    path.resolve(__dirname, 'frontend', 'dist', 'career-app', 'index.html')
-  );
+// app.get('*', (req, res) => {
+//   res.sendFile(
+//     path.resolve(__dirname, 'frontend', 'dist', 'career-app', 'index.html')
+//   );
+// });
+
+app.get('/', (req, res) => {
+  res.send('I can listen to you');
+});
+
+app.post('/', (req, res) => {
+  console.log(req.body);
+  res.send('Yess');
 });
 
 app.listen(PORT, () => {
